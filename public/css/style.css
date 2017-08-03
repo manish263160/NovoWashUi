@@ -1,0 +1,21 @@
+.main-text .section-title {
+  font-size: 20px;
+  margin-bottom: 10px !important; }
+.main-text .intro-title {
+  font-family: Playfair Display,serif !important; }
+
+.footerText h3 {
+  color: #fff;
+  font-family: Playfair Display,serif; }
+
+.background {
+  background-color: #455a64; }
+  .background h2, .background p {
+    color: #fff; }
+
+.para .text {
+  line-height: 140%;
+  text-align: justify;
+  color: #7f7f7f; }
+
+/*# sourceMappingURL=style.css.map */

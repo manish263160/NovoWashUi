@@ -1,0 +1,77 @@
+<section id="reservation" class="section-padding bg-fixed parallax-bg coffee-banner-3 overlay dark-5" data-stellar-background-ratio="0.5">
+    <div class="container">
+
+      <div class="text-center mb-80">
+        <h2 class="section-title text-capitalize white-text">Book A Service</h2>
+        <p class="section-sub white-text">Quisque non erat mi. Etiam congue et augue sed tempus. Aenean sed ipsum luctus, scelerisque ipsum nec, iaculis justo.
+          Sed at vestibulum purus, sit amet viverra diam nulla ac nisi rhoncus.</p>
+      </div>
+
+      <form class="white-form" name="contact-form" id="contactForm" action="sendemail.php" method="POST">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="input-field">
+              <input type="text" name="name" class="validate" id="name">
+              <label for="name">Full Name*</label>
+            </div>
+          </div>
+          <!-- /.col-md-4 -->
+
+          <div class="col-md-4">
+            <div class="input-field">
+              <input id="email" type="email" name="email" class="validate">
+              <label for="email" data-error="wrong" data-success="right">Email Address*</label>
+            </div>
+          </div>
+          <!-- /.col-md-4 -->
+
+          <div class="col-md-4">
+            <div class="input-field">
+              <input type="text" name="phone" class="validate" id="phone">
+              <label for="phone">Phone Number</label>
+            </div>
+          </div>
+          <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="input-field">
+              <input type="text" name="people" class="validate" id="people">
+              <label for="people">Number of people*</label>
+            </div>
+          </div>
+          <!-- /.col-md-4 -->
+
+          <div class="col-md-4">
+            <div class="input-field">
+              <input type="text" name="guest" class="validate" id="guest">
+              <label for="guest">Guest type*</label>
+            </div>
+          </div>
+          <!-- /.col-md-4 -->
+
+          <div class="col-md-4">
+            <div class="input-field">
+              <input type="text" name="time" class="validate" id="time">
+              <label for="time">Time &amp; Date*</label>
+            </div>
+          </div>
+          <!-- /.col-md-4 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="input-field">
+          <textarea name="message" id="message" class="materialize-textarea"></textarea>
+          <label for="message">Aditional note</label>
+        </div>
+
+        <div class="text-center">
+          <button type="button" name="submit" class="waves-effect waves-light btn btn-lg text-medium mt-30 text-capitalize">Book Now</button>
+        </div>
+      </form>
+    </div>
+    <!-- /.container -->
+  </section>
