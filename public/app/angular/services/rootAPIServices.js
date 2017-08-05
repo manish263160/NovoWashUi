@@ -29,7 +29,7 @@ app.factory('RootAPIServices', function ($resource, $localStorage, $rootScope, N
 
 
         getAllServiceCategories :{
-        url: rootURL + '/get/category',
+        url: rootURL + '/services/get/category',
         method:'POST',
         transformResponse:defaultTransformResponse
         }

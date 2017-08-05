@@ -7,7 +7,7 @@
     $mdThemingProvider.theme('red')
       .primaryPalette('red');
 
-    $mdThemingProvider.theme('blue')
-      .primaryPalette('blue');
+    $mdThemingProvider.theme('green')
+      .primaryPalette('green');
 
   })
