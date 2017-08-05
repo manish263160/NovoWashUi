@@ -72,7 +72,7 @@ $scope.theme = 'red';
             });
         };
 
-        function DialogController($scope, $mdDialog) {
+        function DialogController($scope, $mdDialog ,RootAPIServices) {
           $scope.hide = function () {
             $mdDialog.hide();
           };
@@ -84,6 +84,11 @@ $scope.theme = 'red';
           $scope.answer = function (answer) {
             $mdDialog.hide(answer);
           };
+
+          $scope.allcategory;
+          RootAPIServices.rootApi.getAllServiceCategories({}).$promise.then(function(response){
+            console.log('==========',response);
+          })
         }
 
 

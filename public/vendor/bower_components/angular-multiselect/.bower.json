@@ -1,0 +1,40 @@
+{
+  "name": "angular-multiselect",
+  "version": "0.4.16",
+  "authors": [
+    "shalotelli <sha@responsiveshops.com>"
+  ],
+  "description": "A multi select drop down list for AngularJS",
+  "main": "multiselect.js",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "multiselect",
+    "multi",
+    "select",
+    "dropdown",
+    "drop",
+    "down",
+    "combo",
+    "combobox",
+    "select"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/shalotelli/angular-multiselect/blob/master/README.md",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.4.16",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.4.16",
+    "commit": "d77673d41978eae63d621d8eeb2471698ec9c4d6"
+  },
+  "_source": "https://github.com/shalotelli/angular-multiselect.git",
+  "_target": "^0.4.16",
+  "_originalSource": "shalotelli-angular-multiselect"
+}

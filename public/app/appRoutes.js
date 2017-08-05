@@ -5,6 +5,8 @@ app.config(function ($mdThemingProvider) {
   $mdThemingProvider.theme('blue')
     .primaryPalette('blue');
 
+    
+
 });
 
 app.config(['$locationProvider', function ($locationProvider) {
