@@ -1,4 +1,15 @@
+app.config(function ($mdThemingProvider) {
+  $mdThemingProvider.theme('red')
+    .primaryPalette('red');
 
+  $mdThemingProvider.theme('blue')
+    .primaryPalette('blue');
+
+});
+
+app.config(['$locationProvider', function ($locationProvider) {
+  $locationProvider.hashPrefix('');
+}]);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.when("", "/home");
@@ -32,22 +43,22 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       },
     })
 
-    .state('home.service', {
-      url: '/services',
-      views: {
-        'service': {
-          templateUrl: 'app/components/servicesection/services.html',
-          controller: 'serviceSectionController'
-        }
-      },
-    })
+    /*  .state('home.service', {
+       url: '/services',
+       views: {
+         'service': {
+           templateUrl: 'app/components/servicesection/services.html',
+           controller: 'serviceSectionController'
+         }
+       },
+     }) */
 
     .state('aboutus', {
       url: "/aboutus",
       views: {
         header: header,
         content: {
-          templateUrl: "app/components/whyusSection/aboutus.html",
+          templateUrl: "app/components/aboutusSection/aboutus.html",
           controller: 'aboutusController',
         },
         footer: footer
