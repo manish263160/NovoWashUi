@@ -1,5 +1,10 @@
 app.service('Utils', function() {
-    this.myFunc = function (active) {
-        
+
+    var allcategory =[];
+
+    this.allcategory = function (active) {
+        RootAPIServices.rootApi.getAllServiceCategories({}).$promise.then(function (response) {
+        return response.data;
+      })
     }
 });

@@ -23,6 +23,13 @@ app.factory('RootAPIServices', function ($resource, $localStorage, $rootScope, N
   function defaultTransformResponse(response) {
     return angular.fromJson(response);
   }
+
+  function refreshPublishedQuestionnaire(response) {
+    /* if(response && response.result) {
+      $rootScope.getPublishedQuestionnaire_requiresUpdate = 'RequiresCacheRefresh';
+    } */
+    return response;
+  }
   return {
       rootApi:
       $resource(rootURL + '/services', {}, {
@@ -32,8 +39,12 @@ app.factory('RootAPIServices', function ($resource, $localStorage, $rootScope, N
         url: rootURL + '/services/get/category',
         method:'POST',
         transformResponse:defaultTransformResponse
-        }
+        },
 
+        getAllServiceByCatId :{
+        url: rootURL + '/services/get/:categoryId',
+        method:'POST',
+        }
       })
 
   }

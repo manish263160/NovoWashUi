@@ -4,10 +4,19 @@
   ]);
 
   app.config(function ($mdThemingProvider) {
-    $mdThemingProvider.theme('red')
-      .primaryPalette('red');
+    $mdThemingProvider.theme('altTheme')
+    .primaryPalette('purple')
 
-    $mdThemingProvider.theme('green')
-      .primaryPalette('green');
+  }) 
 
-  })
+  app.config(function ($provide) {
+
+  $provide.decorator('$exceptionHandler', function ($delegate) {
+
+    return function (exception, cause) {
+      $delegate(exception, cause);
+
+      alert('There is something wrong, please try again.');
+    };
+  });
+});

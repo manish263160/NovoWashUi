@@ -1,13 +1,29 @@
-<section id="services" ng-cloak md-theme="{{theme}}"  class="section-padding1 ">
-  <div class="container text-center ">
+<section id="services" ng-cloak  class="section-padding2" data-stellar-background-ratio="0.5">
+    <!-- <div class="container"> -->
 
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2 class="section-title text-capitalize ">Our Services</h2>
-        <md-button class="md-primary md-raised page-scroll btn btn-lg text-capitalize waves-effect waves-dark" ng-click="showAdvanced($event)">Book A Service</md-button>
+      <div class="text-center mb-80">
+        <h2 class="section-title text-capitalize white-text">We Provide These Services</h2>
+        
+        <div class="row">
+          <ul>
+            <li  class="col m2"  ng-repeat="item in allcategory">
+              <div class="row">
+            <i class="material-icons">favorite</i>
+            <div class="row">
+            <a class="" ng-click="showAdvanced($event, item.id)">  {{item.catName}}</a>
+            </div>
+            
+            </li>
+
+
+          </ul>
+        </div>
+        
+        
+        <!-- <md-button class="md-primary md-raised page-scroll btn btn-lg text-capitalize waves-effect waves-dark" ng-click="showAdvanced($event)">Book A Service</md-button> -->
       </div>
-    </div>
-  </div>
-</section>
+    <!-- </div> -->
+    <!-- /.container -->
+  </section>
 
 <md-divider ng-if="!$last"></md-divider>

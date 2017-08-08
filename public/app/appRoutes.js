@@ -1,14 +1,3 @@
-app.config(function ($mdThemingProvider) {
-  $mdThemingProvider.theme('red')
-    .primaryPalette('red');
-
-  $mdThemingProvider.theme('blue')
-    .primaryPalette('blue');
-
-    
-
-});
-
 app.config(['$locationProvider', function ($locationProvider) {
   $locationProvider.hashPrefix('');
 }]);

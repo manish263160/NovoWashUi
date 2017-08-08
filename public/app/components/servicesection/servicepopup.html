@@ -1,156 +1,52 @@
-<md-dialog aria-label="All Services">
+<md-dialog aria-label="All Services" flex="50">
   <form ng-cloak>
     <md-toolbar>
       <div class="md-toolbar-tools">
-        <h2 >All Services</h2>
+        <h2>All Services</h2>
         <span flex></span>
-        <md-button class="md-icon-button" ng-click="cancel()">
+        <md-button class="md-icon-button" ng-click="cancel($event)">
           <md-icon md-svg-src="assets/img/icons/ic_close_24px.svg" aria-label="Close dialog">X</md-icon>
         </md-button>
       </div>
     </md-toolbar>
 
-    <md-dialog-content >
+    <md-dialog-content>
+<div ng-controller="AppCtrl" layout="column" style="height:500px;" ng-cloak>
 
+    <section layout="row" flex>
+    <md-sidenav class="md-sidenav-left" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
 
-<section id="services" class="section-padding overlay dark-5 novo-banner-2 bg-fixed parallax-bg" data-stellar-background-ratio="0.5">
-    <div class="container">
+      <md-content layout-padding ng-controller="LeftCtrl">
+        <md-button ng-click="close()" class="md-primary" hide-gt-md>
+          Close Sidenav Left
+        </md-button>
+        <div class="collection">
 
-      <div class="text-center mb-80">
-        <h2 class="section-title text-capitalize white-text">We Provide These Services</h2>
-        <p class="section-sub white-text">Quisque non erat mi. Etiam congue et augue sed tempus. Aenean sed ipsum luctus, scelerisque ipsum nec, iaculis justo.
-          Sed at vestibulum purus, sit amet viverra diam nulla ac nisi rhoncus.</p>
-      </div>
-
-      <div class="row no-gutter">
-        <div class="col-md-3 col-sm-6">
-          <div class="featured-box border-right text-center hover brand-hover">
-            <div class="featured-wrapper">
-              <div class="intro-header">
-                <img src="assets/img/icons/full_home.png" alt="" height=100 width=100 />
-                <h2 class="white-text">Full home deep cleaning</h2>
-              </div>
-
-              <div class="content">
-                <a class="waves-effect waves-light btn-large ">Book Now</a>
-              </div>
-            </div>
-            <!-- /.featured-wrapper -->
-          </div>
-          <!-- /.featured-box  -->
+         <a href="#"  ng-repeat="item in allcategory" ng-click="getServiceById($event,item.id)"
+          ng-class="catId === item.id ? 'active collection-item' : 'collection-item' ">{{item.catName}}
+        </a>
+         
         </div>
-        <!-- /.col-md-3 -->
+      </md-content>
 
-        <div class="col-md-3 col-sm-6">
-          <div class="featured-box border-right text-center hover brand-hover">
-            <div class="featured-wrapper">
-              <div class="intro-header">
-                <i class="flaticon-drink76 brand-icon"></i>
-                <h2 class="white-text">Sofa cleaning</h2>
-              </div>
+    </md-sidenav>
 
-              <div class="content">
-                <a class="waves-effect waves-light btn-large ">Book Now</a>
-              </div>
-            </div>
-            <!-- /.featured-wrapper -->
-          </div>
-          <!-- /.featured-box  -->
-        </div>
-        <!-- /.col-md-3 -->
-
-        <div class="col-md-3 col-sm-6">
-          <div class="featured-box border-right text-center hover brand-hover">
-            <div class="featured-wrapper">
-              <div class="intro-header">
-                <i class="flaticon-coffee3 brand-icon"></i>
-                <h2 class="white-text">Carpet Cleaning</h2>
-              </div>
-
-              <div class="content">
-                <a class="waves-effect waves-light btn-large ">Book Now</a>
-              </div>
-            </div>
-            <!-- /.featured-wrapper -->
-          </div>
-          <!-- /.featured-box  -->
-        </div>
-        <!-- /.col-md-3 -->
-
-        <div class="col-md-3 col-sm-6">
-          <div class="featured-box text-center hover brand-hover">
-            <div class="featured-wrapper">
-              <div class="intro-header">
-                <i class="flaticon-disposable1 brand-icon"></i>
-                <h2 class="white-text">Kitchen Cleaning</h2>
-              </div>
-
-              <div class="content">
-                <a class="waves-effect waves-light btn-large ">Book Now</a>
-              </div>
-            </div>
-            <!-- /.featured-wrapper -->
-          </div>
-          <!-- /.featured-box  -->
-        </div>
-        <!-- /.col-md-3 -->
-
-      </div>
-      <!-- /.row -->
-
-      <div class="row no-gutter">
-        <div class="col-md-3 col-sm-6">
-          <div class="featured-box border-right text-center hover brand-hover">
-            <div class="featured-wrapper">
-              <div class="intro-header">
-                <img src="assets/img/icons/full_home.png" alt="" height=100 width=100 />
-                <h2 class="white-text">Bathroom cleaning</h2>
-              </div>
-
-              <div class="content">
-                <a class="waves-effect waves-light btn-large ">Book Now</a>
-              </div>
-            </div>
-            <!-- /.featured-wrapper -->
-          </div>
-          <!-- /.featured-box  -->
-        </div>
-        <!-- /.col-md-3 -->
-
-        <div class="col-md-3 col-sm-6">
-          <div class="featured-box border-right text-center hover brand-hover">
-            <div class="featured-wrapper">
-              <div class="intro-header">
-                <i class="flaticon-drink76 brand-icon"></i>
-                <h2 class="white-text">Mattress cleaning</h2>
-              </div>
-
-              <div class="content">
-                <a class="waves-effect waves-light btn-large ">Book Now</a>
-              </div>
-            </div>
-            <!-- /.featured-wrapper -->
-          </div>
-          <!-- /.featured-box  -->
-        </div>
-        <!-- /.col-md-3 -->
-
+    <md-content flex layout-padding>
+        <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md>
+          Toggle Category
+        </md-button>
+        
+        <md-list-item ng-repeat="item in allServices" ng-click="goToServiceForm(item.id, $event)" class="noright">
+          <p>{{ item.serviceName }}</p>
+          <md-divider></md-divider>
+          </md-list-item>
+        </md-content>
 
   </section>
-      
+</div>
+
     </md-dialog-content>
 
-    <md-dialog-actions layout="row">
-      <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
-        More on Wikipedia
-      </md-button>
-      <span flex></span>
-      <md-button ng-click="answer('not useful')">
-       Not Useful
-      </md-button>
-      <md-button ng-click="answer('useful')" class="md-primary">
-        Useful
-      </md-button>
-    </md-dialog-actions>
+   
   </form>
 </md-dialog>
