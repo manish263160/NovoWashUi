@@ -127,3 +127,20 @@ md-sidenav {
 md-input-container > label{
   font-size : 1.2em !important;
 }
+
+.nextButton{
+  .groupX-right{
+    float : right !important;
+    padding: 0 20px;
+    height: 42px;
+    position: relative;
+    border-radius: 4px;
+    min-width: 130px;
+    background-color: #03a9f4;
+    font-size: 20px;
+    color: #fff;
+    &:hover{
+      background-color: #03a9f9;
+    }
+  }
+}

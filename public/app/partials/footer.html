@@ -20,9 +20,9 @@
 
       <div class="row">
         <div class="col-md-12">
-          <div class="footer-logo">
+          <!-- <div class="footer-logo">
             <img src="assets/img/coffee/logo.png" alt="">
-          </div>
+          </div> -->
           <div class="row footerText para">
             <div class="col m2 left">
               <h3 class="left-align">ABOUT US</h3>
@@ -121,24 +121,23 @@
   <div class="secondary-footer dark-bg text-center">
     <div class="container">
       <ul>
-        <li>
-          <a href="#home" ui-sref="home" du-smooth-scroll du-scrollspy>Home</a>
-        </li>
-        <li>
-          <a href="#whyus" du-smooth-scroll du-scrollspy>Why Us</a>
-        </li>
-        <li>
-          <a href="#services" du-smooth-scroll du-scrollspy>Services</a>
-        </li>
-        <li>
-          <a ui-sref="aboutus">About Us</a>
-        </li>
-        <li>
-          <a href="#team" du-smooth-scroll du-scrollspy>Team</a>
-        </li>
-        <li>
-          <a href="http://www.novowash.com/blog/" data-scroll>Blog</a>
-        </li>
+        <li ng-class="active==='home' ? 'active' : ''">
+              <a href="#home" ui-sref="home" du-smooth-scroll du-scrollspy>Home</a>
+            </li>
+            <!-- <li ng-class="active==='service' ? 'active' : ''" ng-click="setActive">
+              <a href="#services" du-smooth-scroll du-scrollspy>Services</a>
+            </li> -->
+            <!-- This will be the team information -->
+            <li ng-class="active ==='aboutus' ? 'active' : ''">
+              <a  ui-sref="aboutus" >About us</a>
+            </li>
+
+            <li ng-class="active ==='aboutus' ? 'active' : ''">
+              <a  ui-sref="aboutus" >Be a partner</a>
+            </li>
+            <li>
+              <a href="http://www.novowash.com/blog/" data-scroll>Blog</a>
+            </li>
       </ul>
     </div>
     <!-- /.container -->

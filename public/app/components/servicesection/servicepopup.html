@@ -22,10 +22,12 @@
         </md-button>
         <div class="collection">
 
-         <a href="#"  ng-repeat="item in allcategory" ng-click="getServiceById($event,item.id)"
+         <a href="#" ng-if="isCatShow"  ng-repeat="item in allcategory" ng-click="getServiceById($event,item.id)"
           ng-class="catId === item.id ? 'active collection-item' : 'collection-item' ">{{item.catName}}
         </a>
          
+        <a href="#" ng-if="!isCatShow" class="active collection-item">{{unitCatName}}
+        </a>
         </div>
       </md-content>
 

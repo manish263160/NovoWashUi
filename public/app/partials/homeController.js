@@ -10,7 +10,6 @@ app
     $scope.servModel = false;
 
     $scope.catId;
-    console.log('---hi', $rootScope.active);
 
     $timeout(function () {
       // Simulates loading
@@ -37,19 +36,22 @@ app
         $rootScope.allcategory = response.data;
       })
 
-    $scope.showAdvanced = function (ev,catId) {
-      
-      console.log('catId===',catId);
+    $scope.showAdvanced = function (event,catId) {
+       if(catId == undefined || catId == null){
+         catId = 1;
+         $scope.isCatShow=true;
+       }else{
+        $scope.isCatShow=false;
+       }
       $rootScope.catId = catId;
 
-       console.log('----===',$scope.catId);
       $mdDialog.show({
         controller: DialogController,
         templateUrl: 'app/components/servicesection/servicepopup.html',
         parent: angular.element(document.body),
-        targetEvent: ev,
+        targetEvent: event,
         clickOutsideToClose: true,
-        scope: $scope
+        scope: $scope.$new()
       })
         .then(function (answer) {
           $scope.status = 'You said the information was "' + answer + '".';
@@ -59,17 +61,24 @@ app
     };
 
     function DialogController($scope, $mdDialog, $rootScope) {
-      console.log("-----dilog container", $rootScope.catId);
       $scope.catModel = true;
       var requestData = {};
       requestData.categoryId = $scope.catId
-      console.log('parent====',$scope.allcategory);
+
+      var isCatShow =$scope.isCatShow;
+      $scope.allcategory.forEach(function (data) {
+        if(data.id === $scope.catId){
+          if(!$scope.isCatShow){
+          $scope.unitCatName=data.catName;
+          }
+        }
+
+      });
       // $scope.allcategory= $rootScope.allcategory;
       // $scope.catId = $rootScope.catId;
       
         RootAPIServices.rootApi.getAllServiceByCatId(requestData,null).$promise.then(function (response) {
         $scope.allServices = response.data;
-        console.log('========== service', $scope.allServices );
       }) 
       
 
@@ -78,7 +87,6 @@ app
         $scope.catId=catId;
          RootAPIServices.rootApi.getAllServiceByCatId({categoryId:catId},null).$promise.then(function (response) {
         $scope.allServices = response.data;
-        console.log('========== getServiceById.allServices', $scope.allServices );
 
       }) 
       }
@@ -88,28 +96,23 @@ app
       };
 
       $scope.cancel = function ($event) {
-        console.log("close is clicked");
         $mdDialog.cancel();
-        $event.stopPropagation()
-      };
-
-      $scope.answer = function (answer) {
-        $mdDialog.hide(answer);
+        
       };
 
     }
 
 
-      $scope.goToServiceForm = function (id, event) {
+      $scope.goToServiceForm = function (id, $event) {
         console.log("---",id);
         $scope.servModel = true;
         $mdDialog.show({
         controller: DialogControllerServ,
         templateUrl: 'app/components/servicesection/serviceForm.html',
         parent: angular.element(document.body),
-        targetEvent: event,
-        clickOutsideToClose: true,
-        scope :$scope
+        targetEvent: $event,
+        clickOutsideToClose: false,
+        scope: $scope.$new()
       });
       };
 
@@ -123,13 +126,13 @@ app
         $mdDialog.hide();
       };
 
-      $scope.cancel = function () {
+      $scope.cancel = function ($event) {
         $mdDialog.cancel();
+        console.log("---$scope.catId---",$scope.catId);
+        $scope.showAdvanced($event,$scope.catId);
       };
 
-      $scope.answer = function (answer) {
-        $mdDialog.hide(answer);
-      };
+     
     }
 
 
