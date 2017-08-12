@@ -23,7 +23,8 @@ node_modules/
 *.rar
 *.tar
 *.zip
-*.sass-cache
+/.sass-cache/
+.sass-cache/
 # Logs and databases #
 ######################
 *.log

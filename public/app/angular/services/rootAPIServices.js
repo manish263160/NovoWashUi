@@ -44,6 +44,11 @@ app.factory('RootAPIServices', function ($resource, $localStorage, $rootScope, N
         getAllServiceByCatId :{
         url: rootURL + '/services/get/:categoryId',
         method:'POST',
+        },
+
+        getServicesCostById:{
+        url: rootURL + '/services/get/cost/:serviceId',
+        method:'POST',
         }
       })
 

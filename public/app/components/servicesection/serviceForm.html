@@ -1,7 +1,8 @@
 
 
-<md-dialog layout="column" layout-padding flex="50" ng-controller="serviceForm">
+<md-dialog layout="column" layout-padding flex="50" ng-controller="serviceForm as s">
       <div class="md-toolbar-tools" flex="50">
+        <strong class="centerHeader" flex="grow">{{categoryServiceData.serviceName}}</strong>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel()">
           <md-icon md-svg-src="assets/img/icons/ic_close_24px.svg" aria-label="Close dialog">X</md-icon>
@@ -11,15 +12,34 @@
   
 <md-dialog-content>
   <md-content >
-    <form name="projectForm" >
-      <div layout="row">
-      <md-progress-linear flex="70"  md-mode="determinate" value="{{progressbar}}"></md-progress-linear>
+    <form name="projectForm" class="projectForm">
+      <div layout="row" ng-if="s.pagecount < stepCount">
+      <md-progress-linear flex-offset="4" flex="70"  md-mode="determinate" value="{{s.progressbar}}"></md-progress-linear>
+      <span class="text-capitalize">{{progressbar}} complete</span>
       </div>
 
+      <div ng-if="s.pagecount===1">
+          <p ng-repeat="cost in serviceCost" class="paragraph">
+          <input name="price" ng-model="cost.id" type="radio" id="cost.id" />
+          <label for="cost.id" >{{cost.costDetails}}</label>  
+          </p> 
+      </div>
+      <div ng-if="s.pagecount===2">
+        page 2
+      </div>
+      <div ng-if="s.pagecount===3">
+        page 3
+      </div>
+      <div ng-if="s.pagecount===4">
+        page 4
+      </div>
       
-      <md-divider md-inset ng-if="!$last"></md-divider>
+
+      
+      <md-divider md-inset ></md-divider>
       <div class="nextButton">
-        <md-button class="groupX-right" type="submit">Next &nbsp; &rarr;</md-button>
+        <md-button class="groupX-right" type="submit" ng-click="s.pagecount=s.pagecount+1;s.actionButtonClick(s.pagecount)">{{s.pagecount > stepCount ?'Submit' : 'Next &nbsp; &rarr;'}} </md-button>
+        <md-button class="md-raised" type="submit" ng-click="s.pagecount=s.pagecount-1;s.backButtonClick(s.pagecount)" ng-if="s.pagecount > 1">&#8592; &nbsp; Back </md-button>
         
       </div>
 

@@ -1,6 +1,5 @@
-<md-dialog aria-label="All Services" flex="50">
-  <form ng-cloak>
-    <md-toolbar>
+<md-dialog layout="column" aria-label="All Services" flex="50">
+  <!-- <form ng-cloak> -->
       <div class="md-toolbar-tools">
         <h2>All Services</h2>
         <span flex></span>
@@ -8,7 +7,6 @@
           <md-icon md-svg-src="assets/img/icons/ic_close_24px.svg" aria-label="Close dialog">X</md-icon>
         </md-button>
       </div>
-    </md-toolbar>
 
     <md-dialog-content>
 <div ng-controller="AppCtrl" layout="column" style="height:500px;" ng-cloak>
@@ -38,7 +36,7 @@
           Toggle Category
         </md-button>
         
-        <md-list-item ng-repeat="item in allServices" ng-click="goToServiceForm(item.id, $event)" class="noright">
+        <md-list-item ng-repeat="item in allServices" ng-click="goToServiceForm(item, $event)" class="noright">
           <p>{{ item.serviceName }}</p>
           <md-divider></md-divider>
           </md-list-item>
@@ -50,5 +48,5 @@
     </md-dialog-content>
 
    
-  </form>
+  <!-- </form> -->
 </md-dialog>

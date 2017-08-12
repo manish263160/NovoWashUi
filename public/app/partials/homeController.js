@@ -44,7 +44,7 @@ app
         $scope.isCatShow=false;
        }
       $rootScope.catId = catId;
-
+       $scope.catId=catId;
       $mdDialog.show({
         controller: DialogController,
         templateUrl: 'app/components/servicesection/servicepopup.html',
@@ -103,9 +103,14 @@ app
     }
 
 
-      $scope.goToServiceForm = function (id, $event) {
-        console.log("---",id);
+      $scope.goToServiceForm = function (item, $event) {
+        console.log("-serviceid--",item.id);
+        $scope.categoryServiceData=item;
         $scope.servModel = true;
+        var serviceId =$scope.categoryServiceData.id;
+        RootAPIServices.rootApi.getServicesCostById({serviceId:serviceId},null).$promise.then(function (response) {
+        $scope.serviceCost=response.data;
+        console.log("---cost--",response.data)
         $mdDialog.show({
         controller: DialogControllerServ,
         templateUrl: 'app/components/servicesection/serviceForm.html',
@@ -114,13 +119,22 @@ app
         clickOutsideToClose: false,
         scope: $scope.$new()
       });
+
+      }) 
       };
 
 
     function DialogControllerServ($scope, $mdDialog, $rootScope) {
       var requestData = {};
+      // $scope.serviceCatId=serviceCatId;
+      //   $scope.serviceId=item.id;
+      angular.extend($scope,{
+          categoryServiceData : $scope.categoryServiceData,
+      });
+      console.log("$scope.categoryServiceData===",$scope.categoryServiceData);
       
       
+
 
       $scope.hide = function () {
         $mdDialog.hide();

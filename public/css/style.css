@@ -97,4 +97,14 @@ md-input-container > label {
   .nextButton .groupX-right:hover {
     background-color: #03a9f9; }
 
+.centerHeader {
+  text-align: center; }
+
+.nextButton {
+  padding: 1.5em; }
+
+.projectForm label {
+  font-size: 1em !important;
+  color: black; }
+
 /*# sourceMappingURL=style.css.map */
