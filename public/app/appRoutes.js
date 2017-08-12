@@ -55,5 +55,16 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         footer: footer
       },
     })
+    .state('become_partner', {
+      url: "/become_partner",
+      views: {
+        header: header,
+        content: {
+          templateUrl: "app/components/partner/add_partner.html",
+          controller: 'partnerController'
+        },
+        footer: footer
+      },
+    })
 
 });

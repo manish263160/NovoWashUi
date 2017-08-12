@@ -1,0 +1,56 @@
+<!-- Why us section start -->
+<section style="min-height:110px;background-color: #414142"></section>
+<section id="become_partner" class="background" style="padding-top:110px;background-color: #70AD47;color: white;">
+  <div class="container">
+    <div class="row" style="text-align: center">
+      <div class="col-md-12">
+        <h1>Be A Partner</h1>
+        <p>Want to partner with us? Get in touch today.</p>
+      </div>
+
+    </div>
+  </div>
+  <!-- /.container -->
+</section>
+<section style="height: auto!important;background-color:#f9f9f9">
+  <div class="container">
+    <div class="row">
+      <div class="md-inline-form">
+        <md-card>
+          <md-content layout-padding style="background: white">
+            <div>
+              <form ng-app="app" name="partnerForm" novalidate ng-submit="partnerForm.$valid">
+                <div layout-gt-sm="row">
+                  <md-input-container class="md-block" flex-gt-sm>
+                    <label>Name&#42;</label>
+                    <input ng-model="partner.partnername">
+                  </md-input-container>
+                </div>
+                <md-input-container class="md-block" flex-gt-sm>
+                  <label>Email&#42;</label>
+                  <input ng-model="partner.email">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                  <label>Contact Number&#42;</label>
+                  <input ng-model="partner.contactNumber">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                  <label>City&#42;</label>
+                  <input ng-model="partner.city">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                  <label>Message</label>
+                  <textarea ng-model="partner.message" md-maxlength="500" rows="4" md-select-on-focus></textarea>
+                </md-input-container>
+                <div layout-gt-sm="row" layout-align="center center">
+                  <md-button type="submit" class="md-raised md-primary" ng-disabled="partnerForm.$invalid">SUBMIT</md-button>
+                </div>
+              </form>
+            </div>
+          </md-content>
+        </md-card>
+      </div>
+    </div>
+  </div>
+</section>
+<!--  end -->
