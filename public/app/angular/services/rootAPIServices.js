@@ -49,7 +49,13 @@ app.factory('RootAPIServices', function ($resource, $localStorage, $rootScope, N
         getServicesCostById:{
         url: rootURL + '/services/get/cost/:serviceId',
         method:'POST',
-        }
+        },
+
+       bookOrEnquireService:{
+        url: rootURL + '/services/book/:enquire',
+        method:'POST',
+        },
+      
       })
 
   }

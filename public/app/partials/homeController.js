@@ -37,14 +37,15 @@ app
       })
 
     $scope.showAdvanced = function (event,catId) {
+      console.log("catId in showAdvanced mehod====",catId);
        if(catId == undefined || catId == null){
          catId = 1;
          $scope.isCatShow=true;
        }else{
         $scope.isCatShow=false;
-       }
       $rootScope.catId = catId;
        $scope.catId=catId;
+       }
       $mdDialog.show({
         controller: DialogController,
         templateUrl: 'app/components/servicesection/servicepopup.html',
@@ -63,7 +64,13 @@ app
     function DialogController($scope, $mdDialog, $rootScope) {
       $scope.catModel = true;
       var requestData = {};
+      if($scope.catId != undefined || $scope.catId != null){
+
       requestData.categoryId = $scope.catId
+      }else{
+        requestData.categoryId =1;
+        $scope.catId=1;
+      }
 
       var isCatShow =$scope.isCatShow;
       $scope.allcategory.forEach(function (data) {
@@ -142,8 +149,8 @@ app
 
       $scope.cancel = function ($event) {
         $mdDialog.cancel();
-        console.log("---$scope.catId---",$scope.catId);
-        $scope.showAdvanced($event,$scope.catId);
+        console.log("---$rootScope.catId---",$rootScope.catId);
+        $scope.showAdvanced($event,$rootScope.catId);
       };
 
      

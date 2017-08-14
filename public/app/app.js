@@ -1,6 +1,6 @@
   var app = angular.module('app', ['NVConfig', 'ui.router', 'duScroll', 'ngMaterial',
     'ngResource',
-    'ngStorage', 'angular.filter','ngAnimate'
+    'ngStorage', 'angular.filter','ngAnimate' , 'ngMaterialDatePicker' ,'ngValidate'
   ]);
 
   app.config(function ($mdThemingProvider) {
@@ -8,6 +8,13 @@
     .primaryPalette('purple')
 
   }) 
+
+  app.config(function ($validatorProvider) {
+        $validatorProvider.setDefaults({
+            errorElement: 'div',
+            errorLabelContainer: '.customerror'
+        });
+    });
 
   app.config(function ($provide) {
 

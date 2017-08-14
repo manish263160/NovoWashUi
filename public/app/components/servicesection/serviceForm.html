@@ -1,7 +1,7 @@
 
 
 <md-dialog layout="column" layout-padding flex="50" ng-controller="serviceForm as s">
-      <div class="md-toolbar-tools" flex="50">
+      <div class="md-toolbar-tools" layout="row">
         <strong class="centerHeader" flex="grow">{{categoryServiceData.serviceName}}</strong>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel()">
@@ -9,42 +9,149 @@
         </md-button>
       </div>
 
-  
-<md-dialog-content>
-  <md-content >
-    <form name="projectForm" class="projectForm">
-      <div layout="row" ng-if="s.pagecount < stepCount">
-      <md-progress-linear flex-offset="4" flex="70"  md-mode="determinate" value="{{s.progressbar}}"></md-progress-linear>
-      <span class="text-capitalize">{{progressbar}} complete</span>
+      <div layout="row">  <!-- ng-if="s.pagecount <= stepCount" -->
+      <md-progress-linear flex-offset="15" flex="70"  md-mode="determinate" value="{{s.progressbar}}"></md-progress-linear>
+      <span class="text-capitalize" flex="30" >{{s.progressbar}}&#37; complete</span>
       </div>
 
+      <md-divider ng-if="!$last"></md-divider>
+  
+<md-dialog-content class="fixedHeightDialog">
+  <md-content  class="mddialog">
+    
+    <form name="projectForm" class="projectForm" novalidate ng-validate="validationOptions">
+      <div ng-if="categoryServiceData.serviceType ===1">
+      <!--  step 1 -->
       <div ng-if="s.pagecount===1">
           <p ng-repeat="cost in serviceCost" class="paragraph">
-          <input name="price" ng-model="cost.id" type="radio" id="cost.id" />
-          <label for="cost.id" >{{cost.costDetails}}</label>  
+          <input name="serviceCostId" class="with-gap" ng-model="s.projectForm.serviceCostId" type="radio" id="{{cost.id}}" ng-value="cost.id"/>
+          <label for="{{cost.id}}" class="stronglabel">{{cost.costDetails}}</label>  
           </p> 
-      </div>
-      <div ng-if="s.pagecount===2">
-        page 2
-      </div>
-      <div ng-if="s.pagecount===3">
-        page 3
-      </div>
-      <div ng-if="s.pagecount===4">
-        page 4
-      </div>
-      
-
-      
-      <md-divider md-inset ></md-divider>
-      <div class="nextButton">
-        <md-button class="groupX-right" type="submit" ng-click="s.pagecount=s.pagecount+1;s.actionButtonClick(s.pagecount)">{{s.pagecount > stepCount ?'Submit' : 'Next &nbsp; &rarr;'}} </md-button>
-        <md-button class="md-raised" type="submit" ng-click="s.pagecount=s.pagecount-1;s.backButtonClick(s.pagecount)" ng-if="s.pagecount > 1">&#8592; &nbsp; Back </md-button>
         
+          <div class="customerror"></div> 
+      </div>
+        <!--  step 2 -->
+        <div ng-if="s.pagecount===2">
+        <h2><strong>Pick a date and time slot</strong></h2>
+        <md-input-container  flex-offset="30" flex="70" > 
+          <input flex="70" required mdc-datetime-picker="" date="true" time="true" type="text" id="datetimeedit" placeholder="Date" show-todays-date=""
+            minutes="true" name="serviceDate" min-date="date" edit-input="true" ng-model="s.projectForm.serviceDate" class=" md-input">
+            <!-- example from https://beenote.github.io/angular-material-datetimepicker/ -->
+
+        </md-input-container>
+          <button flex="30" class="md-primary md-icon-button md-button md-ink-ripple" type="button" style="top:-12px;left:-12px;" ng-click="displayDialogEdit()">
+            <md-icon class="material-icons ng-scope" role="img" aria-label="today">today</md-icon>
+            <div class="md-ripple-container">
+            </div>
+        </button>
+        
+        <!-- <h1>{{projectForm.serviceDate.$invalid}}</h1> --> 
+          <div class="customerror"></div> 
       </div>
 
+      <!--  step 3 -->
+      <div ng-if="s.pagecount===3" >
+        <h2><strong layout-padding>Where do you require the service?</strong></h2>
+          <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>House /Flat No</label>
+            <input ng-model="s.projectForm.house" >
+          </md-input-container>
+
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Landmark(Optional)</label>
+            <input ng-model="s.projectForm.landmark">
+          </md-input-container>
+        </div>
+
+        <div ayout-gt-xs="row">
+          <md-input-container  style="min-width: 50%">
+            <label>Locality</label>
+             <md-select ng-model="s.projectForm.locality">
+          <md-option ng-repeat="local in s.location" value="{{local}}">
+            {{local}}
+          </md-option>
+        </md-select>
+          </md-input-container>
+         </div>
+      </div>
+
+      <!--  step 4 -->
+      <div ng-if="s.pagecount===4">
+         <h2><strong>Please enter your contact details</strong></h2>
+          <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Name</label>
+            <input ng-model="s.projectForm.name">
+          </md-input-container>
+          </div>
+          <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Mobile</label>
+            <input ng-model="s.projectForm.phone">
+          </md-input-container>
+        </div>
+
+         <div ayout-gt-xs="row"> 
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Email</label>
+            <input ng-model="s.projectForm.email">
+          </md-input-container>
+
+         </div>
+      </div>
+      </div>
+    <div ng-if="categoryServiceData.serviceType ===0" >
+      <div ng-if="s.pagecount <= stepCount">
+    <h2><strong>Please enter your contact details</strong></h2>
+          <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>{{categoryServiceData.serviceFor == 2 ?'Company' : ''}} Name</label>
+            <input ng-model="s.projectForm.name">
+          </md-input-container>
+          </div>
+          <div layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>{{categoryServiceData.serviceFor == 2 ? 'Company' : ''}} Mobile</label>
+            <input ng-model="s.projectForm.phone">
+          </md-input-container>
+        </div>
+
+         <div ayout-gt-xs="row"> 
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>{{categoryServiceData.serviceFor == 2 ? 'Company' : ''}} Email</label>
+            <input ng-model="s.projectForm.email">
+          </md-input-container>
+
+         </div>
+      </div> 
+      </div>
+    
+      <!--  final step -->
+      <div ng-if="s.pagecount > stepCount">
+        <div layout="column">
+          <div layout="row">
+          <strong class="centerHeader" flex="grow">Thank you!</strong>
+          </div>
+        <div layout="row">
+          <h2 class="centerHeader" flex="grow">Your booking is confirmed.</h2>
+          </div>
+         <div layout="row">
+          <h2 class="centerHeader" flex="grow">Our team will get back to you shortly.</h2>
+          </div>
+        </div>
+        </div>
+
+       <md-divider ng-if="!$last"></md-divider>
+       <footer>
+      <div class="nextButton">
+        <md-button class="groupX-right" type="{button" ng-if="s.pagecount < stepCount" ng-click="s.pagecount=s.pagecount+1;s.actionButtonClick(s.pagecount ,projectForm)">{{s.pagecount >= stepCount ?'Submit' : 'Next &nbsp; &rarr;'}} </md-button>
+        <md-button class="groupX-right" type="submit" ng-if="s.pagecount === stepCount" ng-click="serviceFormSubmit()">Submit </md-button>
+        <md-button class="md-raised" type="button" ng-click="s.pagecount=s.pagecount-1;s.actionButtonClick(s.pagecount)" ng-if="s.pagecount > 1 && s.pagecount < stepCount+1">&#8592; &nbsp; Back </md-button>
+         <md-button class="md-raised md-warn" flex-offset="40" type="button" ui-sref="home" ui-sref-opts="{reload: true, notify: true}" ng-if="s.pagecount > stepCount">Home </md-button> 
+      </div>
+       </footer>
     </form>
   </md-content>
-
     </md-dialog-content>
   </md-dialog>

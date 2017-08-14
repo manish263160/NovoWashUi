@@ -125,7 +125,7 @@ md-sidenav {
 }
 
 md-input-container > label{
-  font-size : 1.2em !important;
+  font-size : 0.75em !important;
 }
 
 .nextButton{
@@ -152,9 +152,50 @@ md-input-container > label{
   padding: 1.5em;
 }
 .projectForm{
-  label{
+  .stronglabel{
     font-size: 1em !important;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
   }
+  p{
+    margin-bottom: 0px;
+  }
+  .md-focused{
+    background-color: #03a9f9 !important;
+  }
 }
+
+.mddialog{
+  background-color: transparent !important;
+}
+
+md-progress-linear{
+.md-container{
+  height: 7px !important;
+  border-radius: 3em !important; 
+  .md-bar{
+    height: 7px !important;
+    border-radius: 3em !important;
+    background-color: #03a9f9 !important;
+  }
+}
+} 
+.collection a.collection-item{
+  color: black ;
+  transition: 0.75s;
+}
+.collection{
+  .active{
+    background-color: #03a9f9 !important;
+  }
+  .collection-item{
+    line-height: 2.5em;
+  }
+  }
+
+  .customerror{
+        background-color: #E91E63;
+    border-radius: 4px;
+    color: #ffffff;
+    text-align: center;
+  }
