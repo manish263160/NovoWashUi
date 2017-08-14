@@ -31,32 +31,34 @@ app.factory('RootAPIServices', function ($resource, $localStorage, $rootScope, N
     return response;
   }
   return {
-      rootApi:
-      $resource(rootURL + '/services', {}, {
-
-
-        getAllServiceCategories :{
+    rootApi:
+    $resource(rootURL + '/services', {}, {
+      getAllServiceCategories: {
         url: rootURL + '/services/get/category',
-        method:'POST',
-        transformResponse:defaultTransformResponse
-        },
+        method: 'POST',
+        transformResponse: defaultTransformResponse
+      },
 
-        getAllServiceByCatId :{
+      getAllServiceByCatId: {
         url: rootURL + '/services/get/:categoryId',
-        method:'POST',
-        },
+        method: 'POST',
+      },
 
-        getServicesCostById:{
+      getServicesCostById: {
         url: rootURL + '/services/get/cost/:serviceId',
-        method:'POST',
-        },
+        method: 'POST',
+      },
 
-       bookOrEnquireService:{
+      bookOrEnquireService: {
         url: rootURL + '/services/book/:enquire',
-        method:'POST',
-        },
-      
-      })
+        method: 'POST',
+      },
+
+      becomePartnerService : {
+        url:rootURL + '/partner/add',
+        method: 'POST'
+      }
+    })
 
   }
 
