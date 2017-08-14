@@ -1,6 +1,6 @@
   var app = angular.module('app', ['NVConfig', 'ui.router', 'duScroll', 'ngMaterial',
-    'ngResource',
-    'ngStorage', 'angular.filter','ngAnimate' , 'ngMaterialDatePicker' ,'ngValidate'
+    'ngResource','ngMessages',
+    'ngStorage', 'angular.filter','ngAnimate' , 'ngMaterialDatePicker' ,'ngValidate' ,'ngAria',
   ]);
 
   app.config(function ($mdThemingProvider) {
@@ -9,12 +9,21 @@
 
   }) 
 
-  app.config(function ($validatorProvider) {
+  /* app.config(function ($validatorProvider) {
         $validatorProvider.setDefaults({
             errorElement: 'div',
-            errorLabelContainer: '.customerror'
+            // errorLabelContainer: '.customerror'
+            errorPlacement: function(error, element) {
+              console.log("element===",element,"  ",element['0'].type);
+             element['0'].type;
+             if(element['0'].type === 'radio' || element['0'].type==='date'){
+              error.appendTo('.customerror');
+             }else{
+               error.appendTo('.text');
+             }
+          }
         });
-    });
+    }); */
 
   app.config(function ($provide) {
 

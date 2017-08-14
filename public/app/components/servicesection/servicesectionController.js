@@ -1,114 +1,132 @@
 'use strict';
-app.controller('serviceForm', function ($scope, $http, mdcDateTimeDialog, $rootScope, RootAPIServices) {
-        var vm = this;
-        $scope.projectForm = {};
 
-        vm.location = ['East delhi', 'West delhi', 'North delhi', 'South Delhi'];
+app.
+controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope ,RootAPIServices) {
+        var vm = this;
+        $scope.parent =$scope.$parent;
+        $scope.myForm ={};
+
+        $scope.location=['East delhi','West delhi','North delhi','South Delhi'];
         $scope.date = moment().startOf('day');
         $scope.minDate = moment().subtract(3, 'year');
-        $scope.maxDate = moment().add(3, 'year');
+      $scope.maxDate = moment().add(3, 'year');
 
-        $scope.displayDialogEdit = function () {
-                mdcDateTimeDialog.show({
-                        currentDate: $scope.dateTimeEdit || moment().startOf('day'),
-                        maxDate: $scope.maxDate,
-                        showTodaysDate: '',
-                        time: true
-                })
-                        .then(function (date) {
-                                //           $scope.projectForm.push
-                                vm.projectForm.serviceDate = date;
-                        }, function () { });
-        };
+       $scope.displayDialogEdit = function (form) {
+        mdcDateTimeDialog.show({
+          currentDate: $scope.dateTimeEdit || moment().startOf('day'),
+          maxDate: $scope.maxDate,
+          showTodaysDate: '',
+          time: true
+        })
+          .then(function (date) {
+        //           $scope.projectForm.push
+            $scope.myForm.serviceDate = date;
+            $("#datetimeedit-error").hide();
+          }, function(){});
+      };
 
-        vm.progressbar = 0;
-        vm.pagecount = 1;
-        vm.servicesCost = [];
-        $scope.init = function () {
-                $scope = $scope.$parent;
-                console.log("--data here--", $scope);
-                console.log("--data servicesCost--", $scope.serviceCost)
+        
+        $scope.progressbar=0;
+        $scope.servicesCost=[];
+        $scope.init=function(){
+                $scope.pagecount=1;
+                
+                console.log("--data here--",$scope.parent);
+                console.log("--data servicesCost--",$scope.parent.serviceCost)
 
-                $scope.serviceCost.forEach(function (element) {
+                $scope.parent.serviceCost.forEach(function(element) {
                         console.log(element.price);
                 }, this);
-                if ($scope.categoryServiceData.serviceType === 1) {
-                        $scope.stepCount = 4;
+                if($scope.parent.categoryServiceData.serviceType ===1){
+                        $scope.stepCount= 4;
                 }
-                else if ($scope.categoryServiceData.serviceType === 0) {
-                        $scope.stepCount = 1;
+                else if($scope.parent.categoryServiceData.serviceType ===0){
+                        $scope.stepCount= 1;
                 }
 
-                console.log("initial page count==", vm.pagecount);
+                console.log("initial page count==", $scope.pagecount);
         }
 
 
-        vm.actionButtonClick = function (pagecount, form) {
-                console.log("pagecount===", pagecount);
-                if (form.validate()) {
-                        // Form is valid! 
-                        console.log("trueeeeeeeeeeeeee");
-
-                        pagecount--;
-
-
-                        var perc = pagecount * 100 / $scope.stepCount;
-                        console.log("click happened", perc);
-                        vm.progressbar = perc;
-                } else {
-                        vm.pagecount--;
-                        form.validate();
-                        return false;
+         $scope.actionButtonClick = function (pagecount , form) {
+                console.log("-------------------",form.$valid);
+                if(form.$valid){
+                 console.log("pagecount===",pagecount);
+                 $scope.pagecount=pagecount;
+                 pagecount--;
+                 var perc=pagecount*100/ $scope.stepCount;
+                        console.log("click happened",perc);
+                        $scope.progressbar=perc;
                 }
+                 /* if(form.validate()) {
+        // Form is valid! 
+                console.log("trueeeeeeeeeeeeee");
+                 }else{
+                         $scope.pagecount--;
+                                form.validate();
+                                return false;
+                        } */
+      };
+                
+          $scope.backButtonClick = function (pagecount){
+                        console.log("click pagecount",pagecount);
+                        $scope.pagecount=pagecount;
+                        pagecount--;
+                        var perc=pagecount*100/ $scope.stepCount;
+                        $scope.progressbar=perc;
+                        console.log("click perc",perc);
+                        // $scope.pagecount--;
         };
 
-        /*  vm.backButtonClick = function (pagecount){
-                        console.log("click pagecount",pagecount);
-                        var perc=pagecount*100/ $scope.stepCount;
-                        pagecount--;
-                        vm.progressbar=perc;
-                        console.log("click perc",perc);
-                }; */
-        $scope.serviceFormSubmit = function () {
+                $scope.serviceFormSubmit=function(){
+                                
+                                 var enquire={};
+                        
+                                enquire.serviceId = $scope.categoryServiceData.id,
+                                enquire.serviceCostId = $scope.myForm.serviceCostId,
+                                enquire.house = $scope.myForm.house,
+                                enquire.landmark= $scope.myForm.landmark,
+                                enquire.locality= $scope.myForm.locality,
+                                enquire.name= $scope.myForm.name,
+                                enquire.phone= $scope.myForm.phone,
+                                enquire.email= $scope.myForm.email,
+                                enquire.serviceDate= $scope.myForm.serviceDate;
+                        // enquire.push(data);
+                         console.log("submit click",enquire);
+                         RootAPIServices.rootApi.bookOrEnquireService({},enquire).$promise.then(function (response) {
 
-                var enquire = {};
+                                console.log("result===",response);
+                                $scope.pagecount++;
+                                console.log("pagecount after submit===",$scope.pagecount);
+                                $scope.progressbar=100;
+                         });
 
-                enquire.serviceId = $scope.categoryServiceData.id,
-                        enquire.serviceCostId = vm.projectForm.serviceCostId,
-                        enquire.house = vm.projectForm.house,
-                        enquire.landmark = vm.projectForm.landmark,
-                        enquire.locality = vm.projectForm.locality,
-                        enquire.name = vm.projectForm.name,
-                        enquire.phone = vm.projectForm.phone,
-                        enquire.email = vm.projectForm.email,
-                        enquire.serviceDate = vm.projectForm.serviceDate;
-                // enquire.push(data);
-                console.log("submit click", enquire);
-                RootAPIServices.rootApi.bookOrEnquireService({}, enquire).$promise.then(function (response) {
-
-                        console.log("result===", response);
-                        vm.pagecount++;
-                        console.log("pagecount after submit===", vm.pagecount);
-                        vm.progressbar = 100;
-                });
-
-        }
+                }
 
         $scope.init();
 
-        $scope.validationOptions = {
-                rules: {
-                        serviceCostId: {
-                                required: true,
-                        },
-                        serviceDate: {
-                                required: true,
-                                minlength: 6
-                        }
-                },
-                messages: {
-
-                }
+/* $scope.validationOptions = {
+    rules: {
+        serviceCostId: {
+            required: true,
+        },
+        serviceDate: {
+            required: true,
+        }, 
+        house:{
+        required: true,
+        },
+        landmark:{
+                required: true,
+        },
+        locality:{
+                required: true,
         }
-
+        
+    },
+    messages: {
+        
+    }
+} */
+        
 });
