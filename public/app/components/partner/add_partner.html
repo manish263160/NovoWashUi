@@ -19,7 +19,7 @@
         <md-card>
           <md-content layout-padding style="background: white">
             <div>
-              <form ng-app="app" name="partnerForm" novalidate ng-submit="partnerForm.$valid">
+              <form ng-app="app" name="partnerForm" ng-controller="partnerController" novalidate ng-submit="partnerForm.$valid">
                 <div layout-gt-sm="row">
                   <md-input-container class="md-block" flex-gt-sm>
                     <label>Name&#42;</label>
@@ -43,7 +43,7 @@
                   <textarea ng-model="partner.message" md-maxlength="500" rows="4" md-select-on-focus></textarea>
                 </md-input-container>
                 <div layout-gt-sm="row" layout-align="center center">
-                  <md-button type="submit" class="md-raised md-primary" ng-disabled="partnerForm.$invalid">SUBMIT</md-button>
+                  <button type="submit" class="waves-effect waves-light btn"><i class="material-icons left">send</i>SUBMIT</button>
                 </div>
               </form>
             </div>
