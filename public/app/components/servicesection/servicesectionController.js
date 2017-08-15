@@ -8,15 +8,17 @@ controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope
 
         $scope.location=['East delhi','West delhi','North delhi','South Delhi'];
         $scope.date = moment().startOf('day');
-        $scope.minDate = moment().subtract(3, 'year');
-      $scope.maxDate = moment().add(3, 'year');
+        $scope.minDate = new Date();
+        $scope.maxDate = moment().add(1, 'year');
+        //$scope.disableDates = 
 
        $scope.displayDialogEdit = function (form) {
         mdcDateTimeDialog.show({
           currentDate: $scope.dateTimeEdit || moment().startOf('day'),
           maxDate: $scope.maxDate,
           showTodaysDate: '',
-          time: true
+          time: true,
+          minDate:$scope.minDate
         })
           .then(function (date) {
         //           $scope.projectForm.push
