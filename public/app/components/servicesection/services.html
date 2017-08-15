@@ -1,29 +1,32 @@
-<section id="services" ng-cloak  class="section-padding2" data-stellar-background-ratio="0.5">
-    <!-- <div class="container"> -->
+<section>
+  <div class="text-center">
+    <h2 class="section-title text-capitalize service-padding">We Provide These Services</h2>
+  </div>
+</section>
 
-      <div class="text-center mb-80">
-        <h2 class="section-title text-capitalize white-text">We Provide These Services</h2>
-        
-        <div class="row">
-          <ul>
-            <li  class="col m2"  ng-repeat="item in allcategory">
-              <div class="row">
-            <i class="material-icons">favorite</i>
-            <div class="row">
-            <a class="" ng-click="showAdvanced($event, item.id)">  {{item.catName}}</a>
-            </div>
-            
-            </li>
+<section id="services" class="overlay dark-7 novo-banner-2 bg-fixed parallax-bg" data-stellar-background-ratio="0.5">
+  <div class="row no-gutter">
+    <div class="col m3 s6" ng-repeat="item in allcategory">
+      <div class="featured-box border-right text-center hover brand-hover">
+        <div class="featured-wrapper">
+          <div class="intro-header">
+            <img src="assets/img/icons/full_home.png" alt="" height=50 width=50 />
+            <h2 class="white-text hover-text">{{item.catName}}</h2>
+          </div>
 
-
-          </ul>
+          <div class="content">
+            <a class="waves-effect  btn btn-larg " ng-click="showAdvanced($event, item.id)">{{item.catType ===2 ? 'Enquire Now' : 'Book Now'}}</a>
+          </div>
         </div>
-        
-        
-        <!-- <md-button class="md-primary md-raised page-scroll btn btn-lg text-capitalize waves-effect waves-dark" ng-click="showAdvanced($event)">Book A Service</md-button> -->
+        <!-- /.featured-wrapper -->
       </div>
-    <!-- </div> -->
-    <!-- /.container -->
-  </section>
+      <!-- /.featured-box  -->
+    </div>
+    <!-- /.col-md-3 -->
 
-<md-divider ng-if="!$last"></md-divider>
+  </div>
+
+
+</section>
+
+<!-- <md-divider ng-if="!$last"></md-divider> -->

@@ -49,7 +49,7 @@ Common featured boxes
 .featured-box {
     position: relative;
     overflow: hidden;
-    min-height: 300px;
+    min-height: 200px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -74,10 +74,10 @@ Common featured boxes
 }
 
 .featured-box:hover .featured-wrapper .intro-header {
-    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-60px,0);
-       -moz-transform: translate3d(0,-50%,0) translate3d(0,-60px,0);
-        -ms-transform: translate3d(0,-50%,0) translate2d(0,-60px,0);
-            transform: translate3d(0,-50%,0) translate3d(0,-60px,0);
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-20px,0);
+       -moz-transform: translate3d(0,-50%,0) translate3d(0,-20px,0);
+        -ms-transform: translate3d(0,-50%,0) translate2d(0,-20px,0);
+            transform: translate3d(0,-50%,0) translate3d(0,-20px,0);
 }
 
 .featured-wrapper .intro-header i {
@@ -187,7 +187,7 @@ Common featured boxes
 .hover:hover i,
 .hover:hover h2,
 .hover:hover .content {
-    color: #fff !important;
+    color: #656D67 !important;
 }
 
 .hover:hover i {

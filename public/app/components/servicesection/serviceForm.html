@@ -31,7 +31,7 @@
               </md-radio-group>
             </md-input-container>
             <div ng-messages="projectForm.serviceCostId.$error" ng-if="projectForm.$submitted || projectForm.serviceCostId.$touched">
-              <div class="customerror" ng-message="required">status is required.</div>
+              <div class="customerror" ng-message="required" ng-hide="myVar">Price is required.</div>
             </div>
           </div>
           <!--  step 2 -->
@@ -49,7 +49,7 @@
               </div>
             </button>
             <div ng-messages="projectForm.serviceDate.$error" ng-if="projectForm.$submitted || projectForm.serviceDate.$touched">
-              <div ng-message="required" class="customerror">Date is required.</div>
+              <div ng-message="required" class="customerror" ng-hide="myVar">Date is required.</div>
             </div>
           </div>
 
@@ -61,7 +61,7 @@
                 <label>House /Flat No</label>
                 <input ng-model="myForm.house" name="house" id="house" ng-required="true">
                 <div ng-messages="projectForm.house.$error" ng-if="projectForm.$submitted || projectForm.house.$touched">
-                  <div ng-message="required">House Name is required.</div>
+                  <div ng-message="required" ng-hide="myVar">House Name is required.</div>
                 </div>
               </md-input-container>
 
@@ -69,7 +69,7 @@
                 <label>Landmark(Optional)</label>
                 <input ng-model="myForm.landmark" name="landmark" id="landmark" ng-required="true">
                 <div ng-messages="projectForm.landmark.$error" ng-if="projectForm.$submitted || projectForm.landmark.$touched">
-                  <div ng-message="required">Landmark is required.</div>
+                  <div ng-message="required" ng-hide="myVar">Landmark is required.</div>
                 </div>
               </md-input-container>
             </div>
@@ -83,7 +83,7 @@
                   </md-option>
                 </md-select>
                 <div ng-messages="projectForm.locality.$error" ng-if="projectForm.$submitted || projectForm.locality.$touched">
-                  <div ng-message="required">Locality is required.</div>
+                  <div ng-message="required" ng-hide="myVar">Locality is required.</div>
                 </div>
               </md-input-container>
             </div>
@@ -100,7 +100,7 @@
                 <input ng-model="myForm.name" ng-required="true" name="name">
 
                 <div ng-messages="projectForm.name.$error" ng-if="projectForm.$submitted || projectForm.name.$touched">
-                  <div ng-message="required">Name is required.</div>
+                  <div ng-message="required" ng-hide="myVar">Name is required.</div>
                 </div>
               </md-input-container>
             </div>
@@ -109,7 +109,7 @@
                 <label>Mobile</label>
                 <input ng-model="myForm.phone" ng-required="true" name="phone">
                 <div ng-messages="projectForm.phone.$error" ng-if="projectForm.$submitted || projectForm.phone.$touched">
-                  <div ng-message="required">Phone is required.</div>
+                  <div ng-message="required" ng-hide="myVar">Phone is required.</div>
                 </div>
               </md-input-container>
 
@@ -120,7 +120,7 @@
                 <label>Email</label>
                 <input type="email" ng-model="myForm.email" ng-required="true" name="email" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/">
                 <div ng-messages="projectForm.email.$error" ng-if="projectForm.$submitted || projectForm.email.$touched">
-                  <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                  <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']" ng-hide="myVar">
                     Your email must be between 10 and 100 characters long and look like an e-mail address.
                   </div>
                 </div>
@@ -136,20 +136,36 @@
             <div layout-gt-sm="row">
               <md-input-container class="md-block" flex-gt-sm>
                 <label>{{categoryServiceData.serviceFor == 2 ?'Company' : ''}} Name</label>
-                <input ng-model="myForm.name">
+                <input ng-model="myForm.name" ng-required="true">
+
+                <div ng-messages="projectForm.name.$error" ng-if="projectForm.$submitted || projectForm.name.$touched">
+                  <div ng-message="required"  ng-hide="myVar">
+                    Please enter your name.
+                  </div>
+                </div>
               </md-input-container>
             </div>
             <div layout-gt-sm="row">
               <md-input-container class="md-block" flex-gt-sm>
                 <label>{{categoryServiceData.serviceFor == 2 ? 'Company' : ''}} Mobile</label>
-                <input ng-model="myForm.phone">
+                <input ng-model="myForm.phone" ng-required="true">
+                <div ng-messages="projectForm.phone.$error" ng-if="projectForm.$submitted || projectForm.phone.$touched">
+                  <div ng-message="required"  ng-hide="myVar">
+                    Please enter your name.
+                  </div>
+                </div>
               </md-input-container>
             </div>
 
             <div ayout-gt-xs="row">
               <md-input-container class="md-block" flex-gt-sm>
                 <label>{{categoryServiceData.serviceFor == 2 ? 'Company' : ''}} Email</label>
-                <input ng-model="myForm.email">
+                <input ng-model="myForm.email" ng-required="true">
+                <div ng-messages="projectForm.email.$error" ng-if="projectForm.$submitted || projectForm.email.$touched">
+                  <div ng-message="required"  ng-hide="myVar">
+                    Please enter your name.
+                  </div>
+                </div>
               </md-input-container>
 
             </div>
@@ -174,7 +190,7 @@
         <md-divider ng-if="!$last"></md-divider>
         <footer>
           <div class="nextButton">
-            <md-button class="groupX-right" type="{button" ng-if="pagecount < stepCount" ng-click="projectForm.$valid && actionButtonClick(pagecount+1 ,projectForm)">{{pagecount >= stepCount ?'Submit' : 'Next &nbsp; &rarr;'}} </md-button>
+            <md-button class="groupX-right" type="{button" ng-if="pagecount < stepCount" ng-click="actionButtonClick(pagecount+1 ,projectForm)">{{pagecount >= stepCount ?'Submit' : 'Next &nbsp; &rarr;'}} </md-button>
             <md-button class="groupX-right" type="submit" ng-if="pagecount === stepCount" ng-click="projectForm.$valid && serviceFormSubmit()">Submit </md-button>
             <md-button class="md-raised" type="button" ng-click="pagecount=pagecount-1;backButtonClick(pagecount)" ng-if="pagecount > 1 && pagecount < stepCount+1">&#8592; &nbsp; Back </md-button>
             <md-button class="md-raised md-warn" flex-offset="40" type="button" ui-sref="home" ui-sref-opts="{reload: true, notify: true}"

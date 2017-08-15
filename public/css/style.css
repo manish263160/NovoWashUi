@@ -140,4 +140,56 @@ md-progress-linear .md-container {
   color: #ffffff;
   text-align: center; }
 
+.service-padding {
+  padding-top: 2%; }
+
+.whyDependOnUs {
+  background-color: #f4f4f4;
+  margin-left: 0;
+  text-align: center;
+  color: black;
+  font-family: FuturaBT; }
+  .whyDependOnUs .whyDependOnUs__icons .col-md-4 img {
+    width: 90%; }
+  .whyDependOnUs .whyDependOnUs__icons .col-md-4 img {
+    width: 90%; }
+  .whyDependOnUs .whyDependOnUs__icons .col-md-7 {
+    text-align: left;
+    position: absolute;
+    top: 35%;
+    left: 40%; }
+  .whyDependOnUs .whyDependOnUs__icons > div {
+    margin-bottom: 20px;
+    margin-top: 20px; }
+  .whyDependOnUs .whyDependOnUs__icons span {
+    font-size: 17px;
+    font-weight: 700; }
+  .whyDependOnUs .heading, .whyDependOnUs .menuItems ul li.categoryHeading, .whyDependOnUs .testimonee {
+    text-transform: uppercase;
+    font-weight: 700; }
+
+.titlecell .btn-secondary:visited {
+  color: #fff; }
+.titlecell a:visited {
+  color: #0bb8e3;
+  /* text-decoration: none; */ }
+.titlecell .btn-secondary {
+  background-color: #00cded;
+  border: 1px solid #00cded;
+  color: #fff; }
+.titlecell .btn-secondary:hover {
+  background-color: #07deff;
+  border-color: #07deff;
+  text-decoration: none; }
+.titlecell .big-button {
+  display: inline-block;
+  width: 100%;
+  max-width: 11.5em;
+  padding: 0.5em 0;
+  font-size: 1.6em;
+  font-family: "Circular","Helvetica",sans-serif;
+  line-height: 1.71em;
+  border-radius: 4px;
+  text-transform: capitalize; }
+
 /*# sourceMappingURL=style.css.map */

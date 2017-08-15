@@ -44,7 +44,7 @@ a:hover {
 .brand-bg,
 .brand-hover:hover,
 .grid-news-hover .post-date {
-    background-color: #d29348 !important;
+    background-color: #f4f4f4 !important;
 }
 .brand-bg.darken-2 {
     background-color: #bd8949 !important;
@@ -67,7 +67,7 @@ a:hover {
 
 /*general css for coffee shop*/
 .logo-brand {
-    font-family: 'Great Vibes', cursive;
+    /* font-family: 'Great Vibes', cursive; */
     font-size: 30px;
     margin: 1px 30px 0 0;
 }

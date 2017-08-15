@@ -51,14 +51,17 @@ controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope
 
 
          $scope.actionButtonClick = function (pagecount , form) {
-                console.log("-------------------",form.$valid);
-                if(form.$valid){
+                console.log("-------------------",$scope.projectForm.$valid);
+                if($scope.projectForm.$valid){
                  console.log("pagecount===",pagecount);
                  $scope.pagecount=pagecount;
                  pagecount--;
                  var perc=pagecount*100/ $scope.stepCount;
                         console.log("click happened",perc);
                         $scope.progressbar=perc;
+                        $scope.myVar = true;
+                }else{
+                         $scope.myVar = false;
                 }
                  /* if(form.validate()) {
         // Form is valid! 
