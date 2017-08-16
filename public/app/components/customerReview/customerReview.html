@@ -1,0 +1,39 @@
+<section ng-controller="customertestinomial">
+  <div class="container">
+
+        <div class="content">
+
+    <script type="text/ng-template" id="tpl.html">
+                <div class="row">
+      <div class="col s12 m5">
+        <div class="card-panel teal">
+          <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+          </span>
+        </div>
+      </div>
+    </div>
+    </script>
+
+  <slick class="slider" settings="slickConfig4" ng-if="slickConfig4Loaded">
+                <div ng-repeat="i in number4">
+                    <div style="width:auto;height:100px ; " ng-include="'tpl.html'"></div>
+                </div>
+            </slick>
+
+
+             <div>
+                <button class="btn btn-info" ng-click="slickConfig4.method.slickGoTo(2)">GoTo(2)</button>
+                <button class="btn btn-info" ng-click="slickConfig4.method.slickPrev()">Prev()</button>
+                <button class="btn btn-info" ng-click="slickConfig4.method.slickNext()">Next()</button>
+                <button class="btn btn-info" ng-click="updateNumber4()">Update/Add()</button>
+                <button class="btn btn-info" ng-click='slickConfig4.method.slickRemove(3)'>Remove(3)</button>
+                <button class="btn btn-info" ng-click='slickConfig4.method.slickPlay()'>Play()</button>
+                <button class="btn btn-info" ng-click='slickConfig4.method.slickPause()'>Pause()</button>
+            </div>
+        </div>
+  </div>
+    
+
+</section>
+

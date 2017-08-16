@@ -192,4 +192,19 @@ md-progress-linear .md-container {
   border-radius: 4px;
   text-transform: capitalize; }
 
+.slider .slick-prev:before, .slider .slick-next:before {
+  font-family: 'slick';
+  font-size: 36px;
+  line-height: 0;
+  opacity: 2;
+  font-weight: 400 !important;
+  text-transform: none;
+  color: #ddd !important;
+  background-color: transparent;
+  transition: all .3s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .slider .slick-prev:before .slider, .slider .slick-next:before .slider {
+    height: 100% !important; }
+
 /*# sourceMappingURL=style.css.map */

@@ -276,3 +276,30 @@
     text-transform: capitalize;
 }
   }
+
+  .slider{
+
+    .slick-prev:before, .slick-next:before {
+    font-family: 'slick';
+    font-size: 36px;
+    line-height: 0;
+    opacity: 2;
+    font-weight: 400!important;
+    text-transform: none;
+    color: #ddd!important;
+    background-color: transparent;
+    transition: all .3s;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    &:hover{
+
+    }
+
+    .slider{
+      height: 100% !important;
+    }
+    h3{
+      
+    }
+}
+  }

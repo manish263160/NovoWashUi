@@ -1,35 +1,4 @@
-/********************************************************
 
-
-/*
-====================================
-[ CSS TABLE CONTENT ]
-------------------------------------
-    1.0 - General
-    2.0 - Typography
-    3.0 - Global Style
-    4.0 - Color Presets
-    5.0 - Overlay css
-    6.0 - Hero css
-    7.0 - Background Banner
-    8.0 - 404 page
-    9.0 - Author Wrapper
-    10.0 - Progress bar
-    11.0 - Clients
-    12.0 - Gallery Thumb
-    13.0 - Material CSS Customization
-    14.0 - Social Icon Animation
-    15.0 - device mockup carousel
-    16.0 - Search Style
-    17.0 - Preloader
-
--------------------------------------
-[ END CSS TABLE CONTENT ]
-=====================================
-*/
-
-
-/* Import css files */
 @import url("../assets/fonts/flaticon/flaticon.css");
 
 /* Google Web Fonts */
@@ -41,7 +10,7 @@
 /* ================= General ==================== */
 
 body{
-    font-family: 'Raleway', sans-serif !important;
+    font-family: 'Arial', sans-serif !important;
     font-size: 14px;
     line-height: 29px;
     font-weight: 500;
@@ -51,7 +20,7 @@ body{
 }
 
 html {
-    font-family: 'Raleway', sans-serif!important;
+    font-family: 'Arial', sans-serif!important;
 }
 
 html,
@@ -96,7 +65,7 @@ a,
 /* ================ Typography ================== */
 
 h1, h2, h3, h4, h5, h6{
-    font-family: 'Raleway', sans-serif!important;
+    font-family: 'Arial', Times New Roman !important;
     font-weight: 400;
     margin: 0 0 15px;
 }
