@@ -1,82 +1,108 @@
 <!-- Why us section start -->
-  <section id="about" class="background" style="padding-top:110px">
-    <div class="container">
-      <div class="row">
+<section id="about" class="background" style="height:110px">
+</section>
+<section style="background-color: white;padding:50px;">
+  <div class="container">
+    <div class="row">
         <div class="col-md-6 mb-sm-50">
-          <img src="assets/img/whyus/steamcleaning.jpg" alt="" class="img-responsive image_round">
-        </div>
-        <!-- /.col-md-6 -->
-
-        <div class="col-md-6">
-          <h2 class="font-40 mb-30">Adopting state-of-the-art steam technolgies for total sanitization</h2>
-          <p>Novowash adopts advanced steam technologies to not just clean but sanitize interiors. When a steam cleaner is used,
-            the tiny hot vapor molecules penetrate the pores of a surface, and as they come in contact with the cool surface
-            of the pores, they expand and force all dirt, debris, and bacteria to the surface. Vapor molecules are so hot
-            that they are not only able to extract pathogens like E. Coli and Salmonella from surface pores, but also kill
-            them. Good-bye infectious enemies!</p>
-
-        </div>
-        <!-- /.col-md-6 -->
+        <img src="assets/img/team/novowash.png" alt="" class="img-responsive ">
+        </div><!--/.col-sm-6-->      
+        <div class="col-md-6 mb-sm-50">
+          <h2 class="font-40 mb-30 center">What is Novowash?</h2>
+          <p class="lead center" style="text-align:justify; font-size:16px">We are India's premium door-step interior care company, who strive to deliver elite customer experience in interior maintainance. We built technology driven operations that leverage on steam technologies to not just clean but sanitize your interiors. We build services that solve customer problems in interior care and mobile-friendly platforms for service requests. </p>
       </div>
     </div>
-    <!-- /.container -->
-  </section>
-  <!--  end -->
-  <section style="background-color: #70AD47;padding:50px;color:white;">
-    <div class="container">
-       <!-- /.row -->
-      <div class="row">
-        <div class="col-md-6 mb-sm-50">
-          <h2 class="font-40 mb-30">Premium deep cleaning services for your home</h2>
-          <p>Our intelligent interior care consists of wide range of home and home furniture cleaning services which help keep 
-            your home brand new. Rising level of pollution and dust have made it utmost necessary to clean beyond regular dusting/mopping.
-            Novowash's deep cleaning services helps get rid of toughest stains from your sofas/carpets and cleanses every corner of your home. Our services are backed by German technology equipments to ensure a premium finish to your home interiors</p>
-        </div>
-        <div class="col-md-6 mb-sm-50">
-          <img src="assets/img/whyus/cleanhome.jpg" alt="" class="img-responsive image_round">
-        </div>
+  </div>
+</section>
+<section style="background-color:#fafafa;padding:50px;">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+          <h2 class="font-40 mb-30 center">Who are we?</h2>
+          <p class="lead center" style="text-align:justify; font-size:16px">We surround ourselves with smart people who strive to build products which cater to the actual needs of a consumer. We believe in technology to solve problems. We built a team which consists primarily of technology driven people to achieve our vision.</p>
       </div>
     </div>
-  </section>
-  <section class="background" style="padding:50px;color:white;">
-    <div class="container">
-       <!-- /.row -->
-      <div class="row">
+  </div>
+</section>
+<section ng-controller="aboutusController" ng-cloak class="team-slick-container">
+  <script type="text/ng-template" id="scrl.html">
+      <md-card class="_md"  alt="Washed Out" style="width:180px;">
+        <img ng-src="{{item.logo_img}}" class="img-responsive md-card-image" alt="Washed Out" src="{{item.logo_img}}">
+          <span class="center"><strong>{{item.name}}</strong></span>
+          <span class="center">{{item.pos}}</span>
+          <span class="center">{{item.qual}}</span>
+    </md-card>
+  </script>
+  <slick class="slider md-paddin" layout-xs="column" layout="row" settings="slickCarausel" ng-if="slickConfig4Loaded">
+      <div layout="column" class="slick-item" ng-repeat=" item in teamList">
+          <div ng-include="'scrl.html'"></div>
+      </div>
+  </slick>
+</section>
+<section style="background-color: white;padding:50px;">
+  <div class="container">
+    <div class="row">
         <div class="col-md-6 mb-sm-50">
-          <img src="assets/img/whyus/ecofriendly.jpg" alt="" class="img-responsive image_round">
-        </div>
+        <img src="assets/img/team/collage1.jpg" alt="" class="img-responsive ">
+        </div><!--/.col-sm-6-->      
         <div class="col-md-6 mb-sm-50">
-          <h2 class="font-40 mb-30">Use of organic chemicals and water conserving eco-friendly technolgies</h2>
-          <p>Novowash deploy's organic chemicals for cleaning which help protect your home fabrics from any kind of damage/discolouration and are completely allergy free. Our equipments harldy require 2-3 liters of water which in turn helps conserve a huge of amount of water.</p>
-        </div>
+          <h2 class="font-40 mb-30 center">Our Service Executives</h2>
+          <p class="lead center" style="text-align:justify; font-size:16px">We are India's premium door-step interior care company, who strive to deliver elite customer experience in interior maintainance. We built technology driven operations that leverage on steam technologies to not just clean but sanitize your interiors. We build services that solve customer problems in interior care and mobile-friendly platforms for service requests. </p>
       </div>
     </div>
-  </section>
-  <section style="background-color: #70AD47;padding:50px;color:white;">
-    <div class="container">
-       <!-- /.row -->
-      <div class="row">
-        <div class="col-md-6 mb-sm-50">
-          <h2 class="font-40 mb-30"></h2>
-          <p>Our dedicated training facility helps maintain a high level of skillset and expertise in our service executives. We monitor the performance of each executive closely and train them on a continous basis. Our continous training and development helps maintain an excellent service deliverence and service quality.</p>
-        </div>
-        <div class="col-md-6 mb-sm-50">
-          <img src="assets/img/whyus/training.jpg" alt="" class="img-responsive image_round">
-        </div>
+  </div>
+</section>
+<!--<section style="background-color: #70AD47;padding:50px;color:white;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-sm-50">
+        <h2 class="font-40 mb-30">Premium deep cleaning services for your home</h2>
+        <p>Our intelligent interior care consists of wide range of home and home furniture cleaning services which help keep 
+          your home brand new. Rising level of pollution and dust have made it utmost necessary to clean beyond regular dusting/mopping.
+          Novowash's deep cleaning services helps get rid of toughest stains from your sofas/carpets and cleanses every corner of your home. Our services are backed by German technology equipments to ensure a premium finish to your home interiors</p>
+      </div>
+      <div class="col-md-6 mb-sm-50">
+        <img src="assets/img/whyus/cleanhome.jpg" alt="" class="img-responsive image_round">
       </div>
     </div>
-  </section>
-  <section style="padding:50px;color:#d29348">
-    <div class="container">
-       <!-- /.row -->
-      <div class="row">
-        <div class="col-md-6 mb-sm-50">
-          <img src="assets/img/whyus/one.gif" alt="" class="img-responsive image_round">
-        </div>
-        <div class="col-md-6 mb-sm-50">
-          <h2 class="font-40 mb-30">One stop shop for all your interior care requirements</h2>
-          <p>Novowash provides an one stop solution for all deep cleaning needs of an urban house-hold. We aim to provide a hassle free service experience to our customers and address the need for standardized and premium quality services at consumer's door-step. So sit back, relax and select a convenient date and a time slot to avail a wide range of our deep cleaning services.</p>
-        </div>
+  </div>
+</section>
+<section class="background" style="padding:50px;color:white;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-sm-50">
+        <img src="assets/img/whyus/ecofriendly.jpg" alt="" class="img-responsive image_round">
+      </div>
+      <div class="col-md-6 mb-sm-50">
+        <h2 class="font-40 mb-30">Use of organic chemicals and water conserving eco-friendly technolgies</h2>
+        <p>Novowash deploy's organic chemicals for cleaning which help protect your home fabrics from any kind of damage/discolouration and are completely allergy free. Our equipments harldy require 2-3 liters of water which in turn helps conserve a huge of amount of water.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<section style="background-color: #70AD47;padding:50px;color:white;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-sm-50">
+        <h2 class="font-40 mb-30"></h2>
+        <p>Our dedicated training facility helps maintain a high level of skillset and expertise in our service executives. We monitor the performance of each executive closely and train them on a continous basis. Our continous training and development helps maintain an excellent service deliverence and service quality.</p>
+      </div>
+      <div class="col-md-6 mb-sm-50">
+        <img src="assets/img/whyus/training.jpg" alt="" class="img-responsive image_round">
+      </div>
+    </div>
+  </div>
+</section>
+<section style="padding:50px;color:#d29348">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-sm-50">
+        <img src="assets/img/whyus/one.gif" alt="" class="img-responsive image_round">
+      </div>
+      <div class="col-md-6 mb-sm-50">
+        <h2 class="font-40 mb-30">One stop shop for all your interior care requirements</h2>
+        <p>Novowash provides an one stop solution for all deep cleaning needs of an urban house-hold. We aim to provide a hassle free service experience to our customers and address the need for standardized and premium quality services at consumer's door-step. So sit back, relax and select a convenient date and a time slot to avail a wide range of our deep cleaning services.</p>
+      </div>
+    </div>
+  </div>
+</section>-->

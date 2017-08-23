@@ -143,18 +143,27 @@ h1 {
   font-size: 1.5rem;
   line-height: 2.25rem; }
 
-.slick-container {
+.slick-container .slider, .team-slick-container {
   width: 90%;
   margin: auto;
-  padding: 0px; }
-  .slick-container .slick-item img {
-    height: 200px;
-    width: 200px;
-    margin: auto; }
-  .slick-container .slider {
-    height: 50% !important; }
-  .slick-container .slick-prev {
-    left: -36px; }
+  padding: 0px; 
+}
+.slick-container .slick-item img {
+  height: 200px;
+  width: 200px;
+  margin: auto; 
+}
+.team-slick-container .slick-item img {
+  height: 165px;
+  width: 180px;
+  margin: auto;
+}
+.slick-container .slider,.team-slick-container .slider {
+  height: 50% !important; 
+}
+.slick-container,team-slick-container .slick-prev {
+  left: -36px;
+}
 
 .main-text .section-title {
   font-size: 20px;

@@ -1,20 +1,20 @@
-<section >
+<section>
     <div class="text-center">
-            <h2 class="section-title text-capitalize service-padding">Our Partners</h2>
-           
-         </div>
-   </section>
+        <h2 class="section-title text-capitalize service-padding">Our Partners</h2>
 
-   <section ng-controller="partnerController" ng-cloak class="slick-container">
+    </div>
+</section>
 
-        <script type="text/ng-template" id="scrl.html">
-            <img src="{{item.logo_img}}"  alt="Washed Out" >
-        </script>
+<section ng-controller="partnerController" ng-cloak class="slick-container">
 
-        <slick class="slider md-paddin" layout-xs="column" layout="row"  settings="slickCarausel" ng-if="slickConfig4Loaded">
-                <div layout="column" class="slick-item"  ng-repeat=" item in logoJson">
-                        <div  ng-include="'scrl.html'"></div>
-                    </div>
-        </slick>
+    <script type="text/ng-template" id="scrl.html">
+        <img src="{{item.logo_img}}" alt="Washed Out">
+    </script>
 
-   </section>
+    <slick class="slider md-paddin" layout-xs="column" layout="row" settings="slickCarausel" ng-if="slickConfig4Loaded">
+        <div layout="column" class="slick-item" ng-repeat=" item in logoJson">
+            <div ng-include="'scrl.html'"></div>
+        </div>
+    </slick>
+
+</section>
