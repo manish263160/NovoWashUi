@@ -129,9 +129,9 @@ Version: 1.5
 
 
         /* === Full Screen Banner === */
-        $(window).on('resizeEnd', function () {
+        /* $(window).on('resizeEnd', function () {
             $(".fullscreen-banner").height($(window).height());
-        });
+        }); */
 
         $(window).resize(function () {
             if (this.resizeTO) clearTimeout(this.resizeTO);

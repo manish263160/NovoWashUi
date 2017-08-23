@@ -1,5 +1,6 @@
 /target/
 node_modules/
+.sass-cache/
 *.classpath
 *.project
 # Compiled source #
@@ -23,8 +24,7 @@ node_modules/
 *.rar
 *.tar
 *.zip
-/.sass-cache/
-.sass-cache/
+
 # Logs and databases #
 ######################
 *.log

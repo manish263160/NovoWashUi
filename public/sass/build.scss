@@ -523,3 +523,15 @@ h1 {
       font-weight: 600;
     }
   }
+
+  .fullscreen-banner{
+    
+    @media screen and (max-width: 600px) {
+      height: 80rem;
+    }
+
+    @media screen and (min-width: 601px) {
+      height: 64rem;
+    }
+  }
+
