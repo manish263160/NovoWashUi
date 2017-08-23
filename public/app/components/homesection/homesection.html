@@ -1,26 +1,20 @@
 <!-- <div ng-include="'app/partials/header.html'" ></div> -->
 
 <div ng-include="'app/components/titlePortion/titleSection.html'" ></div>
+<div ng-include="'app/components/whyus/whyus.html'" ></div>
   
  <service-section ></service-section>
-<div ng-include="'app/components/whyus/whyus.html'" ></div>
 
 <div ng-include="'app/components/customerReview/customerReview.html'" ></div>
-  
-<section id="customerTestinomials" class="section-padding1">
- customerTestinomials
 
-</section>
+<div ng-include="'app/components/ourPartners/partners.html'" ></div>
 
 
-<section id="partners" class="section-padding1">
- partners
-
-</section>
-
-<section id="infographixCount" class="section-padding1">
- infographixCount
-
+<section id="infographixCount" class="section-padding1 infografix">
+ <div class="infogrText" ng-repeat="i in infografix">
+<span class="spanclass"> {{i.value}}</span>
+<div class="undertext">{{i.text}}</div>
+</div>
 </section>
    <!-- Preloader -->
   <div id="preloader" ng-show="loaded" class="animate-show animate-hide">

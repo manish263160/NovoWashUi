@@ -8,6 +8,37 @@ app
     $scope.loaded = true;
     $scope.catModel = false;
     $scope.servModel = false;
+    $scope.infografix=[
+      {value:'0',text:'LIVE SERVICES',max:'10'},
+      {value:'0',text:'CUSTOMERS SERVED',max:'20'},
+      {value:'0',text:'VERIFIED EXPERTS',max:'1000'},
+      {value:'0',text:'AVERAGE RATING',max:'4.5'},
+    ]
+    $document.on('scroll', function() {
+      console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
+      var topheight=$document.scrollTop();
+      if(topheight >= 1800){
+        $timeout($scope.onTimeout,200);
+      }else{
+        $scope.infografix=[
+          {value:'0',text:'LIVE SERVICES',max:'10'},
+          {value:'0',text:'CUSTOMERS SERVED',max:'20'},
+          {value:'0',text:'VERIFIED EXPERTS',max:'1000'},
+          {value:'0',text:'AVERAGE RATING',max:'4.5'},
+        ]
+      }
+    });
+    $scope.onTimeout = function(){
+      $scope.infografix.forEach(function(e) {
+        var store=e.value;
+         if (e.value < e.max) {
+            e.value++;
+            mytimeout = $timeout($scope.onTimeout,200);
+        } else{
+          e.value = e.max;
+        }
+      }, this);
+  }
 
     $scope.catId;
 

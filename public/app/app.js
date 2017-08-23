@@ -7,7 +7,12 @@
     $mdThemingProvider.theme('altTheme')
     .primaryPalette('purple')
 
-  }) 
+  });
+  
+  app.config(['slickCarouselConfig', function (slickCarouselConfig) {
+    slickCarouselConfig.dots = true;
+    slickCarouselConfig.autoplay = false;
+  }]);
   /* app.config(function ($validatorProvider) {
         $validatorProvider.setDefaults({
             errorElement: 'div',

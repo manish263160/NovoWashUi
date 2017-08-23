@@ -1,0 +1,20 @@
+<section >
+    <div class="text-center">
+            <h2 class="section-title text-capitalize service-padding">Our Partners</h2>
+           
+         </div>
+   </section>
+
+   <section ng-controller="partnerController" ng-cloak class="slick-container">
+
+        <script type="text/ng-template" id="scrl.html">
+            <img src="{{item.logo_img}}"  alt="Washed Out" >
+        </script>
+
+        <slick class="slider md-paddin" layout-xs="column" layout="row"  settings="slickCarausel" ng-if="slickConfig4Loaded">
+                <div layout="column" class="slick-item"  ng-repeat=" item in logoJson">
+                        <div  ng-include="'scrl.html'"></div>
+                    </div>
+        </slick>
+
+   </section>

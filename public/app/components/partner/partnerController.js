@@ -1,9 +1,10 @@
 'use strict';
-app.controller('partnerController', function ($scope, $http, $rootScope, RootAPIServices,$mdDialog, $timeout) {
+app.controller('becomepartner', function ($scope, $http, $rootScope, RootAPIServices,$mdDialog, $timeout) {
+  $rootScope.active = "becompartner";
    $scope.partner = {};
    $scope.response = {"isSuccess": false};
 
-
+   console.log('---',$rootScope.active);
   $scope.becomePartner = function (ev) {
     var body = $scope.partner;
     console.log("submit click", body);
