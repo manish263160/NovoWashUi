@@ -143,27 +143,18 @@ h1 {
   font-size: 1.5rem;
   line-height: 2.25rem; }
 
-.slick-container .slider, .team-slick-container {
+.slick-container {
   width: 90%;
   margin: auto;
-  padding: 0px; 
-}
-.slick-container .slick-item img {
-  height: 200px;
-  width: 200px;
-  margin: auto; 
-}
-.team-slick-container .slick-item img {
-  height: 165px;
-  width: 180px;
-  margin: auto;
-}
-.slick-container .slider,.team-slick-container .slider {
-  height: 50% !important; 
-}
-.slick-container,team-slick-container .slick-prev {
-  left: -36px;
-}
+  padding: 0px; }
+  .slick-container .slick-item img {
+    height: 200px;
+    width: 200px;
+    margin: auto; }
+  .slick-container .slider {
+    height: 50% !important; }
+  .slick-container .slick-prev {
+    left: -36px; }
 
 .main-text .section-title {
   font-size: 20px;
@@ -200,7 +191,7 @@ h1 {
   width: 100%;
   display: inline-block;
   position: relative;
-  box-shadow: 0px 0px 0px 7px #fff, 0px 0px 0px 8px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0px 0px 0px 7px white, 0px 0px 0px 8px rgba(0, 0, 0, 0.1); }
 
 md-sidenav {
   min-width: 250px !important;
@@ -251,7 +242,7 @@ md-sidenav {
   width: 100%; }
 
 md-input-container > label {
-  font-size: 0.75em !important; }
+  font-size: 0.85em !important; }
 
 .nextButton .groupX-right {
   float: right !important;
@@ -368,7 +359,7 @@ md-progress-linear .md-container {
   opacity: 2;
   font-weight: 400 !important;
   text-transform: none;
-  color: #ddd !important;
+  color: #dddddd !important;
   background-color: transparent;
   transition: all .3s;
   -webkit-font-smoothing: antialiased;
@@ -402,5 +393,3 @@ md-progress-linear .md-container {
 @media screen and (min-width: 601px) {
   .fullscreen-banner {
     height: 64rem; } }
-
-/*# sourceMappingURL=style.css.map */
