@@ -10,10 +10,10 @@ app
     $scope.servModel = false;
     $scope.sticky =false;
     $scope.infografix=[
-      {value:'0',text:'LIVE SERVICES',max:'10'},
-      {value:'0',text:'CUSTOMERS SERVED',max:'20'},
-      {value:'0',text:'VERIFIED EXPERTS',max:'1000'},
-      {value:'0',text:'AVERAGE RATING',max:'4.5'},
+      {value:'0',text:'WORKING HOURS',max:'1465'},
+      {value:'0',text:'HAPPY CUSTOMERS',max:'1000'},
+      {value:'0',text:'VERIFIED EXPERTS',max:'99'},
+      {value:'0',text:'AVERAGE RATING',max:'3.5'},
     ]
     $document.on('scroll', function() {
       console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
@@ -26,10 +26,10 @@ app
         $timeout($scope.onTimeout,200);
       }else{
         $scope.infografix=[
-          {value:'0',text:'LIVE SERVICES',max:'10'},
-          {value:'0',text:'CUSTOMERS SERVED',max:'20'},
-          {value:'0',text:'VERIFIED EXPERTS',max:'1000'},
-          {value:'0',text:'AVERAGE RATING',max:'4.5'},
+          {value:'0',text:'WORKING HOURS',max:'1465'},
+          {value:'0',text:'HAPPY CUSTOMERS',max:'1000'},
+          {value:'0',text:'VERIFIED EXPERTS',max:'99'},
+          {value:'0',text:'AVERAGE RATING',max:'3.5'},
         ]
       }
     });
