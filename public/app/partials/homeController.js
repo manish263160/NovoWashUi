@@ -8,6 +8,7 @@ app
     $scope.loaded = true;
     $scope.catModel = false;
     $scope.servModel = false;
+    $scope.sticky =false;
     $scope.infografix=[
       {value:'0',text:'LIVE SERVICES',max:'10'},
       {value:'0',text:'CUSTOMERS SERVED',max:'20'},
@@ -17,6 +18,10 @@ app
     $document.on('scroll', function() {
       console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
       var topheight=$document.scrollTop();
+      if(topheight > 0){
+        console.log("topheight true")
+        $('#header').addClass('sticky');
+      }
       if(topheight >= 1800){
         $timeout($scope.onTimeout,200);
       }else{

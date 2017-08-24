@@ -255,13 +255,13 @@
 }
   
   .btn-secondary {
-    background-color: #00cded;
-    border: 1px solid #00cded;
+    background-color: #8FD049;
+    border: 1px solid #616161;
     color: #fff;
 }
   .btn-secondary:hover {
-    background-color: #07deff;
-    border-color: #07deff;
+    background-color: #8FD04B;
+    border-color: #616161;
     text-decoration: none;
 }
 
@@ -337,3 +337,12 @@
     }
   }
 
+.sticky{
+  .active{
+    a {
+      border-bottom: 3px solid #4CAF50 !important;
+      color: #4CAF50 !important;
+  }
+
+  }
+}

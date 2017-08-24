@@ -1,5 +1,7 @@
 app.controller("aboutusController",
   function ($scope, $http, $rootScope, $timeout) {
+
+    $rootScope.active = "aboutus";
     $scope.teamList = [
       { logo_img: 'assets/img/team/1.jpg',name:"Rohan Deshmukh", pos:"Founder", qual:"IIT Bombay" },
       { logo_img: 'assets/img/team/2.jpg',name:"Anudeep Jain", pos:"Founder", qual:"CA,CFA" },

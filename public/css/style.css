@@ -143,27 +143,18 @@ h1 {
   font-size: 1.5rem;
   line-height: 2.25rem; }
 
-.slick-container .slider, .team-slick-container {
+.slick-container {
   width: 90%;
   margin: auto;
-  padding: 0px; 
-}
-.slick-container .slick-item img {
-  height: 200px;
-  width: 200px;
-  margin: auto; 
-}
-.team-slick-container .slick-item img {
-  height: 165px;
-  width: 180px;
-  margin: auto;
-}
-.slick-container .slider,.team-slick-container .slider {
-  height: 50% !important; 
-}
-.slick-container,team-slick-container .slick-prev {
-  left: -36px;
-}
+  padding: 0px; }
+  .slick-container .slick-item img {
+    height: 200px;
+    width: 200px;
+    margin: auto; }
+  .slick-container .slider {
+    height: 50% !important; }
+  .slick-container .slick-prev {
+    left: -36px; }
 
 .main-text .section-title {
   font-size: 20px;
@@ -343,12 +334,12 @@ md-progress-linear .md-container {
   color: #0bb8e3;
   /* text-decoration: none; */ }
 .titlecell .btn-secondary {
-  background-color: #00cded;
-  border: 1px solid #00cded;
+  background-color: #8FD049;
+  border: 1px solid #616161;
   color: #fff; }
 .titlecell .btn-secondary:hover {
-  background-color: #07deff;
-  border-color: #07deff;
+  background-color: #8FD04B;
+  border-color: #616161;
   text-decoration: none; }
 .titlecell .big-button {
   display: inline-block;
@@ -402,5 +393,9 @@ md-progress-linear .md-container {
 @media screen and (min-width: 601px) {
   .fullscreen-banner {
     height: 64rem; } }
+
+.sticky .active a {
+  border-bottom: 3px solid #4CAF50 !important;
+  color: #4CAF50 !important; }
 
 /*# sourceMappingURL=style.css.map */

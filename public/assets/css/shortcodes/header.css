@@ -54,7 +54,7 @@ Top Bar
 .menuzord .menuzord-menu>li.active>a>i,
 .menuzord .menuzord-menu>li:hover>a,
 .menuzord .menuzord-menu>li:hover>a>i{
-    color: #03a9f4 !important;
+    color: #03a9f4 ;
 }
 
 .nav-border-bottom .menuzord .menuzord-menu>li.active>a,
