@@ -2,13 +2,8 @@ app.controller("aboutusController",
   function ($scope, $http, $rootScope, $timeout) {
 
     $rootScope.active = "aboutus";
-    $scope.teamList = [
-      { logo_img: 'assets/img/team/1.jpg',name:"Rohan Deshmukh", pos:"Founder", qual:"IIT Bombay" },
-      { logo_img: 'assets/img/team/2.jpg',name:"Anudeep Jain", pos:"Founder", qual:"CA,CFA" },
-      { logo_img: 'assets/img/team/3.jpg' ,name:"Sandeep Supal", pos:"Tech(Consultant)", qual:"IIT Guwahati" },
-      { logo_img: 'assets/img/team/4.jpg' ,name:"Swayam Subhra", pos:"Technology", qual:"BTech CS" },
-      { logo_img: 'assets/img/team/5.jpg' ,name:"Aman Jingalia", pos:"Operations", qual:"BCom" },
-    ];
+    $scope.team1 =  { logo_img: 'assets/img/team/1.jpg',name:"Rohan Deshmukh", pos:"Founder", qual:"IIT Bombay" };
+    $scope.team2 = { logo_img: 'assets/img/team/2.jpg',name:"Anudeep Jain", pos:"Founder", qual:"CA,CFA" }
     $scope.slickConfig4Loaded = true;
 
 
