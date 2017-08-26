@@ -5,16 +5,22 @@
     </div>
 </section>
 
-<section ng-controller="partnerController" ng-cloak class="slick-container">
+<section ng-controller="partnerController" ng-cloak class=" contentSlide">
 
-    <script type="text/ng-template" id="scrl.html">
+  <!--   <script type="text/ng-template" id="scrl.html">
         <img src="{{item.logo_img}}" alt="Washed Out">
-    </script>
+    </script> -->
 
-    <slick class="slider md-paddin" layout-xs="column" layout="row" settings="slickCarausel" ng-if="slickConfig4Loaded">
+    <!-- <slick class="slider md-paddin" layout-xs="column" layout="row" settings="slickCarausel" ng-if="slickConfig4Loaded">
         <div layout="column" class="slick-item" ng-repeat=" item in logoJson">
             <div ng-include="'scrl.html'"></div>
         </div>
-    </slick>
+    </slick> -->
+
+    <data-owl-carousel id="first" class="owl-carousel" data-options="{navigation: true, pagination: false,loop:true,items:4, rewindNav : false}">
+            <div owl-carousel-item="" ng-repeat="item in ::logoJson" class="item owlcarausel">
+                    <img src="{{item.logo_img}}" alt="Washed Out">
+            </div>
+          </data-owl-carousel>
 
 </section>

@@ -10,10 +10,10 @@ app
     $scope.servModel = false;
     $scope.sticky =false;
     $scope.infografix=[
-      {value:'0',text:'WORKING HOURS',max:'1465'},
-      {value:'0',text:'HAPPY CUSTOMERS',max:'1000'},
-      {value:'0',text:'VERIFIED EXPERTS',max:'99'},
-      {value:'0',text:'AVERAGE RATING',max:'3.5'},
+      {value:'0',text:'WORKING HOURS',max:'10000', type:'+' , icon:'query_builder'},
+      {value:'0',text:'HAPPY CUSTOMERS',max:'1500' , type:'+',icon:'favorite_border'},
+      // {value:'0',text:'VERIFIED EXPERTS',max:'99'},
+      {value:'0',text:'positive feedback',max:'99' , type:'%',icon:'star_rate'},
     ]
     $document.on('scroll', function() {
       console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
@@ -26,10 +26,10 @@ app
         $timeout($scope.onTimeout,200);
       }else{
         $scope.infografix=[
-          {value:'0',text:'WORKING HOURS',max:'1465'},
-          {value:'0',text:'HAPPY CUSTOMERS',max:'1000'},
-          {value:'0',text:'VERIFIED EXPERTS',max:'99'},
-          {value:'0',text:'AVERAGE RATING',max:'3.5'},
+          {value:'0',text:'WORKING HOURS',max:'10000', type:'+' , icon:'query_builder'},
+          {value:'0',text:'HAPPY CUSTOMERS',max:'1500' , type:'+',icon:'favorite_border'},
+          // {value:'0',text:'VERIFIED EXPERTS',max:'99'},
+          {value:'0',text:'positive feedback',max:'99' , type:'%',icon:'star_rate'},
         ]
       }
     });

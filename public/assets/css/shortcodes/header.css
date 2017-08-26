@@ -338,13 +338,13 @@ header.sticky .menuzord-menu>li>a,
 
 .transparent-header.sticky .menuzord-menu>li>a,
 .transparent-header.sticky .menuzord-menu>li>a>i {
-    color: #202020;
+    color: #202020 !important;
 }
 
 
 .menuzord-menu>li.active>a,
 .menuzord-menu>li:hover>a {
-    color: #202020
+    color: #202020;
 }
 .menuzord-menu ul.dropdown,
 .menuzord-menu ul.dropdown li ul.dropdown {

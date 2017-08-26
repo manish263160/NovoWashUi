@@ -2,12 +2,12 @@
   .main-text{
 
     .section-title{
-      font-size: 20px;
+      font-size: 16px;
       margin-bottom: 10px !important;
     }
 
     .intro-title{
-      font-family: Playfair Display,serif !important;
+      font-family: "Circular","Helvetica",sans-serif !important;
     }
   }
 
@@ -237,6 +237,7 @@
     .whyDependOnUs__icons span {
       font-size: 17px;
       font-weight: 700;
+      font-family: "Circular","Helvetica",sans-serif !important;
   }
     .heading, .menuItems ul li.categoryHeading, .testimonee {
     text-transform: uppercase;
@@ -276,6 +277,13 @@
     border-radius: 4px;
     text-transform: capitalize;
 }
+
+.btn-alternate {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #ffffff;
+  font-family: "Circular","Helvetica",sans-serif;
+}
   }
 
   .slider{
@@ -314,7 +322,7 @@
       margin-right: 70px;
       margin-top: 5rem;
       .material-icons{
-        widows: 5rem;
+        font-size: 3rem;
       }
     }
     .spanclass{
@@ -343,9 +351,25 @@
 .sticky{
   .active{
     a {
-      border-bottom: 3px solid #00E676 !important;
-      color: #00E676 !important;
+      border-bottom: 3px solid #8FD049 !important;
+      color: #8FD049 !important;
   }
 
+  }
+}
+
+.brand-hover{
+   &:hover{
+    background-color: transparent !important;
+    h2{
+      color: white !important;
+    }
+   }
+}
+
+.contentSlide{
+
+  .slick-item{
+    width: 270px !important;
   }
 }

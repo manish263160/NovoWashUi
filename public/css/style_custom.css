@@ -10,7 +10,7 @@
 /* ================= General ==================== */
 
 body{
-    font-family: 'Arial', sans-serif !important;
+    font-family: "Circular","Helvetica",sans-serif !important;
     font-size: 14px;
     line-height: 29px;
     font-weight: 500;
@@ -842,7 +842,7 @@ thead {
 
 /* ================= Hero Unit ==================== */
 .intro-title {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 900;
 }
 .sub-intro {
@@ -1167,6 +1167,14 @@ thead {
     }
 }
 
+
+@media (max-width: 767px) {
+    .reviewcarausel > .md-padding {
+      height: 36em;
+      padding-left: 17rem;
+      padding-right: 17rem;
+     } 
+    }
 .error-wrapper-alt h1 {
     color: #fff;
     font-size: 130px;
@@ -2236,6 +2244,10 @@ KEY FRAME
     background:#03a9f4;
 }
 
-
-
-
+@media (max-width: 600px) {
+    .fullscreen-banner {
+      height: 80rem; } }
+      
+@media (min-width: 601px) {
+    .fullscreen-banner {
+      height: 65rem; } }

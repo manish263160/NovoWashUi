@@ -99,37 +99,48 @@ h1 {
 }
 
 
-
 } //end of parent */
+$desktop: "(max-width: 767px)";
+
 
 .reviewcarausel{
 
 
 .md-padding{
-    height: 40em;
+    height: 36em;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    @media  #{$desktop}{
+        height: 36em;
+        padding-left: 17rem;
+        padding-right: 17rem;
+}
 }
 
 .img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 50%;
+    margin-left: 25%;
   }
 .slick-slide{
-    width: 40rem;
-    min-height: 54rem;
+    width: 30rem;
+    min-height: 40rem;
     max-height: 60rem;
-    margin-right: 3rem;
+    margin-left: 1rem;
+    
 }
+
+
 .slick-list {
-    padding: 0px 0px !important;
+    // padding: 0px 0px !important;
 }
 .slick-prev {
-    left: 0;
+    left: 3px;
     z-index: 9;
 }
 .slick-track {
     position: relative;
     top: 0;
-    left: -44rem;
+    left: -48rem;
 }
 .slick-next{
     right: 2rem;
@@ -179,10 +190,11 @@ h1 {
     width: 90%;
     margin: auto;
     padding: 0px;
-    .slick-item {}
+    .slick-item {
+        
+    }
     
     .slick-item img {
-        height: 200px;
         width: 200px;
       margin: auto;
     }
@@ -197,15 +209,21 @@ h1 {
   }
   
 
+  .owl-item {
+      img {
+    width: 200px !important;
+}
+  }
+
   .main-text{
 
     .section-title{
-      font-size: 20px;
+      font-size: 16px;
       margin-bottom: 10px !important;
     }
 
     .intro-title{
-      font-family: Playfair Display,serif !important;
+      font-family: "Circular","Helvetica",sans-serif !important;
     }
   }
 
@@ -435,6 +453,7 @@ h1 {
     .whyDependOnUs__icons span {
       font-size: 17px;
       font-weight: 700;
+      font-family: "Circular","Helvetica",sans-serif !important;
   }
     .heading, .menuItems ul li.categoryHeading, .testimonee {
     text-transform: uppercase;
@@ -453,13 +472,13 @@ h1 {
 }
   
   .btn-secondary {
-    background-color: #00cded;
-    border: 1px solid #00cded;
+    background-color: #8FD049;
+    border: 1px solid #616161;
     color: #fff;
 }
   .btn-secondary:hover {
-    background-color: #07deff;
-    border-color: #07deff;
+    background-color: #00E676;
+    border-color: #616161;
     text-decoration: none;
 }
 
@@ -473,6 +492,13 @@ h1 {
     line-height: 1.71em;
     border-radius: 4px;
     text-transform: capitalize;
+}
+
+.btn-alternate {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #ffffff;
+  font-family: "Circular","Helvetica",sans-serif;
 }
   }
 
@@ -511,6 +537,9 @@ h1 {
       color: #949494;
       margin-right: 70px;
       margin-top: 5rem;
+      .material-icons{
+        font-size: 3rem;
+      }
     }
     .spanclass{
       font-size: 50px;
@@ -535,3 +564,28 @@ h1 {
     }
   }
 
+.sticky{
+  .active{
+    a {
+      border-bottom: 3px solid #8FD049 !important;
+      color: #8FD049 !important;
+  }
+
+  }
+}
+
+.brand-hover{
+   &:hover{
+    background-color: transparent !important;
+    h2{
+      color: white !important;
+    }
+   }
+}
+
+.contentSlide{
+
+  .slick-item{
+    width: 270px !important;
+  }
+}

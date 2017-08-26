@@ -44,7 +44,7 @@ a:hover {
 .brand-bg,
 .brand-hover:hover,
 .grid-news-hover .post-date {
-    background-color: #f4f4f4 !important;
+    background-color: transparent !important;
 }
 .brand-bg.darken-2 {
     background-color: #bd8949 !important;
@@ -77,7 +77,7 @@ a:hover {
 }
 
 .tt-nav.sticky .logo-brand {
-    color: #4CAF50;
+    color: #8FD049;
     margin: 1px 30px 0 0;
     line-height: 60px;
 }
@@ -94,7 +94,7 @@ a:hover {
 .menuzord .menuzord-menu>li.active>a>i, 
 .menuzord .menuzord-menu>li:hover>a, 
 .menuzord .menuzord-menu>li:hover>a>i {
-    color: #03a9f4 ;
+    color: #ffffff ;
 }
 .menuzord-menu ul.dropdown li:hover>a, 
 .menuzord-menu ul.dropdown li.active>a, 
@@ -107,7 +107,7 @@ a:hover {
 }
 .nav-border-bottom .menuzord .menuzord-menu>li.active>a, 
 .nav-border-bottom .menuzord .menuzord-menu>li:hover>a {
-    border-bottom: 3px solid #03a9f4;
+    border-bottom: 3px solid #8FD049;
 }
 .menuzord-menu>li {
     margin-left: 15px;
@@ -194,3 +194,37 @@ input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
     color: #d29348 !important; 
 }*/
+
+
+@font-face {
+   font-family: "Circular";
+   src:url("assets/circular/lineto-circular-black-c.eot");
+   src:url("assets/circular/lineto-circular-black-c.eot?#iefix") format("embedded-opentype"),
+      url("assets/circular/lineto-circular-black-c.woff") format("woff"),
+     url("assets/circular/lineto-circular-black-c.ttf") format("truetype"),
+     url("assets/circular/lineto-circular-black-c.svg#LLCircularWeb-Black") format("svg");
+   font-weight:900;
+   font-style:normal;
+}
+
+@font-face {
+   font-family: "Circular";
+   src:    url("assets/circular/lineto-circular-bold-c.eot");
+   src:    url("assets/circular/lineto-circular-bold-c.eot?#iefix") format("embedded-opentype"),
+      url("assets/circular/lineto-circular-bold-c.woff") format("woff"),
+      url("assets/circular/lineto-circular-bold-c.ttf") format("truetype"),
+      url("assets/circular/lineto-circular-bold-c.svg#LLCircularWeb-Bold") format("svg");
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Circular";
+   src:    url("assets/circular/lineto-circular-book-c.eot");
+   src:    url("assets/circular/lineto-circular-book-c.eot?#iefix") format("embedded-opentype"),
+     url("assets/circular/lineto-circular-book-c.woff") format("woff"),
+     url("assets/circular/lineto-circular-book-c.ttf") format("truetype"),
+     url("assets/circular/lineto-circular-book-c.svg#LLCircularWeb-Book") format("svg");
+   font-weight: normal;
+   font-style: normal;
+}

@@ -36,6 +36,7 @@
     "angulartics-google-analytics": "^0.4.0",
     "ng-flow": "~2",
     "angular-filter": "^0.5.16",
-    "angular-multi-step-form": "^1.3.0"
+    "angular-multi-step-form": "^1.3.0",
+    "owl.carousel": "^2.2.1"
   }
 }

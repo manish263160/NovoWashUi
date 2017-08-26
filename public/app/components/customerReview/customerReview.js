@@ -3,11 +3,11 @@ app
   function ($scope, $http, $rootScope, $timeout) {
 
     $scope.number4 = [
-      { img: 'assets/cus_review_img/rakesh_thakur.jpg' ,label: 'Home Deep cleaning', cus_name:'Rakesh Thakur', review :'@Novowash Thank you! You more than lived up to your claims! My house is cleaned better than my expections. Keep it up :)' }, 
-      { img: 'assets/cus_review_img/arti_bahal.jpg' ,label: 'Home Deep cleaning', cus_name:'Arti Bahal', review :"The house has become totally spic and span in just a few hours. I couldn't have imagined doing this all by myself with such good quality. Thanks Novowash!" },
-      {img: 'assets/cus_review_img/anmal_kohli.jpg' ,label: 'Car Cleaning', cus_name:'Anmal Kohli', review :'You guys are brilliant! I would like to take your monthly interior care service.' },
-      {img: 'assets/cus_review_img/shruti_arora.JPG' ,label: 'Car Package', cus_name:'Shruti Arora', review :'Excellent car cleaning service at door-step! Had never seen a car cleaned using steam technology. Keep up your good work!' },
-      {img: 'assets/cus_review_img/meenu_jain.jpg' ,label: 'Sofa Cleaning', cus_name:'Meenu Jain', review :'I was really looking to give my couch a brand new look once again. And you guys did exaclty that for me!' },
+      { img: 'assets/cus_review_img/rakesh_thakur.jpg' ,label: 'Home Deep cleaning', cus_name:'Rakesh Thakur', review :'Thank you Novowash team for a very professional home cleaning service.  My house is cleaned better than my expectations.' }, 
+      { img: 'assets/cus_review_img/arti_bahal.jpg' ,label: 'Home Deep cleaning', cus_name:'Arti Bahal', review :"Definitely recommending Novowash to my friends and relatives. Very professional and courteous staff with new technology equipments." },
+      {img: 'assets/cus_review_img/anmal_kohli.jpg' ,label: 'Car Cleaning', cus_name:'Anmal Kohli', review :'Loved your car interior care service. Had never seen steam technology based cleaning earlier. I am definitely interested in your car cleaning packages' },
+      {img: 'assets/cus_review_img/shruti_arora.JPG' ,label: 'Car Package', cus_name:'Shruti Arora', review :'I have been a Novowash customer since a past few months. What I like most about them is their quality of service and the time each professional gives to ensure that the car is cleaned in a very detailed manner.  Keep it up!' },
+      {img: 'assets/cus_review_img/meenu_jain.jpg' ,label: 'Sofa Cleaning', cus_name:'Meenu Jain', review :'I was looking to give my couch a brand new look and you guys did just that! Keep up the excellent work!' },
     ];
     $scope.slickConfig4Loaded = true;
     /* $scope.updateNumber4 = function () {
@@ -21,7 +21,7 @@ app
     $scope.slickConfig4 = {
       method: {},
       dots: false,
-      infinite: false,
+      infinite: true,
       speed: 300,
       slidesToShow: 1,
       slidesToScroll:1,

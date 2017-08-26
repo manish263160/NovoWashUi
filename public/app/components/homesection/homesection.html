@@ -12,7 +12,8 @@
 
 <section id="infographixCount" class="section-padding1 infografix">
  <div class="infogrText" ng-repeat="i in infografix">
-<span class="spanclass"> {{i.value}}</span>
+    <i class="material-icons">{{i.icon}}</i>
+<span class="spanclass"> {{i.value}}{{i.value === i.max ? i.type : ''}}</span>
 <div class="undertext">{{i.text}}</div>
 </div>
 </section>
