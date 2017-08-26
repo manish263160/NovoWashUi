@@ -260,7 +260,7 @@
     color: #fff;
 }
   .btn-secondary:hover {
-    background-color: #8FD04B;
+    background-color: #00E676;
     border-color: #616161;
     text-decoration: none;
 }
@@ -313,6 +313,9 @@
       color: #949494;
       margin-right: 70px;
       margin-top: 5rem;
+      .material-icons{
+        widows: 5rem;
+      }
     }
     .spanclass{
       font-size: 50px;
@@ -340,8 +343,8 @@
 .sticky{
   .active{
     a {
-      border-bottom: 3px solid #4CAF50 !important;
-      color: #4CAF50 !important;
+      border-bottom: 3px solid #00E676 !important;
+      color: #00E676 !important;
   }
 
   }
