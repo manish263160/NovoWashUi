@@ -30,6 +30,8 @@ controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope
         
         $scope.progressbar=0;
         $scope.servicesCost=[];
+        $scope.laundry=false;
+        $scope.Math = window.Math;
         $scope.init=function(){
                 $scope.pagecount=1;
                 
@@ -41,6 +43,11 @@ controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope
                 }, this);
                 if($scope.parent.categoryServiceData.serviceType ===1){
                         $scope.stepCount= 4;
+                }
+                
+                if($scope.parent.categoryServiceData.serviceCatId ===6){
+                        $scope.laundry= true;
+                        $scope.stepCount= 3;
                 }
                 else if($scope.parent.categoryServiceData.serviceType ===0){
                         $scope.stepCount= 1;
@@ -78,7 +85,7 @@ controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope
                         $scope.pagecount=pagecount;
                         pagecount--;
                         var perc=pagecount*100/ $scope.stepCount;
-                        $scope.progressbar=perc;
+                        $scope.progressbar=Math.ceil(perc);
                         console.log("click perc",perc);
                         // $scope.pagecount--;
         };
