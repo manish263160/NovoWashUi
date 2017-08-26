@@ -354,11 +354,11 @@ h1 {
       position: relative;
       border-radius: 4px;
       min-width: 130px;
-      background-color: #03a9f4;
+      background-color: #8FD049;
       font-size: 20px;
       color: #fff;
       &:hover{
-        background-color: #03a9f9;
+        background-color: #00E676;
       }
     }
   }
@@ -397,7 +397,7 @@ h1 {
     .md-bar{
       height: 7px !important;
       border-radius: 3em !important;
-      background-color: #03a9f9 !important;
+      background-color: #8FD049 !important;
     }
   }
   } 
@@ -407,7 +407,8 @@ h1 {
   }
   .collection{
     .active{
-      background-color: #03a9f9 !important;
+      background-color: #8FD049 !important;
+      color: black !important;
     }
     .collection-item{
       line-height: 2.5em;
