@@ -157,7 +157,7 @@ Header
 #header.transparent-header .dark-header,
 #header.transparent-header {
     background: transparent !important;
-    z-index: 1;
+    z-index: 999;
 }
 
 #header.transparent-header .menuzord .logo-brand {
