@@ -139,7 +139,7 @@ h1 {
   border: 0;
   border-bottom: 1px solid #E6E9EC; }
 .reviewcarausel p {
-  text-align: justify;
+  text-align: justify !important;
   margin: 0vh 0vh;
   text-align: left;
   padding-bottom: 0;
