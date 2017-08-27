@@ -414,8 +414,8 @@ md-progress-linear .md-container {
   } */
 .section-whyus {
   font-size: 30px;
-  margin-bottom: 2rem;
-  color: black; }
+  color: black;
+  line-height: 3em; }
 
 .service-text {
   font-size: 30px;
@@ -434,7 +434,8 @@ md-progress-linear .md-container {
 
 .contentSlide {
   background-color: #ffffff;
-  margin-top: 5em; }
+  margin-top: 5em;
+  height: 21em; }
   .contentSlide .slick-item {
     width: 270px !important; }
 

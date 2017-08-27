@@ -569,8 +569,8 @@ h1 {
 
   .section-whyus{
     font-size: 30px;
-    margin-bottom: 2rem;
     color: black;
+    line-height: 3em;
     
 }
 .service-text{
@@ -602,6 +602,7 @@ h1 {
 .contentSlide{
   background-color: #ffffff;
   margin-top: 5em;
+  height: 21em;
   .slick-item{
     width: 270px !important;
   }
