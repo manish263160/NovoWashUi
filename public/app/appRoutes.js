@@ -106,4 +106,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         footer: footer
       },
     })
+    .state('allEnquery', {
+      url: "/allEnquery",
+      views: {
+        header: header,
+        content: {
+          templateUrl: "app/allEnquery/enqueryUserList.html",
+          controller: 'enqueryUserListController',
+        },
+        footer: footer
+      },
+    })
 });

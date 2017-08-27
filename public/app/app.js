@@ -1,5 +1,5 @@
   var app = angular.module('app', ['NVConfig', 'ui.router', 'duScroll', 'ngMaterial',
-    'ngResource','ngMessages','slickCarousel',
+    'ngResource','ngMessages','slickCarousel','ngTable',
     'ngStorage', 'angular.filter','ngAnimate' , 'ngMaterialDatePicker' ,'ngAria',
   ]);
 

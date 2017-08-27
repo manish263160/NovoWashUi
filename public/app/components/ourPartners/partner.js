@@ -4,14 +4,14 @@ function ($scope, $http, $rootScope, $timeout){
 
     $scope.logoJson=[
         {logo_img:'assets/partner_img/godrej.png'},
-        {logo_img:'assets/partner_img/homecenter.jpg'},
         {logo_img:'assets/partner_img/hicare_logo.png'},
-        {logo_img:'assets/partner_img/parwanath.jpg'},
-        {logo_img:'assets/partner_img/renticle.jpg'},
-        {logo_img:'assets/partner_img/sandoz.jpg'},
-        {logo_img:'assets/partner_img/u_logo.png'},
+        {logo_img:'assets/partner_img/homecenter.png'},
+        {logo_img:'assets/partner_img/parwanath.png'},
+        {logo_img:'assets/partner_img/rentickle.png'},
+        // {logo_img:'assets/partner_img/sandoz.png'},
+        {logo_img:'assets/partner_img/uclean.png'},
         {logo_img:'assets/partner_img/urbanclap.png'},
-        {logo_img:'assets/partner_img/zimmber.png'},
+        {logo_img:'assets/partner_img/Zommber.png'},
     ] ;
     $scope.slickConfig4Loaded = true;
 
