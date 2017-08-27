@@ -106,7 +106,7 @@ Header
 
 .tt-nav {
     width: 100%;
-    height: 100px;
+    height: 72px;
     z-index: 1000;
     position: relative;
 }
@@ -230,7 +230,7 @@ header.sticky .menuzord-menu>li>a,
 }
 
 .nav-border-bottom .menuzord-menu>li>a {
-    line-height: 99px;
+    line-height: 70px;
 }
 
 .tt-nav.sticky .menuzord-menu>li>a {
@@ -290,7 +290,7 @@ header.sticky .menuzord-menu>li>a,
     font-weight: 700;
     cursor: pointer;
     margin: 33px 30px 0 0;
-    line-height: 100px;
+    line-height: 72px;
 }
 .tt-nav.sticky .logo-brand {
     margin: 15px 30px 0 0;

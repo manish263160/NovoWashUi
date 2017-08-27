@@ -85,7 +85,7 @@ controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope
                         $scope.pagecount=pagecount;
                         pagecount--;
                         var perc=pagecount*100/ $scope.stepCount;
-                        $scope.progressbar=Math.ceil(perc);
+                        $scope.progressbar=perc;
                         console.log("click perc",perc);
                         // $scope.pagecount--;
         };

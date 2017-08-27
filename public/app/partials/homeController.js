@@ -5,6 +5,7 @@ app
   function ($scope, $http, $rootScope, $timeout, $document, $mdDialog, $interval, RootAPIServices,Utils) {
 
     $rootScope.active = "home";
+    $scope.frameHeight = window.innerHeight;
     $scope.loaded = true;
     $scope.catModel = false;
     $scope.servModel = false;
@@ -22,7 +23,7 @@ app
         console.log("topheight true")
         $('#header').addClass('sticky');
       }
-      if(topheight >= 1800){
+      if(topheight >= 1500){
         $timeout($scope.onTimeout,200);
       }else{
         $scope.infografix=[

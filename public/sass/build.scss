@@ -107,7 +107,7 @@ $desktop: "(max-width: 767px)";
 
 
 .md-padding{
-    height: 36em;
+    height: 30em;
     padding-left: 4rem;
     padding-right: 4rem;
     @media  #{$desktop}{
@@ -153,7 +153,7 @@ h1 {
     letter-spacing: 1px;
     // margin: 2vh 4vw;
     text-align: center;
-    font-family: $serif;
+    font-family: "Circular","Helvetica",sans-serif !important;
   }
   
   h2 {
@@ -212,7 +212,7 @@ h1 {
 
   .owl-item {
       img {
-    width: 200px !important;
+    width: 100px !important;
 }
   }
 
@@ -247,7 +247,7 @@ h1 {
     .text{
       line-height:140%;
       text-align: justify; 
-      color:#7f7f7f;
+      color:#7F7F7F;
     }
   }
 
@@ -433,10 +433,10 @@ h1 {
       color: black;
       font-family: FuturaBT;
       .whyDependOnUs__icons .col-md-4 img {
-      width: 90%;
+      width: 60%;
   }
   .whyDependOnUs__icons {.col-md-4 img {
-      width: 90%;
+      width: 60%;
 
     }
     }
@@ -479,7 +479,7 @@ h1 {
     color: #fff;
 }
   .btn-secondary:hover {
-    background-color: #00E676;
+    background-color: #72A63A;
     border-color: #616161;
     text-decoration: none;
 }
@@ -497,9 +497,10 @@ h1 {
 }
 
 .btn-alternate {
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #ffffff;
+  background-color: #fff;
+  border: 3px solid #708047;
+  border-radius: 10px;
+  color: black;
   font-family: "Circular","Helvetica",sans-serif;
 }
   }
@@ -529,16 +530,16 @@ h1 {
   .infografix{
 
     width: 100%;
-    height: 150px;
-    background-color: #f4f4f4;
+    height: 12rem;
+    background-color: #8A8A8A;
     text-align: center;
     padding-top: 25px;
 
     .infogrText{
       display: inline-block;
-      color: #949494;
-      margin-right: 70px;
-      margin-top: 5rem;
+      color: #ffffff;
+      margin-right: 17rem;
+      text-align: center;
       .material-icons{
         font-size: 3rem;
       }
@@ -555,7 +556,7 @@ h1 {
     }
   }
 
-  .fullscreen-banner{
+  /* .fullscreen-banner{
     
     @media screen and (max-width: 600px) {
       height: 80rem;
@@ -564,7 +565,20 @@ h1 {
     @media screen and (min-width: 601px) {
       height: 64rem;
     }
-  }
+  } */
+
+  .section-whyus{
+    font-size: 30px;
+    margin-bottom: 2px;
+    color: black;
+    
+}
+.service-text{
+  font-size: 30px;
+  margin-bottom: 2px;
+  color: #ffffff !important;
+  opacity: 0.9;
+}
 
 .sticky{
   .active{
@@ -586,8 +600,17 @@ h1 {
 }
 
 .contentSlide{
-
+  background-color: #ffffff;
   .slick-item{
     width: 270px !important;
   }
+}
+
+.whyussection{
+  background-color: #dbdbdb !important;
+}
+.privatetext{
+  color: gray !important;
+  background-color: #141414 !important;
+  text-align: center;
 }

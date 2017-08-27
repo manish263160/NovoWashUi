@@ -842,8 +842,8 @@ thead {
 
 /* ================= Hero Unit ==================== */
 .intro-title {
-    font-size: 50px;
-    font-weight: 900;
+    font-size: 40px;
+    font-weight: 100;
 }
 .sub-intro {
     display: block;

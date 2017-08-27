@@ -52,10 +52,10 @@ a:hover {
 
 
 .dark-bg {
-    background-color: #120d07 !important;
+    background-color:  #252525 !important;
 }
 .dark-bg.lighten-1 {
-    background-color: #221a10 !important;
+    background-color:  #252525 !important;
 }
 
 
@@ -118,7 +118,7 @@ a:hover {
     border-color: #03a9f4;
 }
 .border-right {
-    border-right: 1px solid #383837;
+    border-right: 1px solid transparent;
 }
 
 .subscribe-wrapper .input-field {

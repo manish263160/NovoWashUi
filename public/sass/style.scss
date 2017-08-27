@@ -30,7 +30,7 @@
     .text{
       line-height:140%;
       text-align: justify; 
-      color:#7f7f7f;
+      color:#7F7F7F;
     }
   }
 
@@ -216,10 +216,10 @@
       color: black;
       font-family: FuturaBT;
       .whyDependOnUs__icons .col-md-4 img {
-      width: 90%;
+      width: 60%;
   }
   .whyDependOnUs__icons {.col-md-4 img {
-      width: 90%;
+      width: 60%;
 
     }
     }
@@ -262,7 +262,7 @@
     color: #fff;
 }
   .btn-secondary:hover {
-    background-color: #00E676;
+    background-color: #72A63A;
     border-color: #616161;
     text-decoration: none;
 }
@@ -280,9 +280,10 @@
 }
 
 .btn-alternate {
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #ffffff;
+  background-color: #fff;
+  border: 3px solid #708047;
+  border-radius: 10px;
+  color: black;
   font-family: "Circular","Helvetica",sans-serif;
 }
   }
@@ -312,16 +313,16 @@
   .infografix{
 
     width: 100%;
-    height: 150px;
-    background-color: #f4f4f4;
+    height: 12rem;
+    background-color: #8A8A8A;
     text-align: center;
     padding-top: 25px;
 
     .infogrText{
       display: inline-block;
-      color: #949494;
-      margin-right: 70px;
-      margin-top: 5rem;
+      color: #ffffff;
+      margin-right: 17rem;
+      text-align: center;
       .material-icons{
         font-size: 3rem;
       }
@@ -338,7 +339,7 @@
     }
   }
 
-  .fullscreen-banner{
+  /* .fullscreen-banner{
     
     @media screen and (max-width: 600px) {
       height: 80rem;
@@ -347,7 +348,20 @@
     @media screen and (min-width: 601px) {
       height: 64rem;
     }
-  }
+  } */
+
+  .section-whyus{
+    font-size: 30px;
+    margin-bottom: 2px;
+    color: black;
+    
+}
+.service-text{
+  font-size: 30px;
+  margin-bottom: 2px;
+  color: #ffffff !important;
+  opacity: 0.9;
+}
 
 .sticky{
   .active{
@@ -369,8 +383,17 @@
 }
 
 .contentSlide{
-
+  background-color: #ffffff;
   .slick-item{
     width: 270px !important;
   }
+}
+
+.whyussection{
+  background-color: #dbdbdb !important;
+}
+.privatetext{
+  color: gray !important;
+  background-color: #141414 !important;
+  text-align: center;
 }

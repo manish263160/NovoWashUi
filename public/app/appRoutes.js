@@ -66,5 +66,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         footer: footer
       },
     })
-
+    .state('faq', {
+      url: "/faq",
+      views: {
+        header: header,
+        content: {
+          templateUrl: "app/partials/faq.html",
+          // controller: 'becomepartner',
+        },
+        footer: footer
+      },
+    })
 });
