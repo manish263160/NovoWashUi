@@ -210,7 +210,7 @@
     }
     
     .whyDependOnUs {
-      background-color: #f4f4f4;
+      background-color: #dbdbdb;
       margin-left: 0;
       text-align: center;
       color: black;
@@ -281,8 +281,8 @@
 
 .btn-alternate {
   background-color: #fff;
-  border: 3px solid #708047;
-  border-radius: 10px;
+  // border: 3px solid #708047;
+  // border-radius: 10px;
   color: black;
   font-family: "Circular","Helvetica",sans-serif;
 }
@@ -352,7 +352,7 @@
 
   .section-whyus{
     font-size: 30px;
-    margin-bottom: 2px;
+    margin-bottom: 2rem;
     color: black;
     
 }
@@ -391,6 +391,7 @@
 
 .whyussection{
   background-color: #dbdbdb !important;
+  padding-bottom: 5rem;
 }
 .privatetext{
   color: gray !important;
@@ -430,4 +431,7 @@ ul.faq li span.number {
   background: #70AD47;
   color: #fff;
   font-size: 24px;
+}
+.oprpartner{
+  background-color: #ffffff !important;
 }

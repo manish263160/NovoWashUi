@@ -107,7 +107,7 @@ $desktop: "(max-width: 767px)";
 
 
 .md-padding{
-    height: 30em;
+    height: 32em;
     padding-left: 4rem;
     padding-right: 4rem;
     @media  #{$desktop}{
@@ -427,7 +427,7 @@ h1 {
     }
     
     .whyDependOnUs {
-      background-color: #f4f4f4;
+      background-color: #dbdbdb;
       margin-left: 0;
       text-align: center;
       color: black;
@@ -498,8 +498,8 @@ h1 {
 
 .btn-alternate {
   background-color: #fff;
-  border: 3px solid #708047;
-  border-radius: 10px;
+  // border: 3px solid #708047;
+  // border-radius: 10px;
   color: black;
   font-family: "Circular","Helvetica",sans-serif;
 }
@@ -569,7 +569,7 @@ h1 {
 
   .section-whyus{
     font-size: 30px;
-    margin-bottom: 2px;
+    margin-bottom: 2rem;
     color: black;
     
 }
@@ -608,6 +608,7 @@ h1 {
 
 .whyussection{
   background-color: #dbdbdb !important;
+  padding-bottom: 5rem;
 }
 .privatetext{
   color: gray !important;
@@ -647,4 +648,7 @@ ul.faq li span.number {
   background: #70AD47;
   color: #fff;
   font-size: 24px;
+}
+.oprpartner{
+  background-color: #ffffff !important;
 }
