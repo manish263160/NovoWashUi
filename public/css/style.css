@@ -433,7 +433,8 @@ md-progress-linear .md-container {
     color: white !important; }
 
 .contentSlide {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  margin-top: 5em; }
   .contentSlide .slick-item {
     width: 270px !important; }
 
