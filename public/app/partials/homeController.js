@@ -4,6 +4,8 @@ app
   .controller("headerController",
   function ($scope, $http, $rootScope, $timeout, $document, $mdDialog, $interval, RootAPIServices,Utils) {
 
+
+    
     $rootScope.active = "home";
     $scope.frameHeight = window.innerHeight;
     $scope.loaded = true;
@@ -195,4 +197,7 @@ app
 
 
     $scope.init();
+
+   
+
   }).value('duScrollOffset', 30);

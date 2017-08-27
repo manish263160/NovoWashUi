@@ -36,11 +36,11 @@
                 <br>
                 <a href="about-us.html#Team">Meet The Team</a>
                 <br>
-                <a ui-sref="faq" >Frequently Asked Questions</a> <!-- ui-sref="faq" -->
+                <a ng-click="goTofaq()" >Frequently Asked Questions</a> <!-- ui-sref="faq" -->
                 <br>
-                <a ui-sref="privacy">Privacy Policy</a>
+                <a ui-sref="privacy" data-ui-sref-opts="{reload: true}">Privacy Policy</a>
                 <br>
-                <a ui-sref="terms">Terms of Use</a>
+                <a ui-sref="terms" data-ui-sref-opts="{reload: true}">Terms of Use</a>
                 <br>
               </p>
             </div>

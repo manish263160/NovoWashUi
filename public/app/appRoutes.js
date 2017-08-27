@@ -11,11 +11,18 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   }
   var footer = {
     templateUrl: "app/partials/footer.html",
-    controller: function ($scope, $document) {
+    controller: function ($scope, $document,$state) {
       $scope.toTheTop = function () {
         $document.scrollTopAnimated(0, 500).then(function () {
           console.log('You just scrolled to the top!');
         });
+      }
+
+      $scope.goTofaq = function()
+      {
+        console.log('reload');
+        // $state.reload();
+        $state.go("faq",{},{reload:'faq'})
       }
     }
 

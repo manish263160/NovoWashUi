@@ -447,4 +447,31 @@ md-progress-linear .md-container {
   background-color: #141414 !important;
   text-align: center; }
 
+.partials h1 {
+  margin-bottom: 1rem;
+  font-family: Playfair Display,serif;
+  font-weight: 700; }
+.partials h3 {
+  font-size: 3rem;
+  font-weight: bold; }
+.partials h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-left: 7rem !important; }
+.partials p {
+  margin: 0 7rem 30px !important;
+  text-align: justify;
+  line-height: 30px; }
+
+ul.faq li span.number {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #70AD47;
+  color: #fff;
+  font-size: 24px; }
+
 /*# sourceMappingURL=style.css.map */
