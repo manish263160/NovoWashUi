@@ -77,4 +77,26 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         footer: footer
       },
     })
+    .state('privacy', {
+      url: "/privacy",
+      views: {
+        header: header,
+        content: {
+          templateUrl: "app/partials/privacy.html",
+          // controller: 'becomepartner',
+        },
+        footer: footer
+      },
+    })
+    .state('terms', {
+      url: "/terms",
+      views: {
+        header: header,
+        content: {
+          templateUrl: "app/partials/terms.html",
+          // controller: 'becomepartner',
+        },
+        footer: footer
+      },
+    })
 });
