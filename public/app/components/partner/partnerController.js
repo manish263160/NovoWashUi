@@ -1,15 +1,14 @@
 'use strict';
 app.controller('becomepartner', function ($scope, $http, $rootScope, RootAPIServices,$mdDialog, $timeout) {
   $rootScope.active = "becompartner";
+   $scope.form = {};
    $scope.partner = {};
    $scope.response = {"isSuccess": false};
 
    console.log('---',$rootScope.active);
   $scope.becomePartner = function (ev) {
     var body = $scope.partner;
-    console.log("submit click", body);
     RootAPIServices.rootApi.becomePartnerService({}, body).$promise.then(function (response) {
-      console.log("result===", response);
       $scope.response.isSuccess = true;
       $scope.partner = {};
       $mdDialog.show(
@@ -24,8 +23,8 @@ app.controller('becomepartner', function ($scope, $http, $rootScope, RootAPIServ
           .targetEvent(ev)
       );
 
-      $scope.partnerForm.$setPristine();
-      $scope.partnerForm.$setUntouched();
+      $scope.form.partnerForm.$setPristine();
+      $scope.form.partnerForm.$setUntouched();
    
     });
   }

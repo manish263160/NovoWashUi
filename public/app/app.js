@@ -36,7 +36,7 @@
     return function (exception, cause) {
       $delegate(exception, cause);
 
-      alert('There is something wrong, please try again.');
+     // alert('There is something wrong, please try again.');
     };
   });
 });
