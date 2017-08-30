@@ -215,6 +215,12 @@
       text-align: center;
       color: black;
       font-family: FuturaBT;
+
+
+      &.partner{
+        background-color: white;
+      }
+
       .whyDependOnUs__icons .col-md-4 img {
       width: 60%;
   }
@@ -353,7 +359,7 @@
   .section-whyus{
     font-size: 30px;
     color: black;
-    line-height: 3em;
+    line-height: 5em;
     
 }
 .service-text{
@@ -385,7 +391,7 @@
 .contentSlide{
   background-color: #ffffff;
   margin-top: 5em;
-  height: 21em;
+  height: 29em;
   .slick-item{
     width: 270px !important;
   }
@@ -393,7 +399,7 @@
 
 .whyussection{
   background-color: #dbdbdb !important;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
 }
 .privatetext{
   color: gray !important;

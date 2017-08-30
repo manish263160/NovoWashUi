@@ -317,6 +317,8 @@ md-progress-linear .md-container {
   text-align: center;
   color: black;
   font-family: FuturaBT; }
+  .whyDependOnUs.partner {
+    background-color: white; }
   .whyDependOnUs .whyDependOnUs__icons .col-md-4 img {
     width: 60%; }
   .whyDependOnUs .whyDependOnUs__icons .col-md-4 img {
@@ -415,7 +417,7 @@ md-progress-linear .md-container {
 .section-whyus {
   font-size: 30px;
   color: black;
-  line-height: 3em; }
+  line-height: 5em; }
 
 .service-text {
   font-size: 30px;
@@ -435,13 +437,13 @@ md-progress-linear .md-container {
 .contentSlide {
   background-color: #ffffff;
   margin-top: 5em;
-  height: 21em; }
+  height: 29em; }
   .contentSlide .slick-item {
     width: 270px !important; }
 
 .whyussection {
   background-color: #dbdbdb !important;
-  padding-bottom: 5rem; }
+  padding-bottom: 10rem; }
 
 .privatetext {
   color: gray !important;

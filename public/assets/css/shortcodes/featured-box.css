@@ -98,6 +98,7 @@ Common featured boxes
 }
 .featured-wrapper .intro-header h2 {
     font-weight: 500;
+    margin-top: 1rem;
 }
 
 .featured-box .content{
