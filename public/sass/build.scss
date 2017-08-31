@@ -215,7 +215,7 @@ h1 {
     width: 60% !important;
 }
   }
-
+$break-small: 768px;
   .main-text{
 
     .section-title{
@@ -427,7 +427,7 @@ h1 {
     }
     
     .whyDependOnUs {
-      background-color: #dbdbdb;
+      background-color: #fff;
       margin-left: 0;
       text-align: center;
       color: black;
@@ -438,31 +438,41 @@ h1 {
         background-color: white;
       }
 
-      .whyDependOnUs__icons .col-md-4 img {
-      width: 60%;
-  }
-  .whyDependOnUs__icons {.col-md-4 img {
-      width: 60%;
-
+    .whyDependOnUs__icons {
+        img {
+        width: 13rem;
+        @media screen and (max-device-width: 767px)  {
+          width: 30rem !important;
+        }
+      }
     }
-    }
 
-  .whyDependOnUs__icons{ .col-md-7 {
-      text-align: left;
-      position: absolute;
-      top: 35%;
-      left: 40%;
-  }
+  .whyDependOnUs__icons{
+    span{
+      max-width: 15em;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5em;
+      font-family: "Circular","Helvetica",sans-serif;
+      @media screen and (max-device-width: 767px) {
+        font-size: 5rem !important;
+      }
+    }
   }
   .whyDependOnUs__icons>div {
       margin-bottom: 20px;
       margin-top: 20px;
   }
-    .whyDependOnUs__icons span {
+    .whyDependOnUs__icons {
+      span {
       font-size: 17px;
       font-weight: 400;
       font-family: "Circular","Helvetica",sans-serif !important;
+      @media screen and (max-width: 600px){
+        font-size: 25px;
+      }
   }
+}
     .heading, .menuItems ul li.categoryHeading, .testimonee {
     text-transform: uppercase;
     font-weight: 700;
@@ -574,16 +584,20 @@ h1 {
   } */
 
   .section-whyus{
-    font-size: 30px;
+    font-size: 40px;
     color: black;
     line-height: 5em;
+    font-weight: 800;
+    
     
 }
 .service-text{
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 2px;
   color: #ffffff !important;
   opacity: 0.9;
+  font-weight: 900;
+  line-height: 11rem;
 }
 
 .sticky{
@@ -615,13 +629,14 @@ h1 {
 }
 
 .whyussection{
-  background-color: #dbdbdb !important;
+  background-color: #fff !important;
   padding-bottom: 10rem;
 }
 .privatetext{
   color: gray !important;
   background-color: #141414 !important;
   text-align: center;
+  line-height: 6rem;
 }
 
 .partials{
@@ -659,4 +674,16 @@ ul.faq li span.number {
 }
 .oprpartner{
   background-color: #ffffff !important;
+}
+
+#services{
+  height: 60rem;
+  @media screen and (max-device-width:767px){
+    height: 100%;
+  }
+}
+#services {
+  .text-center{
+  height: 15rem;
+}
 }

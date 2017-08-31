@@ -312,22 +312,27 @@ md-progress-linear .md-container {
   padding-top: 2%; }
 
 .whyDependOnUs {
-  background-color: #dbdbdb;
+  background-color: #fff;
   margin-left: 0;
   text-align: center;
   color: black;
   font-family: FuturaBT; }
   .whyDependOnUs.partner {
     background-color: white; }
-  .whyDependOnUs .whyDependOnUs__icons .col-md-4 img {
-    width: 60%; }
-  .whyDependOnUs .whyDependOnUs__icons .col-md-4 img {
-    width: 60%; }
-  .whyDependOnUs .whyDependOnUs__icons .col-md-7 {
-    text-align: left;
-    position: absolute;
-    top: 35%;
-    left: 40%; }
+  .whyDependOnUs .whyDependOnUs__icons img {
+    width: 13rem; }
+    @media screen and (max-device-width: 767px) {
+      .whyDependOnUs .whyDependOnUs__icons img {
+        width: 30rem !important; } }
+  .whyDependOnUs .whyDependOnUs__icons span {
+    max-width: 15em;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5em;
+    font-family: "Circular","Helvetica",sans-serif; }
+    @media screen and (max-device-width: 767px) {
+      .whyDependOnUs .whyDependOnUs__icons span {
+        font-size: 5rem !important; } }
   .whyDependOnUs .whyDependOnUs__icons > div {
     margin-bottom: 20px;
     margin-top: 20px; }
@@ -335,6 +340,9 @@ md-progress-linear .md-container {
     font-size: 17px;
     font-weight: 400;
     font-family: "Circular","Helvetica",sans-serif !important; }
+    @media screen and (max-width: 600px) {
+      .whyDependOnUs .whyDependOnUs__icons span {
+        font-size: 25px; } }
   .whyDependOnUs .heading, .whyDependOnUs .menuItems ul li.categoryHeading, .whyDependOnUs .testimonee {
     text-transform: uppercase;
     font-weight: 700; }
@@ -415,15 +423,18 @@ md-progress-linear .md-container {
     }
   } */
 .section-whyus {
-  font-size: 30px;
+  font-size: 40px;
   color: black;
-  line-height: 5em; }
+  line-height: 5em;
+  font-weight: 800; }
 
 .service-text {
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 2px;
   color: #ffffff !important;
-  opacity: 0.9; }
+  opacity: 0.9;
+  font-weight: 900;
+  line-height: 11rem; }
 
 .sticky .active a {
   border-bottom: 3px solid #8FD049 !important;
@@ -442,13 +453,14 @@ md-progress-linear .md-container {
     width: 270px !important; }
 
 .whyussection {
-  background-color: #dbdbdb !important;
+  background-color: #fff !important;
   padding-bottom: 10rem; }
 
 .privatetext {
   color: gray !important;
   background-color: #141414 !important;
-  text-align: center; }
+  text-align: center;
+  line-height: 6rem; }
 
 .partials h1 {
   margin-bottom: 1rem;
@@ -479,5 +491,14 @@ ul.faq li span.number {
 
 .oprpartner {
   background-color: #ffffff !important; }
+
+#services {
+  height: 60rem; }
+  @media screen and (max-device-width: 767px) {
+    #services {
+      height: 100%; } }
+
+#services .text-center {
+  height: 15rem; }
 
 /*# sourceMappingURL=style.css.map */
