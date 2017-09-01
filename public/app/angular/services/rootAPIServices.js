@@ -57,7 +57,11 @@ app.factory('RootAPIServices', function ($resource, $localStorage, $rootScope, N
       becomePartnerService : {
         url:rootURL + '/partner/add',
         method: 'POST'
-      }
+      },
+      getAllBooking : {
+        url:rootURL + '/booking/getAll',
+        method: 'POST'
+      },
     })
 
   }

@@ -1,24 +1,34 @@
+<style>
+
+</style>
 <section>
-        <table ng-table="usersTable" class="table table-striped">
-                <tr ng-repeat="user in data">
+    <div class="container">
+            <div class="text-center">
+                    <h2 class="text-capitalize service-padding">All User's Enquery</h2>
+                   
+                 </div>
+        <table ng-table="usersTable" class="table table-striped dataTable">
+                <tr ng-repeat="user in $data">
                     <td data-title="'Id'" >
-                        {{user.id}}
+                      <span>  {{user.id}}</span>
                     </td>
-                    <td data-title="'First Name'" >
-                        {{user.first_name}}
+                    <td data-title="'User Name'" >
+                            <span> {{user.name}}</span>
                     </td>
-                    <td data-title="'Last Name'" >
-                        {{user.last_name}}
+                    <td data-title="'Email'" >
+                            <span> {{user.email}}</span>
                     </td>    
-                    <td data-title="'e-mail'" >
-                        {{user.email}}
+                    <td data-title="'Phone'" >
+                            <span> {{user.phone}}</span> 
                     </td>    
-                    <td data-title="'Country'">
-                        {{user.country}}
+                    <td data-title="'servicename'">
+                            <span> {{user.servicename}}</span>
                     </td>    
-                    <td data-title="'IP'" >
-                        {{user.ip_address}}
+                    <td data-title="'Date'" >
+                            <span> {{user.serviceDate | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+                    
                     </td>    
                 </tr>
              </table>
+    </div>>
 </section>

@@ -162,6 +162,10 @@ Header
 
 #header.transparent-header .menuzord .logo-brand {
     z-index: 1200;
+    font-family: 'Great Vibes', normal;
+    font-size: 3.7rem;
+    letter-spacing: 6px;
+    margin-bottom: -19px;
 }
 
 
@@ -234,7 +238,7 @@ header.sticky .menuzord-menu>li>a,
 }
 
 .tt-nav.sticky .menuzord-menu>li>a {
-    line-height: 60px;
+    line-height: 68px;
 }
 
 .menuzord-menu>li>a,

@@ -320,29 +320,27 @@ md-progress-linear .md-container {
   .whyDependOnUs.partner {
     background-color: white; }
   .whyDependOnUs .whyDependOnUs__icons img {
-    width: 13rem; }
+    width: 18rem; }
     @media screen and (max-device-width: 767px) {
       .whyDependOnUs .whyDependOnUs__icons img {
-        width: 30rem !important; } }
+        width: 17rem !important; } }
+  .whyDependOnUs .textdiv {
+    margin-top: 2em; }
   .whyDependOnUs .whyDependOnUs__icons span {
     max-width: 15em;
+    margin-top: 2rem;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5em;
+    font-size: 17px;
+    font-weight: 400;
     font-family: "Circular","Helvetica",sans-serif; }
     @media screen and (max-device-width: 767px) {
       .whyDependOnUs .whyDependOnUs__icons span {
-        font-size: 5rem !important; } }
+        font-size: 2rem !important; } }
   .whyDependOnUs .whyDependOnUs__icons > div {
     margin-bottom: 20px;
     margin-top: 20px; }
-  .whyDependOnUs .whyDependOnUs__icons span {
-    font-size: 17px;
-    font-weight: 400;
-    font-family: "Circular","Helvetica",sans-serif !important; }
-    @media screen and (max-width: 600px) {
-      .whyDependOnUs .whyDependOnUs__icons span {
-        font-size: 25px; } }
   .whyDependOnUs .heading, .whyDependOnUs .menuItems ul li.categoryHeading, .whyDependOnUs .testimonee {
     text-transform: uppercase;
     font-weight: 700; }
@@ -426,14 +424,26 @@ md-progress-linear .md-container {
   font-size: 40px;
   color: black;
   line-height: 5em;
-  font-weight: 800; }
+  font-weight: 400; }
+
+.section-ourpartner {
+  font-size: 30px;
+  color: black;
+  line-height: 5em;
+  font-weight: 400; }
+
+.sectionwhyus {
+  font-size: 40px;
+  color: black;
+  line-height: 1em;
+  font-weight: 400; }
 
 .service-text {
   font-size: 40px;
   margin-bottom: 2px;
   color: #ffffff !important;
   opacity: 0.9;
-  font-weight: 900;
+  font-weight: 500;
   line-height: 11rem; }
 
 .sticky .active a {
@@ -454,7 +464,9 @@ md-progress-linear .md-container {
 
 .whyussection {
   background-color: #fff !important;
-  padding-bottom: 10rem; }
+  padding-bottom: 5rem; }
+  .whyussection.whyus {
+    padding-bottom: 1rem; }
 
 .privatetext {
   color: gray !important;
@@ -500,5 +512,8 @@ ul.faq li span.number {
 
 #services .text-center {
   height: 15rem; }
+
+.dataTable td {
+  text-align: center !important; }
 
 /*# sourceMappingURL=style.css.map */

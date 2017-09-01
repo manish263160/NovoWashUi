@@ -106,8 +106,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         footer: footer
       },
     })
-    .state('allEnquery', {
-      url: "/allEnquery",
+    .state('allEnqueryforNovoWash', {
+      url: "/allEnqueryforNovoWash",
       views: {
         // header: header,
         content: {
