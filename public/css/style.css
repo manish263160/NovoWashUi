@@ -427,9 +427,9 @@ md-progress-linear .md-container {
   font-weight: 400; }
 
 .section-ourpartner {
-  font-size: 30px;
+  font-size: 40px;
   color: black;
-  line-height: 5em;
+  line-height: 4em;
   font-weight: 400; }
 
 .sectionwhyus {
@@ -458,7 +458,7 @@ md-progress-linear .md-container {
 .contentSlide {
   background-color: #ffffff;
   margin-top: 5em;
-  height: 29em; }
+  height: 30em; }
   .contentSlide .slick-item {
     width: 270px !important; }
 
