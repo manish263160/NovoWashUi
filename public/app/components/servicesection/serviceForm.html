@@ -96,7 +96,7 @@
               <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                   <label>Mobile</label>
-                  <input ng-model="myForm.phone" ng-required="true" name="phone">
+                  <input ng-model="myForm.phone"  ng-required="true" name="phone" ng-minlength=10 ng-maxlength=10>
                   <div ng-messages="projectForm.phone.$error" ng-if="projectForm.$submitted || projectForm.phone.$touched">
                     <div ng-message="required" ng-hide="myVar">Phone is required.</div>
                   </div>
@@ -204,7 +204,7 @@
               <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                   <label>Mobile</label>
-                  <input ng-model="myForm.phone" ng-required="true" name="phone">
+                  <input ng-model="myForm.phone" ng-required="true"  ng-required="true" name="phone" ng-minlength=10 ng-maxlength=10 />
                   <div ng-messages="projectForm.phone.$error" ng-if="projectForm.$submitted || projectForm.phone.$touched">
                     <div ng-message="required" ng-hide="myVar">Phone is required.</div>
                   </div>
@@ -249,7 +249,7 @@
             <div layout-gt-sm="row">
               <md-input-container class="md-block" flex-gt-sm>
                 <label>{{categoryServiceData.serviceFor == 2 ? 'Company' : ''}} Mobile</label>
-                <input ng-model="myForm.phone" ng-required="true">
+                <input ng-model="myForm.phone" ng-required="true" type="number" ng-minlength=10 ng-maxlength=10>
                 <div ng-messages="projectForm.phone.$error" ng-if="projectForm.$submitted || projectForm.phone.$touched">
                   <div ng-message="required"  ng-hide="myVar">
                     Please enter your name.

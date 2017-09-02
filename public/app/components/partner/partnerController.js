@@ -5,7 +5,7 @@ app.controller('becomepartner', function ($scope, $http, $rootScope, RootAPIServ
    $scope.partner = {};
    $scope.response = {"isSuccess": false};
 
-   console.log('---',$rootScope.active);
+  //  console.log('---',$rootScope.active);
   $scope.becomePartner = function (ev) {
     var body = $scope.partner;
     RootAPIServices.rootApi.becomePartnerService({}, body).$promise.then(function (response) {

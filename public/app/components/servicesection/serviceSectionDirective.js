@@ -13,17 +13,17 @@ app
         $scope.setActive = function () {
           $rootScope.active = "service";
         }
-        console.log('------------',$rootScope.active);
+        // console.log('------------',$rootScope.active);
        
       },
        compile: function compile( tElement, tAttributes ) {
-            console.log( tAttributes.log + ' (compile)'  );
+            // console.log( tAttributes.log + ' (compile)'  );
             return {
                 pre: function preLink( scope, element, attributes ) {
-                    console.log( attributes.log + ' (pre-link)'  );
+                    // console.log( attributes.log + ' (pre-link)'  );
                 },
                 post: function postLink( scope, element, attributes ) {
-                    console.log( attributes.log + ' (post-link)'  );
+                    // console.log( attributes.log + ' (post-link)'  );
                 }
             };
          }

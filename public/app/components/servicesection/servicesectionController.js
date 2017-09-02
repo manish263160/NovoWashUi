@@ -35,11 +35,11 @@ controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope
         $scope.init=function(){
                 $scope.pagecount=1;
                 
-                console.log("--data here--",$scope.parent);
-                console.log("--data servicesCost--",$scope.parent.serviceCost)
+                // console.log("--data here--",$scope.parent);
+                // console.log("--data servicesCost--",$scope.parent.serviceCost)
 
                 $scope.parent.serviceCost.forEach(function(element) {
-                        console.log(element.price);
+                        // console.log(element.price);
                 }, this);
                 if($scope.parent.categoryServiceData.serviceType ===1){
                         $scope.stepCount= 4;
@@ -53,18 +53,15 @@ controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope
                         $scope.stepCount= 1;
                 }
 
-                console.log("initial page count==", $scope.pagecount);
+                // console.log("initial page count==", $scope.pagecount);
         }
 
 
          $scope.actionButtonClick = function (pagecount , form) {
-                console.log("-------------------",$scope.projectForm.$valid);
                 if($scope.projectForm.$valid){
-                 console.log("pagecount===",pagecount);
                  $scope.pagecount=pagecount;
                  pagecount--;
                  var perc=pagecount*100/ $scope.stepCount;
-                        console.log("click happened",perc);
                         $scope.progressbar=perc;
                         $scope.myVar = true;
                 }else{
@@ -81,12 +78,10 @@ controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope
       };
                 
           $scope.backButtonClick = function (pagecount){
-                        console.log("click pagecount",pagecount);
                         $scope.pagecount=pagecount;
                         pagecount--;
                         var perc=pagecount*100/ $scope.stepCount;
                         $scope.progressbar=perc;
-                        console.log("click perc",perc);
                         // $scope.pagecount--;
         };
 
@@ -104,12 +99,9 @@ controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope
                                 enquire.email= $scope.myForm.email,
                                 enquire.serviceDate= $scope.myForm.serviceDate;
                         // enquire.push(data);
-                         console.log("submit click",enquire);
                          RootAPIServices.rootApi.bookOrEnquireService({},enquire).$promise.then(function (response) {
 
-                                console.log("result===",response);
                                 $scope.pagecount++;
-                                console.log("pagecount after submit===",$scope.pagecount);
                                 $scope.progressbar=100;
                          });
 

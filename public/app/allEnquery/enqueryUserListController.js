@@ -14,7 +14,7 @@ function ($scope, $http, $rootScope, $filter, NgTableParams, $document, RootAPIS
 
 RootAPIServices.rootApi.getAllBooking({}).$promise.then(function (response) {
                                 $scope.users=response.data;
-                                console.log("result===",$scope.users);
+                                // console.log("result===",$scope.users);
                             $scope.usersTable = new NgTableParams({} , { dataset:  $scope.users});
                          });
    

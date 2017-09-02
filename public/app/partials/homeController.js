@@ -19,10 +19,10 @@ app
       {value:'0',text:'positive feedback',max:'99' , type:'%',icon:'star_rate'},
     ]
     $document.on('scroll', function() {
-      console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
+      // console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
       var topheight=$document.scrollTop();
       if(topheight > 0){
-        console.log("topheight true")
+        // console.log("topheight true")
         $('#header').addClass('sticky');
       }
       if(topheight >= 1500){
@@ -76,7 +76,7 @@ app
       })
 
     $scope.showAdvanced = function (event,catId) {
-      console.log("catId in showAdvanced mehod====",catId);
+      // console.log("catId in showAdvanced mehod====",catId);
        if(catId == undefined || catId == null){
          catId = 1;
          $scope.isCatShow=true;
@@ -129,7 +129,7 @@ app
       
 
       $scope.getServiceById =function getServiceById(event, catId){
-        console.log('catId--',catId);
+        // console.log('catId--',catId);
         $scope.catId=catId;
          RootAPIServices.rootApi.getAllServiceByCatId({categoryId:catId},null).$promise.then(function (response) {
         $scope.allServices = response.data;
@@ -150,13 +150,13 @@ app
 
 
       $scope.goToServiceForm = function (item, $event) {
-        console.log("-serviceid--",item.id);
+        // console.log("-serviceid--",item.id);
         $scope.categoryServiceData=item;
         $scope.servModel = true;
         var serviceId =$scope.categoryServiceData.id;
         RootAPIServices.rootApi.getServicesCostById({serviceId:serviceId},null).$promise.then(function (response) {
         $scope.serviceCost=response.data;
-        console.log("---cost--",response.data)
+        // console.log("---cost--",response.data)
         $mdDialog.show({
         controller: DialogControllerServ,
         templateUrl: 'app/components/servicesection/serviceForm.html',
@@ -177,7 +177,7 @@ app
       angular.extend($scope,{
           categoryServiceData : $scope.categoryServiceData,
       });
-      console.log("$scope.categoryServiceData===",$scope.categoryServiceData);
+      // console.log("$scope.categoryServiceData===",$scope.categoryServiceData);
       
       
 
@@ -188,7 +188,7 @@ app
 
       $scope.cancel = function ($event) {
         $mdDialog.cancel();
-        console.log("---$rootScope.catId---",$rootScope.catId);
+        // console.log("---$rootScope.catId---",$rootScope.catId);
         $scope.showAdvanced($event,$rootScope.catId);
       };
 
