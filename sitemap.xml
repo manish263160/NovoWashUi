@@ -7,8 +7,26 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://novowash.com/</loc>
-  <lastmod>2017-09-01T21:13:18+00:00</lastmod>
-  <changefreq>monthly</changefreq>
+  <loc>http://novowash.com/#/home</loc>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+</url>
+
+<url>
+  <loc>http://novowash.com/#/aboutus</loc>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+</url>
+
+
+<url>
+  <loc>http://novowash.com/#/becomepartner</loc>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>http://novowash.com/#/blog</loc>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
 </url>
 </urlset>
