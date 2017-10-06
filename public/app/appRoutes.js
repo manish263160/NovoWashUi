@@ -6,18 +6,35 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.when("", "/home");
   var header = {
     templateUrl: "app/partials/header.html",
-    controller: function ($scope) { }
+    controller: function ($scope,$window) { 
+     /*  $scope.ulshow=false;
+
+      $scope.myFunction=function(){
+        $scope.ulshow=!$scope.ulshow;
+      } */
+      $scope.ismobileview=false;
+      if($window.innerWidth <= 768){
+        // $scope.isdesktop=false;
+        $scope.ismobileview=true;
+      }
+
+    }
 
   }
   var footer = {
     templateUrl: "app/partials/footer.html",
-    controller: function ($scope, $document,$state) {
+    controller: function ($scope, $document,$state , $window) {
       $scope.toTheTop = function () {
         $document.scrollTopAnimated(0, 500).then(function () {
           // console.log('You just scrolled to the top!');
         });
       }
 
+      $scope.ismobileview=false;
+      if($window.innerWidth <= 768){
+        // $scope.isdesktop=false;
+        $scope.ismobileview=true;
+      }
       $scope.goTofaq = function()
       {
         // console.log('reload');

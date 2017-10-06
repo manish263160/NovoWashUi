@@ -1168,13 +1168,7 @@ thead {
 }
 
 
-@media (max-width: 767px) {
-    .reviewcarausel > .md-padding {
-      height: 36em;
-      padding-left: 17rem;
-      padding-right: 17rem;
-     } 
-    }
+
 .error-wrapper-alt h1 {
     color: #fff;
     font-size: 130px;

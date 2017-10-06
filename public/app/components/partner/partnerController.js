@@ -1,11 +1,19 @@
 'use strict';
-app.controller('becomepartner', function ($scope, $http, $rootScope, RootAPIServices,$mdDialog, $timeout) {
+app.controller('becomepartner', function ($window,$scope, $http, $rootScope, RootAPIServices,$mdDialog, $timeout) {
   $rootScope.active = "becompartner";
    $scope.form = {};
    $scope.partner = {};
    $scope.response = {"isSuccess": false};
 
   //  console.log('---',$rootScope.active);
+
+  $scope.ismobileview=false;
+  if($window.innerWidth <= 768){
+    // $scope.isdesktop=false;
+    $scope.ismobileview=true;
+  }
+
+
   $scope.becomePartner = function (ev) {
     var body = $scope.partner;
     RootAPIServices.rootApi.becomePartnerService({}, body).$promise.then(function (response) {

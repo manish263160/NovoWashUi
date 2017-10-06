@@ -23,8 +23,31 @@ $break-big: 1024px;
         display: none;
     }
 
+    md-dialog{
+        padding-top: 8rem!important;
+    
+ }
+
+ .servicesection{
+    background-color: #fff;
+ }
+
+ .md-inline-form {
+    height: 100% !important;
+}
+
+ .md-divider{
+     padding: 0px !important;
+ }
     .menuMobile{
         display: block;
+
+        ul{
+            margin-bottom: 0px !important;
+        }
+        .container {
+            width: 100%;
+        }
     
         .header-sticky{
             box-shadow: 0px 1px 0px 0 rgba(0, 0, 0, 0.16), 0 0px 0px 0 rgba(0, 0, 0, 0.12);
@@ -33,24 +56,26 @@ $break-big: 1024px;
     .first-half{
         max-width: 50%;
         vertical-align: top;
-        display: inline-block;
+        display: inline-grid;
         text-align: center;
         .intellitext{
-            display: block;
-            font-size: 1.2em;
+            font-size: 9px;
             font-weight: 900;
+            text-align:left;
+            line-height: 13px;
         }
         .logo-brand {
             z-index: 1200;
-            font-family: 'Great Vibes', normal;
-            font-size: 7rem !important;
-            letter-spacing: 2px !important;
+            font-family: 'Great Vibes',normal;
+            font-size: 4rem!important;
+            letter-spacing: 1px!important;
             margin-top: 2.5rem;
-            margin-bottom: 0px !important;
-            color: #8FD049;
+            margin-bottom: 0rem !important;
+            color: #8fd049;
         }
     }
 
+   
     .tt-nav.sticky .logo-brand {
         color: #8FD049;
         margin: 22px 0 0 0;
@@ -60,21 +85,27 @@ $break-big: 1024px;
     .menuzord .showhide {
         width: 30px;
         height: 46px;
-        padding: 12px 31px 0px;
+        padding: 0px 0px 0px;
+        margin-right: 6px;
         display: none;
         float: right;
         text-decoration: none;
         outline: 0;
         -webkit-tap-highlight-color: transparent;
+
+        img{
+            width: 100% !important;
+        }
     }
 
     .margintop2{
         margin-top: 2rem;
+        margin-right: 1rem;
     }
     .menuzord .showhide em {
         width: 34px;
-        height: 7px;
-        margin: 6.5px 18px 0px;
+        height: 4px;
+        margin: 6px 0 0;
         float: right;
         background: #777;
     }
@@ -121,22 +152,219 @@ $break-big: 1024px;
         display: block;
         text-align: left;
         margin-left: 15px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-        padding: 1rem 3rem !important;
+        border-bottom: 2px solid rgba(0,0,0,.03);
+        padding: 1rem 3rem!important;
         line-height: 5rem;
         text-decoration: none;
-        font-size: 2em;
-        font-weight: normal;
+        font-size: 2rem;
+        font-weight: 400;
         outline: 0;
         -webkit-tap-highlight-color: transparent;
-        font-family: 'Raleway', sans-serif !important;
+        font-family: Raleway,sans-serif!important;
       }
     
       .topnav.responsive .active {
         a{
-            border-bottom: 3px solid #8FD049
+            border-bottom: 3px solid rgb(255,87,34)
                   }
       } 
     }
+
+    #preloader{
+        
+                .preloader-position
+                {
+                    left: 40%;
+                    top: 40%;
+                }
+                img{
+                    width: 200px;        
+                }
+                .progress{
+                    height: 3px;
+                    margin: 18px 0;
+                }
+            } 
+        
+            .menuMobile.tt-nav{
+                position: fixed !important;
+            }
+    
 }
 
+
+@media screen and (max-device-width: 768px)
+{
+    .menuMobile{
+        .slideable{
+         display: none;   
+        }
+        .whyDependOnUs__icons{
+            p{
+                line-height: 1.5em;
+                font-size: 1.8rem;
+                font-family: "Circular","Helvetica",sans-serif;
+            }
+
+        }
+        .whyDependOnUs {
+            .textdiv{
+                margin-top: 1em;
+            }
+        }
+
+        md-toolbar:not(.md-menu-toolbar) {
+            background-color : #8fd049 !important;
+        }
+
+        md-toolbar:focus{
+            outline-color: #8fd049 !important;
+        }
+
+         .md-toggle-icon{
+            display: block;
+            margin-left: auto;
+            speak: none;
+            vertical-align: middle;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            -webkit-transition: -webkit-transform 0.3s ease-in-out;
+            transition: -webkit-transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+
+            .toggled {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            .material-icons{
+                line-height: 2 !important;
+                font-size: 31px;
+            }
+         }
+
+         .md-toolbar-tools{
+            font-weight: 700 !important;
+         }
+    }
+
+}
+
+/* -------------------------Partners Page------------------------------------*/
+
+@media screen and (max-device-width: 768px)
+{
+
+    .partnerSlide{
+            background-color: #fff;
+            margin-top: 1em;
+
+        .section-ourpartner{
+            line-height: 2em !important;
+        }
+
+        .owl-item{ img {
+            width: 80%!important;
+        }
+        }
+    }  
+
+    .infographMobile{
+
+        .infogrText{
+            display: inline-block;
+
+            .spanclass{
+                font-size: 12px;
+                display: inline-block;
+                display: block;
+            }
+            .undertext{
+                font-size: 10px;
+                display: block;
+            }
+        }
+    }
+
+    .abountusMobile{
+    .aboutuspage{
+        background-color: white;
+
+    }
+
+    .OurFounder{
+        background-color:#fafafa;
+    }
+}
+
+.borderUpdown{
+    border-bottom: 1px solid #fafafa;
+    border-top: 1px solid #fafafa;
+
+    
+}
+
+.hiddenComponents{
+    display: none;
+}
+.hidefocus{
+    &:focus{
+        outline: transparent !important;
+    }
+
+    .offset-s4{
+        margin-left: 30% !important;
+    }
+}
+/* ---------------------faq page css----------------------- */
+.background{
+    height: 30px !important;
+}
+.partials{
+
+    h1{
+        margin-bottom: 3rem ;
+    }
+    h4{
+        font-size: 15px !important;
+    }
+    
+    .section-whyus{
+        font-size: 30px;
+    }
+}
+
+.infograph{
+    .material-icons{
+        font-size: 5.3rem;
+    }
+    .spanCount{
+        font-size: 2.4rem;
+    }
+}
+
+/* --------------------footer css */
+
+.footerMobile{
+    
+    .footerText{
+        padding-top: 0.5rem;
+    }
+    .mt-10{
+        margin-top: 0px !important;
+    }
+
+    h3{
+        margin: 0 0 6px !important;
+    }
+}
+
+.service_mobile{
+    form{
+    h2{
+        padding-bottom: 1em !important;
+    }
+}
+}
+}

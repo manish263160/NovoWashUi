@@ -1,7 +1,9 @@
 <!-- Why us section start -->
-<section id="about" class="background" style="height:110px">
+
+<section id="about"  style="{{!ismobileview ? 'height:110px' : 'height:68px'}}">
 </section>
-<section style="background-color: white;padding:50px;">
+<div ng-if="!ismobileview">
+<section style="background-color: white;padding:50px;" >
   <div class="container">
     <div class="row">
         <div class="col-md-6 mb-sm-50">
@@ -71,3 +73,76 @@
     </div>
   </div>
 </section>
+</div>
+
+<!-- ------------------------------mobile view----------------------------------- -->
+<div ng-if="ismobileview" class="abountusMobile">
+<section  class="aboutuspage" >
+    <!-- <div class="container">
+      <div class="row"> -->
+          <div class="col-sm-12 mb-sm-50">
+          <img src="assets/img/team/cleaning services.png" alt="" class="img-responsive ">
+          </div><!--/.col-sm-6-->      
+          <div class="col-md-12 mb-sm-50">
+            <h2 class="font-40 mb-30 center" style="color: black">Our Vision</h2>
+            <p class="lead center" style="text-align:justify;color:black; font-size:16px">Novowash aims to build India's first organized chain providing end-to-end home interior care solutions to urban households, who need premium service quality as well as ease and convenience in their busy life-style. We look to build not just a brand but an eco-system of partners who would be standardized by our strategic technology partnerships, highly trained professionals and complete digitized service deliverance. Novowash is committed to working with entrepreneurs and investors to co-build Novowash brand through the franchise route. We have built a team of passionate individuals looking to build a sustainable business in the direct-to-home services segment and look to become an overall segment creator.</p>
+        </div>
+      <!-- </div>
+    </div> -->
+  </section>
+  <section class="OurFounder">
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <h2 class="font-40 mb-30 center" style="color: black">Our Founders</h2>
+            <p class="lead center" style="text-align:justify;color:black; font-size:16px">While working together in their previous company our founders looked deeply into the problems consumers faced when dealing with home and car care service providers. There was a huge need for creating not just a market-place but an eco-system of organized and standardized chain of service providers. Novowash was built with great effort and understanding of the current market and requirement for high quality hassle free services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section ng-controller="aboutusController" ng-cloak class="team-slick-container">
+    <div class="container">
+      <div class="row">
+          
+          <div class="col s6">
+              <md-card class="_md"  alt="Washed Out" style="width:14rem;height:29rem">
+                  <img ng-src="{{team1.logo_img}}"  style="height:165px"  class="img-responsive md-card-image" alt="Washed Out" src="{{team1.logo_img}}">
+                    <span class="center"><strong>{{team1.name}}</strong></span>
+                    <span class="center">{{team1.pos}}</span>
+                    <span class="center">{{team1.qual}}</span>
+                    <a  target="_blank" href="https://www.linkedin.com/in/rohandeshmukh7" class="center">
+                      <img src="assets/img/linkedin.png" title="LinkedIn" width="20" height="20">  
+                    </a>
+              </md-card>
+          </div>
+          <div class="col s6">
+              <md-card class="_md"  alt="Washed Out" style="width:14rem;height:29rem">
+                  <img ng-src="{{team2.logo_img}}" style="height:165px" class="img-responsive md-card-image" alt="Washed Out" src="{{team2.logo_img}}">
+                    <span class="center"><strong>{{team2.name}}</strong></span>
+                    <span class="center">{{team2.pos}}</span>
+                    <span class="center">{{team2.qual}}</span>
+                    <a target="_blank"  href="https://www.linkedin.com/in/anudeep-jain-2a347a57" class="center">
+                      <img src="assets/img/linkedin.png" title="LinkedIn" width="20" height="20">
+                    </a>
+              </md-card>
+          </div>
+          
+        </div>
+    </div>
+  </section>
+  <section style="background-color: white;margin-top: 2em;">
+    <div class="container">
+      <div class="row">
+          <!--/.col-sm-6-->      
+          <div class="col-md-6 mb-sm-50">
+            <h2 class="font-40 mb-30 center" style="color: black">Our service professionals</h2>
+            
+        </div>
+        <div class="col-md-6 mb-sm-50">
+            <img src="assets/img/team/collage1.jpg" alt="" class="img-responsive ">
+            </div>
+            <p class="lead center col-md-6 mb-sm-50" style="text-align:justify; color: black;font-size:16px">Our service executives are highly trained professionals and are always happy to serve our customers. We provide an excellent environment for their professional training and provide them with state-of-the-art technologies to cater to our customers.We take sheer pleasure and joy in serving our customers. We believe in providing an elite service experience in our services primarily with the help of technology and service quality.</p>
+      </div>
+    </div>
+  </section>
+</div>

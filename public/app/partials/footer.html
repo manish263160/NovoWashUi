@@ -1,5 +1,5 @@
 <!--footer 4 start -->
-<footer class="footer footer-four ">
+<footer class="footer footer-four " ng-if="!ismobileview">
   <div class="primary-footer dark-bg lighten-1 text-center">
     <div class="container">
 
@@ -143,3 +143,117 @@
   </div>
 </footer>
 <!--footer 4 end-->
+
+<!-- ----------------------------------footer for mobile-------------------------------- -->
+
+<footer class="footer footer-four footerMobile" ng-if="ismobileview">
+    <div class="primary-footer dark-bg lighten-1 text-center">
+      <div class="container">
+  
+        <button ng-click="toTheTop()" class="page-scroll btn-floating btn-large back-top waves-effect waves-light">
+                      <i class="material-icons">&#xE316;</i>
+        </button>
+  
+        <ul class="social-link tt-animate ltr mt-20">
+          <li><a href="https://www.facebook.com/novowashservices"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/novowash"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/novowash"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="http://www.instagram.com/novowashindia"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UC0vTJsbwupvVvEzY5BfIVBA"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="https://plus.google.com/u/0/105957726178174805323"><i class="fa fa-google-plus"></i></a></li>
+        </ul>
+  
+        <hr class="mt-10">
+  
+        <!-- <div class="row"> -->
+          <!-- <div class="col-md-12"> -->
+            <div class="row footerText para">
+              <div   ng-click="showAboutUs=!showAboutUs" class="hidefocus">
+                <h3 class="col m8 left-align" >ABOUT US</h3>
+                <!-- <span class="" > -->
+                    <i class="col m4 offset-s5 material-icons">add</i>
+                    <!-- </span> -->
+                    <p class="col m12 text footer_a"  ng-if="showAboutUs" >Novowash was founded by a team of passionate IITians, looking to provide highly standardized and ultra premium
+                      services to consumers and clients on a PAN India basis.</p>
+                </div>
+               </div>
+               <hr class="mt-10">
+               <div class="row footerText para">
+              <div ng-click="showCompany=!showCompany" class="hidefocus">
+                <h3 class="col m8 left-align">COMPANY</h3>
+                  <i class="col m4 offset-s5 material-icons">add</i>
+                <p class="col m12 text footer_a" ng-if="showCompany">
+                  <a  ui-sref="aboutus">Company Overview</a>
+                  <!-- <br>
+                  <a href="about-us.html#Team">Meet The Team</a> -->
+                  <br>
+                  <a ng-click="goTofaq()" >Frequently Asked Questions</a> <!-- ui-sref="faq" -->
+                  <br>
+                  <a ui-sref="privacy" data-ui-sref-opts="{reload: true}">Privacy Policy</a>
+                  <br>
+                  <a ui-sref="terms" data-ui-sref-opts="{reload: true}">Terms of Use</a>
+                  <br>
+                </p>
+              </div>
+               </div>
+               <hr class="mt-10">
+               <div class="row footerText para">
+              <div  ng-click="showAddress=!showAddress" class="hidefocus">
+                <h3 class="col m8 left-align">ADDRESS</h3>
+                <!-- <span class="" > -->
+                  <i class="col m4  material-icons" style="margin-left: 45%;">add</i>
+                  <!-- </span> -->
+                <p class="col m12 text footer_a" ng-if="showAddress">
+                  <b>Corporate Office: </b>
+                  </br>C-10, Main Market, Malviyanagar,
+                  </br>Delhi : 110017
+                  </br>Ph: +91-7505100200
+                  </br>Email: info@novowash.com
+                </p>
+              </div>
+            </div>
+            <hr class="mt-10">
+            <div class="row footerText para">
+              <div ng-click="showServing=!showServing" class="hidefocus">
+                <h3 class="col m8 left-align">SERVING IN</h3>
+                <!-- <span class="" > -->
+                  <i class="col m4  material-icons" style="margin-left: 38%">add</i>
+                  <!-- </span> -->
+                <p class="text footer_a col m12 " ng-if="showServing" >
+                  <a href="#">New Delhi</a>
+                  <br>
+                  <a href="#">North-West Delhi</a>
+                  <br>
+                  <a href="#">West Delhi</a>
+                  <br>
+                  <a href="#">South-West Delhi</a>
+                  <br>
+                  <a href="#">South Delhi</a>
+                  <br>
+                  <a href="#">Gurgaon</a>
+                  <br>
+                  <a href="#">South-East Delhi</a>
+                  <br>
+                  <a href="#">Central Delhi</a>
+                  <br>
+                  <a href="#">Norht-East Delhi</a>
+                  <br>
+                  <a href="#">Shahdara</a>
+                  <br>  
+                  <a href="#">East Delhi</a>
+                  <br>
+                  <a href="#">Noida</a>
+                  </br>
+                </p>
+              </div>  
+              </div>
+          <!-- </div> -->
+          
+        <!-- </div> -->
+      </div>
+    </div>
+    
+    <div class="privatetext">
+    <span>2016-2017 &copy; Novoweb Ventures Pvrivate Limited</span>
+    </div>
+  </footer>

@@ -1,8 +1,8 @@
 <!-- <section class="oprpartner">
 </section>
  -->
-<section ng-controller="partnerController" ng-cloak class=" contentSlide">
-    <div class="text-center ">
+<section ng-controller="partnerController" ng-cloak class="contentSlide" ng-if="!ismobileview">
+    <div class="text-center">
         <h2 class="section-ourpartner text-capitalize ">Our Partners</h2>
     
     </div>
@@ -23,4 +23,39 @@
             </div>
           </data-owl-carousel>
 
+</section>
+<section ng-controller="partnerController" ng-cloak  ng-cloak class="menuMobile partnerSlide" ng-if="ismobileview">
+
+    <md-toolbar class="md-theme-light" ng-click="ourPrtnrSection=!ourPrtnrSection"> 
+        <div flex  layout="row"> 
+        <h2 class="md-toolbar-tools" flex>
+            <span>Our Partners</span>
+          </h2>
+          <span flex></span>
+          <span class="md-toggle-icon" ng-class="{'toggled' :  serviceSection}">
+          <i class="material-icons">add</i>
+          </span>
+          </div>
+        </md-toolbar>
+
+    <!-- <div class="text-center">
+        <h2 class="section-ourpartner text-capitalize ">Our Partners</h2>
+    
+    </div> -->
+    <md-content class="hiddenComponents" data-slide-toggle="ourPrtnrSection" data-slide-toggle-duration="500">
+    <!-- <data-owl-carousel id="first" class="owl-carousel" data-options="{navigation: true, pagination: false,loop:true,items:5, rewindNav : false}">
+        <div owl-carousel-item="" ng-repeat="item in ::logoJson" class="item owlcarausel">
+                <img src="{{item.logo_img}}" alt="Washed Out">
+        </div>
+      </data-owl-carousel> -->
+      <md-list>
+        <md-list-item class="md-3-line" ng-repeat="item in logoJson" >
+          <img ng-src="{{item.logo_img}}?{{$index}}" alt=""  class="md-avatar" alt="{{item.logo_img}}">
+          <div class="md-list-item-text">
+            <h3>{{item.com_name}}</h3>
+          </div>
+          <md-divider md-inset ng-if="!$last"></md-divider>
+        </md-list-item>
+      </md-list>
+    </md-content>
 </section>

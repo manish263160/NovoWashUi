@@ -10,14 +10,40 @@
 <div ng-include="'app/components/ourPartners/partners.html'" ></div>
 
 
-<section id="infographixCount" class="section-padding1 infografix" >
+<section id="infographixCount" class="section-padding1 infografix" ng-if="!ismobileview">
  <div class="infogrText" ng-repeat="i in infografix">
     <i class="material-icons">{{i.icon}}</i>
 <span class="spanclass"> {{i.value}}{{i.value === i.max ? i.type : ''}}</span>
 <div class="undertext">{{i.text}}</div>
 </div>
 </section>
-   <!-- Preloader -->
+
+<section ng-if="ismobileview">
+    <md-content>
+        <md-list>
+          <md-list-item class="md-3-line infograph" ng-repeat="i in infografix" >
+            <div class="md-list-item-text" layout="row" layout-wrap>
+                <i class="material-icons" flex="20">{{i.icon}}</i>
+              <span flex="80" class="spanCount">{{i.value}}{{i.value === i.max ? i.type : ''}}</span>
+              <span flex="20"></span>
+              <h3 class="text-capitalize" layout="row" flex="80">{{i.text}}</h3>
+            </div>
+            <md-divider md-inset ng-if="!$last"></md-divider>
+          </md-list-item>
+        </md-list>
+      </md-content>
+
+
+  <!-- <div class="infogrText col-xs-4" ng-repeat="i in infografix">
+    <div class="row">
+      
+      <span class="spanclass col-xs-12"> <i class="material-icons">{{i.icon}}</i> {{i.value}}{{i.value === i.max ? i.type : ''}}</span>
+    </div>
+    <div class="row">
+      <span class="undertext col-xs-12">{{i.text}}</span>
+    </div>
+  </div> -->
+</section> <!-- Preloader -->
   <div id="preloader" ng-show="loaded" class="animate-show animate-hide">
     <div class="preloader-position">
       <img src="assets/img/logo.png" alt="logo" width="300">

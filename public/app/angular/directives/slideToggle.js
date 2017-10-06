@@ -1,4 +1,4 @@
-app.directive('slideable', function () {
+/* app.directive('slideable', function () {
     return {
         restrict:'C',
         compile: function (element, attr) {
@@ -20,8 +20,8 @@ app.directive('slideable', function () {
             };
         }
     };
-})
-.directive('slideToggle', function() {
+}) */
+/* .directive('slideToggle',['$document', function($document) {
     return {
         restrict: 'A',
         link: function(scope, element, attrs) {
@@ -39,6 +39,39 @@ app.directive('slideable', function () {
                 }
                 attrs.expanded = !attrs.expanded;
             });
+
+            $document.bind('click', function(event){
+                var isClickedElementChildOfPopup = element
+                .find(event.target)
+                .length > 0;
+                
+                if(!isClickedElementChildOfPopup){
+                    target.style.height = '0px';
+                    attrs.expanded = false;
+                }
+                  
+              });
         }
     }
-});
+}]) */
+
+app.directive('slideToggle', function() {  
+    return {
+      restrict: 'A',      
+      scope:{
+        isOpen: "=slideToggle" // 'data-slide-toggle' in our html
+      },  
+      link: function(scope, element, attr) {
+        var slideDuration = parseInt(attr.slideToggleDuration, 10) || 200;      
+        
+        // Watch for when the value bound to isOpen changes
+        // When it changes trigger a slideToggle
+        scope.$watch('isOpen', function(newIsOpenVal, oldIsOpenVal){
+          if(newIsOpenVal !== oldIsOpenVal){ 
+            element.stop().slideToggle(slideDuration);
+          }
+        });
+        
+      }
+    };  
+  });

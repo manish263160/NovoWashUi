@@ -289,6 +289,14 @@ Footer 4
     margin-left: 15px;
 }
 
+@media screen and (max-device-width: 768px)
+{
+
+    .footer-four .social-link li+li {
+        margin-left: 0px !important;
+    }
+    
+}
 .footer-four .social-link li a {
     line-height: 14px;
 }

@@ -4,8 +4,12 @@ $break-small: 768px;
     .section-title{
       font-size: 16px;
       margin-bottom: 10px !important;
+    @media screen and (max-device-width: 768px)
+    {
+    font-size: 15px !important;
+    margin-bottom: 2px!important;
     }
-
+  }
     .intro-title{
       font-family: "Circular","Helvetica",sans-serif !important;
     }
@@ -62,6 +66,14 @@ $break-small: 768px;
       min-width: 250px !important;
       width: 75vw !important;
       max-width: 250px !important;
+    }
+
+    @media screen and (max-device-width: 768px)
+    {
+      margin-top: 6rem;
+      min-width: 26em !important;
+      width: 75vw !important;
+      max-width: 26em !important;
     }
   }
 
@@ -223,7 +235,7 @@ $break-small: 768px;
         img {
         width: 18rem;
         @media screen and (max-device-width: 767px)  {
-          width: 17rem !important;
+          width: 14rem !important;
         }
       }
     }
@@ -288,6 +300,12 @@ $break-small: 768px;
     line-height: 1.71em;
     border-radius: 4px;
     text-transform: capitalize;
+    @media screen and (max-device-width: 768px)
+    {
+      max-width: 12.5em;
+      line-height: 2.3em;
+      margin-bottom: 1em;
+    }
 }
 
 .btn-alternate {
@@ -453,6 +471,12 @@ p{
   margin: 0 7rem 30px !important;
   text-align: justify;
   line-height: 30px;
+  @media screen and (max-device-width: 768px)
+  {
+    margin: 0 2rem 20px!important;
+    text-align: justify;
+    line-height: 24px;
+  }
 }
 }
 

@@ -1,19 +1,70 @@
-  <!--header start-->
+<!--header start mobile-->
+
+<header id="headermobile" class="tt-nav  nav-border-bottom menuMobile " ng-if="ismobileview">
+  <div class="header-sticky light-header">
+
+    <div class="container">
+      <div id="materialize-menu" class="menuzord menuzord-responsive">
+        <div class="first-half pull-left">
+          <a href="#" ui-sref="home" class="logo-brand">Novowash</a>
+          <span class="intellitext">INTELLIGENT INTERIOR CARE</span>
+        </div>
+
+        <div class="pull-right first-half margintop2">
+        <a href="javascript:void(0)" class="showhide" style="display: inline;"  ng-click="showHeader=!showHeader">
+          <!-- <em></em><em></em><em></em> -->
+          <img src="assets/img/mobileMenu.png" alt="mobile menu" >
+        </a>
+        </div>       
+      </div>   
+      <ul class="topnav responsive slideable" id="myTopnav"  data-slide-toggle="showHeader" data-slide-toggle-duration="100">
+        <li ng-class="active==='home' ? 'active' : ''">
+          <a href="#home" ui-sref="home" du-smooth-scroll du-scrollspy >Home</a>
+        </li>
+        <li ng-class="active ==='aboutus' ? 'active' : ''">
+            <a  ui-sref="aboutus" data-ui-sref-opts="{reload: true}" >About us</a>
+          </li>
+          <li ng-class="active ==='becompartner' ? 'active' : ''">
+              <a  ui-sref="becomepartner" >Be a franchise</a>
+            </li>
+            <li>
+              <a href="http://www.novowash.com/blog/" data-scroll>Blog</a>
+            </li>
+        </ul>
+    </div>
+
+   
+    
+    
+
+  </div>
+
+</header>
   
-<header id="header" class="tt-nav transparent-header nav-border-bottom">
+<!--header start Desktop-->
+<header id="header" class="tt-nav transparent-header nav-border-bottom menuDesctop" ng-if="!ismobileview">
     <div class="header-sticky light-header">
 
       <div class="container">
         <div id="materialize-menu" class="menuzord">
-          <!--logo start-->
+          <!-- Mobile menu startr -->
+          <div class="menuMobile first-half" >
+              <a href="#" ui-sref="home" class="logo-brand">Novowash</a>
+              <span  class="intellitext"> INTELLIGENT INTERIOR CARE</span>
+          </div>
+
+  
+          
+          <!--Desctop menu start-->
           <div class="pull-left" style="width: 24%">
           <a href="#" ui-sref="home" class="logo-brand">
                             Novowash
                             <!-- <img src="assets/img/logo.png"  alt="logo_light"> -->
                           </a>
-                          <span style="font-size: 12px;font-weight: 900"> INTELLIGENT INTERIOR CARE</span>
+                          <span style="font-size: 12px;font-weight: 900" class="intellitext"> INTELLIGENT INTERIOR CARE</span>
           </div>
-          <ul class="nav menuzord-menu pull-right op-nav light">
+    
+          <ul class="nav menuzord-menu pull-right op-nav light ">
             <li ng-class="active==='home' ? 'active' : ''">
               <a href="#home" ui-sref="home" du-smooth-scroll du-scrollspy>Home</a>
             </li>

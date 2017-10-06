@@ -1,8 +1,22 @@
 'use strict';
 
 app.
-controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope ,RootAPIServices) {
+controller('serviceForm', function($scope, $http ,mdcDateTimeDialog , $rootScope ,RootAPIServices ,$window) {
         var vm = this;
+        $scope.isdesktop=true;
+        
+        if($window.innerWidth <= 768){
+          $scope.isdesktop=false;
+        }
+
+
+       /*  $scope.resizeHeght = function() {
+        console.log("===============",$window.innerHeight);
+        var windowHeight=$window.innerHeight;
+
+        $(".md-dialog-container").height(windowHeight);
+        }; */
+
         $scope.parent =$scope.$parent;
         $scope.myForm ={};
 

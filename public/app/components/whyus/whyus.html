@@ -1,5 +1,5 @@
 
-  <section id="whyus" class="whyussection whyus">
+  <section id="whyus" class="whyussection whyus menuDesctop" ng-if="!ismobileview">
       <div class="text-center">
           <h2 class="sectionwhyus text-capitalize service-padding">Why us?</h2>
          
@@ -44,5 +44,50 @@
     </div>
     
   </section>
+
+
+  <!-- ------------------------------mobile view start---------------------------------------- -->
+  <section id="whyus" class="whyussection whyus menuMobile" ng-if="ismobileview">
+    <div class="text-center">
+      <h2 class="sectionwhyus text-capitalize service-padding">Why us?</h2>
+    </div>
+
+    <div class="container whyDependOnUs  section">
+        <div class="row whyDependOnUs__icons">
+          <div class="col s12">
+              <div class="">
+                <img src="assets/img/whyus/trained_professionals.png" class="image" alt="Why depend on Novo Was?">
+              </div>
+              <div class="col s10 offset-s1 textdiv">
+                <p>Trained and dedicated service professionals at your service</p>
+              </div>
+        </div>
+      </div>
+    <!-- second image for why us -->
+      <div class="row whyDependOnUs__icons">
+        <div class="col-sm-12 col-xs-12">
+            <div class=" col-sm-12 col-xs-12 ">
+              <img src="assets/img/whyus/steam_based_technologies.png" class="image" style="width: 12rem !important;" alt="Why depend on Novo Was?">
+            </div>
+            <div class="col s10 offset-s1 textdiv">
+              <p>Deploying advanced steam technologies and organic chemicals</p>
+            </div>
+      </div>
+    </div>
+
+<!-- third image for why us -->
+    <div class="row whyDependOnUs__icons">
+      <div class="col-sm-12 col-xs-12">
+          <div class=" col-sm-12 col-xs-12 ">
+            <img src="assets/img/whyus/premium_quality.png" class="image" alt="Why depend on Novo Was?">
+          </div>
+          <div class="col s10 offset-s1 textdiv">
+            <p>Premium service quality with on-time, hassle free service experience</p>
+          </div>
+    </div>
+  </div>
+
+  </section>
+    
 
 <md-divider ng-if="!$last"></md-divider>

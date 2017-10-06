@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, height=device-height">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,7 +62,7 @@
 
   <link rel="stylesheet" href="vendor/bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet"; href="vendor/ngtables/ng-table.min.css">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <!-- <link href="css/serviceForm.css" rel="stylesheet"> -->
 
   <!-- js start -->
@@ -83,7 +83,7 @@
   <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
   <!-- <script src="assets/js/menuzord.js"></script>  -->
   <!-- <script src="assets/js/equalheight.js"></script>  -->
-  <script src="assets/js/scripts.min.js?v=5"></script>
+  <script src="assets/js/scripts.js?v=5"></script>
 
   <!-- Angular Material requires Angular.js Libraries -->
   <script src="vendor/bower_components/angular/angular.min.js"></script>
@@ -127,17 +127,17 @@
   <script src="app/components/customerReview/customerReview.js"></script>
   <script src="app/components/ourPartners/partner.js"></script>
   <script src="app/allEnquery/enqueryUserListController.js"></script>
-  <!-- <script src="app/angular/directives/slideToggle.js"></script> -->
+  <script src="app/angular/directives/slideToggle.js"></script>
 
   
 </head>
 
-<body id="top" ng-app="app" ng-cloak md-theme="{{theme}}">
+<body id="top" ng-app="app" ng-cloak class="has-header-search" data-spy="scroll" data-target="#materialize-menu" data-offset="100" >
 
 
   <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
   <div ui-view="header"></div>
-  <div ui-view="content"></div>
+  <div ui-view="content" autoscroll="true"></div>
   <div ui-view="footer"></div>
 
 

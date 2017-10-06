@@ -1,21 +1,26 @@
 app
 .controller("partnerController",
-function ($scope, $http, $rootScope, $timeout){
+function ($scope, $http, $rootScope, $timeout ,$window){
 
     $scope.logoJson=[
-        {logo_img:'assets/partner_img/godrej.png'},
-        {logo_img:'assets/partner_img/hicare_logo.png'},
-        {logo_img:'assets/partner_img/homecenter.png'},
-        {logo_img:'assets/partner_img/parwanath.png'},
-        {logo_img:'assets/partner_img/rentickle.png'},
+        {logo_img:'assets/partner_img/godrej.png', com_name:'Godrej Group'},
+        {logo_img:'assets/partner_img/hicare_logo.png', com_name:'Hicare services pvt ltd'},
+        {logo_img:'assets/partner_img/homecenter.png', com_name:'Home Centre Stores'},
+        {logo_img:'assets/partner_img/parwanath.png', com_name:'Parshwanath Housing Finance'},
+        {logo_img:'assets/partner_img/rentickle.png', com_name:'Rentickle'},
         // {logo_img:'assets/partner_img/sandoz.png'},
-        {logo_img:'assets/partner_img/uclean.png'},
-        {logo_img:'assets/partner_img/urbanclap.png'},
-        {logo_img:'assets/partner_img/Zommber.png'},
+        {logo_img:'assets/partner_img/uclean.png', com_name:'U clean Technology'},
+        {logo_img:'assets/partner_img/urbanclap.png', com_name:'UrbanClap Technologies India Pvt. Ltd '},
+        {logo_img:'assets/partner_img/Zommber.png', com_name:'Zimmber'},
     ] ;
     $scope.slickConfig4Loaded = true;
 
+	$scope.isMobileView = false;
+	if ($window.innerWidth <= 768) {
+		$scope.isMobileView = true;
+	}
 
+	// console.log("$scope.isMobileView==in partner====",$scope.isMobileView)
     /* $scope.slickCarausel = {
         method: {},
         dots: false,

@@ -1,10 +1,16 @@
 app.controller("aboutusController",
-  function ($scope, $http, $rootScope, $timeout) {
+  function ($scope, $http,$window, $rootScope, $timeout) {
 
+    $rootScope.ismobileview=false;
+    if($window.innerWidth <= 768){
+      // $scope.isdesktop=false;
+      $rootScope.ismobileview=true;
+    }
     $rootScope.active = "aboutus";
     $scope.team1 =  { logo_img: 'assets/img/team/1.jpg',name:"Rohan Deshmukh", pos:"Founder", qual:"IIT Bombay" };
     $scope.team2 = { logo_img: 'assets/img/team/2.jpg',name:"Anudeep Jain", pos:"Founder", qual:"CA,CFA" }
     $scope.slickConfig4Loaded = true;
+
 
 
     $scope.slickCarausel = {

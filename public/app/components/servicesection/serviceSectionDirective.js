@@ -9,7 +9,7 @@ app
       link: function (scope, element, attrs) {
 
       },
-      controller: function ($scope, $http, $rootScope, $mdDialog, $interval, RootAPIServices, ) {
+      controller: function ($scope, $http, $rootScope, $mdDialog, $interval, RootAPIServices ) {
         $scope.setActive = function () {
           $rootScope.active = "service";
         }
@@ -32,7 +32,7 @@ app
   });
 
 
-app.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log,$mdDialog,) {
+app.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log,$mdDialog) {
   $scope.toggleLeft = buildDelayedToggler('left');
   $scope.toggleRight = buildToggler('right');
   $scope.isOpenRight = function () {

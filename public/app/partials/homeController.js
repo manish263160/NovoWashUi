@@ -2,7 +2,7 @@
 
 app
   .controller("headerController",
-  function ($scope, $http, $rootScope, $timeout, $document, $mdDialog, $interval, RootAPIServices,Utils) {
+  function ($scope, $http,$window, $rootScope, $timeout, $document, $mdDialog, $interval, RootAPIServices,Utils) {
 
 
     
@@ -16,7 +16,7 @@ app
       {value:'0',text:'WORKING HOURS',max:'10000', type:'+' , icon:'query_builder'},
       {value:'0',text:'HAPPY CUSTOMERS',max:'1500' , type:'+',icon:'favorite_border'},
       // {value:'0',text:'VERIFIED EXPERTS',max:'99'},
-      {value:'0',text:'positive feedback',max:'99' , type:'%',icon:'star_rate'},
+      {value:'0',text:'POSITIVE FEEDBACK',max:'99' , type:'%',icon:'star_rate'},
     ]
     $document.on('scroll', function() {
       // console.log('Document scrolled to ', $document.scrollLeft(), $document.scrollTop());
@@ -32,7 +32,7 @@ app
           {value:'0',text:'WORKING HOURS',max:'10000', type:'+' , icon:'query_builder'},
           {value:'0',text:'HAPPY CUSTOMERS',max:'1500' , type:'+',icon:'favorite_border'},
           // {value:'0',text:'VERIFIED EXPERTS',max:'99'},
-          {value:'0',text:'positive feedback',max:'99' , type:'%',icon:'star_rate'},
+          {value:'0',text:'POSITIVE FEEDBACK',max:'99' , type:'%',icon:'star_rate'},
         ]
       }
     });
@@ -58,6 +58,21 @@ app
 
     $scope.init = function () {
      
+      // $scope.isdesktop=true;
+      $rootScope.ismobileview=false;
+      if($window.innerWidth <= 768){
+        // $scope.isdesktop=false;
+        $rootScope.ismobileview=true;
+      }
+      
+      $scope.isdesktop=true;
+      
+      if($window.innerWidth <= 768){
+        $scope.isdesktop=false;
+      }
+      $scope.serviceSection=false;
+      $scope.showHeader=false;
+      
     }
 /* 
     $scope.theme = 'red';
@@ -95,12 +110,12 @@ app
       })
         .then(function (answer) {
           $scope.status = 'You said the information was "' + answer + '".';
-        }, function () {
-          $scope.status = 'You cancelled the dialog.';
+          $("#viewAll").click();
         });
     };
 
-    function DialogController($scope, $mdDialog, $rootScope) {
+    function DialogController($scope, $mdDialog, $rootScope ,$window ,$mdSidenav, $log) {
+
       $scope.catModel = true;
       var requestData = {};
       if($scope.catId != undefined || $scope.catId != null){
@@ -197,7 +212,11 @@ app
 
 
     $scope.init();
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-   
+/* start of mobile site */
+
+
+
 
   }).value('duScrollOffset', 30);

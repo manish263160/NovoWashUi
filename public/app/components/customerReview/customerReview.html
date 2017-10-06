@@ -1,11 +1,11 @@
-<section >
+<section ng-if="!ismobileview" >
   <div class="text-center">
           <h2 class="section-whyus text-capitalize">Our Happy Customers</h2>
          
        </div>
  </section>
 
-<section ng-controller="customertestinomial" ng-cloak class="reviewcarausel">
+<section ng-controller="customertestinomial" ng-cloak class="reviewcarausel" ng-if="!ismobileview">
     <!-- <md-content class="md-padding" layout-xs="column" layout="row"> -->
   <!-- <div class="container"> -->
     <!-- <md-content class="md-padding" layout-xs="column" layout="row"> -->
@@ -32,3 +32,27 @@
 <!-- </div> -->
 </section>
 
+<!-- <section ng-controller="customertestinomial" ng-cloak class="mobileCustomerReview" ng-if="ismobileview">
+    <div class="text-center">
+        <h2 class="headingTop text-capitalize">Our Happy Customers</h2>      
+     </div>
+
+     <slick class="slider md-padding"  layout-xs="column" layout="row" settings="slickConfig4" ng-if="slickConfig4Loaded">
+        <md-card layout="column" ng-repeat=" item in number4">
+            
+            <img ng-src="{{item.img}}" class="md-card-image img" alt="Washed Out">
+            
+            <md-card-title>
+              <md-card-title-text>
+                <h2>{{item.cus_name}}</h2>
+                <h1>{{item.label}}</h1>
+              </md-card-title-text>
+            </md-card-title>
+            <hr/>
+            <md-card-content>
+              <p>{{item.review}}</p>
+            </md-card-content>
+          </md-card>
+
+    </slick>
+</section> -->
