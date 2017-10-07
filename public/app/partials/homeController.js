@@ -25,9 +25,13 @@ app
         // console.log("topheight true")
         $('#header').addClass('sticky');
       }
-      if(topheight >= 1500){
+      if($scope.isdesktop && topheight >= 1500 ){
         $timeout($scope.onTimeout,200);
-      }else{
+      }
+      else if(!$scope.isdesktop && topheight >= 1050 ){
+        $timeout($scope.onTimeout,200);
+      }
+      else{
         $scope.infografix=[
           {value:'0',text:'WORKING HOURS',max:'10000', type:'+' , icon:'query_builder'},
           {value:'0',text:'HAPPY CUSTOMERS',max:'1500' , type:'+',icon:'favorite_border'},
@@ -35,6 +39,8 @@ app
           {value:'0',text:'POSITIVE FEEDBACK',max:'99' , type:'%',icon:'star_rate'},
         ]
       }
+
+      
     });
     $scope.onTimeout = function(){
       $scope.infografix.forEach(function(e) {
@@ -71,7 +77,7 @@ app
         $scope.isdesktop=false;
       }
       $scope.serviceSection=false;
-      $scope.showHeader=false;
+      
       
     }
 /* 

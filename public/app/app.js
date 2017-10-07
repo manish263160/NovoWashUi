@@ -1,6 +1,6 @@
   var app = angular.module('app', ['NVConfig', 'ui.router', 'duScroll', 'ngMaterial',
     'ngResource','ngMessages','slickCarousel','ngTable', 
-    'ngStorage', 'angular.filter','ngAnimate' , 'ngMaterialDatePicker' ,'ngAria',
+    'ngStorage', 'angular.filter','ngAnimate' , 'ngMaterialDatePicker' ,'ngAria','angular-click-outside'
   ]);
 
   app.config(function ($mdThemingProvider) {

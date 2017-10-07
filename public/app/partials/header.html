@@ -1,7 +1,6 @@
 <!--header start mobile-->
-
 <header id="headermobile" class="tt-nav  nav-border-bottom menuMobile " ng-if="ismobileview">
-  <div class="header-sticky light-header">
+  <div class="header-sticky light-header" click-outside=closeHeader()>
 
     <div class="container">
       <div id="materialize-menu" class="menuzord menuzord-responsive">
@@ -11,13 +10,13 @@
         </div>
 
         <div class="pull-right first-half margintop2">
-        <a href="javascript:void(0)" class="showhide" style="display: inline;"  ng-click="showHeader=!showHeader">
+        <a href="javascript:void(0)" class="showhide" style="display: inline;"  ng-click="showHeaderView()">
           <!-- <em></em><em></em><em></em> -->
           <img src="assets/img/mobileMenu.png" alt="mobile menu" >
         </a>
         </div>       
       </div>   
-      <ul class="topnav responsive slideable" id="myTopnav"  data-slide-toggle="showHeader" data-slide-toggle-duration="100">
+      <ul class="topnav responsive slideable" id="myTopnav"  data-slide-toggle="{showHeader}" data-slide-toggle-duration="100">
         <li ng-class="active==='home' ? 'active' : ''">
           <a href="#home" ui-sref="home" du-smooth-scroll du-scrollspy >Home</a>
         </li>

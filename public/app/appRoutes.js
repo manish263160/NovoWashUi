@@ -18,6 +18,18 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         $scope.ismobileview=true;
       }
 
+      $scope.showHeader=false;
+
+      $scope.showHeaderView = function(){
+        $scope.showHeader = !$scope.showHeader;
+      }
+      
+      
+      $scope.closeHeader = function(){
+        console.log("showHeaderView=====close",$scope.showHeader);
+        $scope.showHeader =false;
+      }
+
     }
 
   }
