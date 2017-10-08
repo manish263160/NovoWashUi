@@ -13,6 +13,14 @@ app
         $scope.setActive = function () {
           $rootScope.active = "service";
         }
+
+        $scope.serviceSection=true;
+
+        $scope.showServices =function(){
+          $scope.serviceSection=!$scope.serviceSection
+        }
+
+
         // console.log('------------',$rootScope.active);
        
       },

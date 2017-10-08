@@ -33,19 +33,20 @@
 
 <div ng-if="ismobileview"  flex-gt-sm="100" ng-cloak flex class="menuMobile" >
    
-    <md-toolbar class="md-theme-light" ng-click="serviceSection=!serviceSection"> 
+    <md-toolbar class="md-theme-light" ng-click="showServices()"> 
       <div flex  layout="row"> 
       <h2 class="md-toolbar-tools" flex>
           <span>Our Services</span>
         </h2>
         <span flex></span>
         <span class="md-toggle-icon" ng-class="{'toggled' :  serviceSection}">
-        <i class="material-icons">add</i>
+        <i class="material-icons" ng-if="!serviceSection">add</i>
+        <i class="material-icons" ng-if="serviceSection">remove</i>
         </span>
         </div>
       </md-toolbar>
 
-    <md-content class="hiddenComponents" data-slide-toggle="serviceSection" data-slide-toggle-duration="500">
+    <md-content  data-slide-toggle="{serviceSection}" data-slide-toggle-duration="500">
         <md-list>
           <md-list-item class="md-3-line" ng-repeat="item in allcategory" ng-click="showAdvanced($event, item.id)">
             <img ng-src="{{item.imageUrl}}?{{$index}}" alt=""  class="md-avatar" alt="{{item.imageUrl}}">

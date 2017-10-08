@@ -204,6 +204,7 @@ $break-big: 1024px;
                 line-height: 1.5em;
                 font-size: 1.8rem;
                 font-family: "Circular","Helvetica",sans-serif;
+                margin: 0 0 0px !important;
             }
 
         }
@@ -367,4 +368,16 @@ $break-big: 1024px;
     }
 }
 }
+
+/* -----------------------service flow--------------------------------------- */
+.md-dialog-container {
+    height: 100% !important;
+}
+}
+
+
+/* date picket settings */
+@media screen and (max-device-width: 768px)
+{
+
 }

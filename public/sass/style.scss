@@ -19,7 +19,11 @@ $break-small: 768px;
     padding-top: 2rem;
     h3 {
       color: #fff;
-      font-family: "Open Sans", sans-serif
+      font-family: "Open Sans", sans-serif;
+      @media screen and (max-device-width: 768px)
+      {
+        font-size: 15px;
+      }
     }
   }
 
@@ -219,6 +223,11 @@ $break-small: 768px;
 
     .service-padding{
       padding-top: 2%;
+
+      @media screen and (max-device-width: 768px)
+      {
+        padding-top: 6% !important;
+      }
     }
     
     .whyDependOnUs {
@@ -303,7 +312,7 @@ $break-small: 768px;
     @media screen and (max-device-width: 768px)
     {
       max-width: 12.5em;
-      line-height: 2.3em;
+      line-height: 1.3em;
       margin-bottom: 1em;
     }
 }
@@ -399,6 +408,10 @@ $break-small: 768px;
   color: black;
   line-height: 1em;
   font-weight: 400;
+  @media screen and (max-device-width: 768px)
+  {
+    font-size: 35px;
+  }
   
 }
 .service-text{

@@ -133,7 +133,8 @@
   .menuMobile .whyDependOnUs__icons p {
     line-height: 1.5em;
     font-size: 1.8rem;
-    font-family: "Circular","Helvetica",sans-serif; }
+    font-family: "Circular","Helvetica",sans-serif;
+    margin: 0 0 0px !important; }
   .menuMobile .whyDependOnUs .textdiv {
     margin-top: 1em; }
   .menuMobile md-toolbar:not(.md-menu-toolbar) {
@@ -221,7 +222,11 @@
     margin: 0 0 6px !important; }
 
   .service_mobile form h2 {
-    padding-bottom: 1em !important; } }
+    padding-bottom: 1em !important; }
+
+  /* -----------------------service flow--------------------------------------- */
+  .md-dialog-container {
+    height: 100% !important; } }
 /*
 .reviewcarausel{
     height: 60rem;
@@ -401,6 +406,9 @@ h1 {
   .footerText h3 {
     color: #fff;
     font-family: "Open Sans", sans-serif; }
+    @media screen and (max-device-width: 768px) {
+      .footerText h3 {
+        font-size: 15px; } }
 
 .background {
   background-color: #455a64; }
@@ -543,6 +551,9 @@ md-progress-linear .md-container {
 
 .service-padding {
   padding-top: 2%; }
+  @media screen and (max-device-width: 768px) {
+    .service-padding {
+      padding-top: 6% !important; } }
 
 .whyDependOnUs {
   background-color: #fff;
@@ -604,7 +615,7 @@ md-progress-linear .md-container {
   @media screen and (max-device-width: 768px) {
     .titlecell .big-button {
       max-width: 12.5em;
-      line-height: 2.3em;
+      line-height: 1.3em;
       margin-bottom: 1em; } }
 .titlecell .btn-alternate {
   background-color: #fff;
@@ -675,6 +686,9 @@ md-progress-linear .md-container {
   color: black;
   line-height: 1em;
   font-weight: 400; }
+  @media screen and (max-device-width: 768px) {
+    .sectionwhyus {
+      font-size: 35px; } }
 
 .service-text {
   font-size: 40px;

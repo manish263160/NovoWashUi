@@ -26,7 +26,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
       
       
       $scope.closeHeader = function(){
-        console.log("showHeaderView=====close",$scope.showHeader);
         $scope.showHeader =false;
       }
 
