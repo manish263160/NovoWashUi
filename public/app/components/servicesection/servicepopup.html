@@ -52,7 +52,9 @@
         <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md id="viewAll">
          View Categories
         </md-button>
-        
+        <div layout="row" layout-sm="column" layout-align="space-around" ng-if="isShowLoaderCat">
+            <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+          </div>
         <md-list-item ng-repeat="item in allServices" ng-click="goToServiceForm(item, $event)" class="noright">
           <p>{{ :: item.serviceName }}</p>
           <md-divider></md-divider>

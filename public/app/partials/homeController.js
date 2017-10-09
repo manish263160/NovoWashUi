@@ -146,9 +146,11 @@ app
     }
       // $scope.allcategory= $rootScope.allcategory;
       // $scope.catId = $rootScope.catId;
+      $scope.isShowLoaderCat=true;
         RootAPIServices.rootApi.getAllServiceByCatId(requestData,null).$promise.then(function (response) {
         $scope.allServices = response.data;
         $scope.isShowLoader=false;
+        $scope.isShowLoaderCat=false;
       }) 
       
 
