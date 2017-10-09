@@ -1,4 +1,4 @@
-<md-dialog layout="column"  layout-xs="column" flex="{{ ::isdesktop ? 50 : 100}}" ng-controller="serviceForm">
+<md-dialog layout="column"  layout-xs="column" flex="{{ isdesktop ? 50 : 100}}" ng-controller="serviceForm">
   <div ng-class="isdesktop ? 'menuDesctop' : 'menuMobile service_mobile md-inline-form'" >
   <div class="md-toolbar-tools" layout="row">
     <strong class="centerHeader" flex="grow">{{ ::categoryServiceData.serviceName}}</strong>
@@ -10,16 +10,16 @@
 
   <div layout="row">
     <!-- ng-if="pagecount <= stepCount" -->
-    <md-progress-linear  style="padding: 10px;" md-mode="determinate" value="{{ ::progressbar}}"></md-progress-linear>
+    <md-progress-linear  style="padding: 10px;" md-mode="determinate" value="{{progressbar}}"></md-progress-linear>
   </div>
   <div>
-    <span class="col-sm-12 text-capitalize center"   style="{{ ::!isdesktop ? 'margin-left: 25%;' : ''}}"  >&#40; {{ ::progressbar| number : 0}}&#37; complete &#41;<span>
+    <span class="col-sm-12 text-capitalize center"   style="{{!isdesktop ? 'margin-left: 25%;' : ''}}">&#40; {{ progressbar| number : 0}}&#37; complete &#41;<span>
   </div>
 
 
 
 
-  <md-divider ng-if="!$last" style="{{ ::!isdesktop ? 'padding: 0px !important;' : ''}}"></md-divider>
+  <md-divider ng-if="!$last" style="{{ !isdesktop ? 'padding: 0px !important;' : ''}}"></md-divider>
 
   <md-dialog-content class="fixedHeightDialog serviceFormMobile" layout-padding >
     <md-content class="mddialog">
@@ -78,7 +78,7 @@
                 <md-input-container style="min-width: 50%" md-is-error="projectForm.locality.$invalid && (projectForm.$submitted || projectForm.locality.$dirty)">
                   <label>Locality</label>
                   <md-select ng-model="myForm.locality" name="locality" ng-required="true">
-                    <md-option ng-repeat="local in location" value="{{ ::local}}">
+                    <md-option ng-repeat="local in location" value="{{ local}}">
                       {{ ::local}}
                     </md-option>
                   </md-select>
@@ -135,7 +135,7 @@
             <div ng-if="pagecount===1">  
               <md-input-container md-is-error="projectForm.status.$invalid && (projectForm.$submitted || projectForm.status.$dirty)" >
                 <md-radio-group name="serviceCostId" id="serviceCostId" ng-model="myForm.serviceCostId" ng-required="true"   >
-                  <md-radio-button  style="{{ ::!isdesktop ? 'margin-bottom: 0px !important; width: 100% !important;' : ''}}" ng-repeat="cost in parent.serviceCost"  ng-value="cost.id">{{ ::cost.costDetails}}</md-radio-button>
+                  <md-radio-button  style="{{ !isdesktop ? 'margin-bottom: 0px !important; width: 100% !important;' : ''}}" ng-repeat="cost in parent.serviceCost"  ng-value="cost.id">{{ ::cost.costDetails}}</md-radio-button>
                 </md-radio-group>
               </md-input-container>
               <div ng-messages="projectForm.serviceCostId.$error" ng-if="projectForm.$submitted || projectForm.serviceCostId.$touched">
@@ -194,7 +194,7 @@
                 <md-input-container style="min-width: 50%" md-is-error="projectForm.locality.$invalid && (projectForm.$submitted || projectForm.locality.$dirty)">
                   <label>Locality</label>
                   <md-select ng-model="myForm.locality" name="locality" ng-required="true">
-                    <md-option ng-repeat="local in location" value="{{ ::local}}">
+                    <md-option ng-repeat="local in location" value="{{ local}}">
                       {{ ::local}}
                     </md-option>
                   </md-select>
@@ -255,7 +255,7 @@
             <h2><strong>Please enter your contact details</strong></h2>
             <div layout-gt-sm="row">
               <md-input-container class="md-block" flex-gt-sm>
-                <label>{{ ::categoryServiceData.serviceFor == 2 ?'Company' : ''}} Name</label>
+                <label>{{ categoryServiceData.serviceFor == 2 ?'Company' : ''}} Name</label>
                 <input ng-model="myForm.name" ng-required="true">
 
                 <div ng-messages="projectForm.name.$error" ng-if="projectForm.$submitted || projectForm.name.$touched">
@@ -267,7 +267,7 @@
             </div>
             <div layout-gt-sm="row">
               <md-input-container class="md-block" flex-gt-sm>
-                <label>{{ ::categoryServiceData.serviceFor == 2 ? 'Company' : ''}} Mobile</label>
+                <label>{{ categoryServiceData.serviceFor == 2 ? 'Company' : ''}} Mobile</label>
                 <input ng-model="myForm.phone" ng-required="true" type="number" ng-minlength=10 ng-maxlength=10>
                 <div ng-messages="projectForm.phone.$error" ng-if="projectForm.$submitted || projectForm.phone.$touched">
                   <div ng-message="required"  ng-hide="myVar">
@@ -279,7 +279,7 @@
 
             <div ayout-gt-xs="row">
               <md-input-container class="md-block" flex-gt-sm>
-                <label>{{ ::categoryServiceData.serviceFor == 2 ? 'Company' : ''}} Email</label>
+                <label>{{ categoryServiceData.serviceFor == 2 ? 'Company' : ''}} Email</label>
                 <input ng-model="myForm.email" ng-required="true">
                 <div ng-messages="projectForm.email.$error" ng-if="projectForm.$submitted || projectForm.email.$touched">
                   <div ng-message="required"  ng-hide="myVar">
@@ -310,7 +310,7 @@
         <md-divider ng-if="!$last"></md-divider>
         <footer>
           <div class="nextButton">
-            <md-button class="groupX-right" type="{button" ng-if="pagecount < stepCount" ng-click="actionButtonClick(pagecount+1 ,projectForm)">{{ ::pagecount >= stepCount ?'Submit' : 'Next &nbsp; &rarr;'}} </md-button>
+            <md-button class="groupX-right" type="{button" ng-if="pagecount < stepCount" ng-click="actionButtonClick(pagecount+1 ,projectForm)">{{ pagecount >= stepCount ?'Submit' : 'Next &nbsp; &rarr;'}} </md-button>
             <md-button class="groupX-right" type="submit" ng-if="pagecount === stepCount" ng-click="projectForm.$valid && serviceFormSubmit()">Submit </md-button>
             <md-button class="md-raised" type="button" ng-click="pagecount=pagecount-1;backButtonClick(pagecount)" ng-if="pagecount > 1 && pagecount < stepCount+1">&#8592; &nbsp; Back </md-button>
             <md-button class="md-raised md-warn" flex-offset="40" type="button" ui-sref="home" ui-sref-opts="{reload: true, notify: true}"

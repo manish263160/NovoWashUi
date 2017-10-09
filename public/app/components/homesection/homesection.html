@@ -12,9 +12,9 @@
 
 <section id="infographixCount" class="section-padding1 infografix" ng-if="!ismobileview">
  <div class="infogrText" ng-repeat="i in infografix">
-    <i class="material-icons">{{ ::i.icon}}</i>
-<span class="spanclass"> {{ ::i.value}}{{ ::i.value === i.max ? i.type : ''}}</span>
-<div class="undertext">{{ ::i.text}}</div>
+    <i class="material-icons">{{ i.icon}}</i>
+<span class="spanclass"> {{ i.value}}{{ i.value === i.max ? i.type : ''}}</span>
+<div class="undertext">{{ i.text}}</div>
 </div>
 </section>
 
@@ -23,10 +23,10 @@
         <md-list style="background-color: #d2d2d2 !important;">
           <md-list-item class="md-3-line infograph" ng-repeat="i in infografix" >
             <div class="md-list-item-text" layout="row" layout-wrap>
-                <i class="material-icons" flex="20">{{ ::i.icon}}</i>
-              <span flex="80" class="spanCount">{{ ::i.value}}{{ ::i.value === i.max ? i.type : ''}}</span>
+                <i class="material-icons" flex="20">{{ i.icon}}</i>
+              <span flex="80" class="spanCount">{{ i.value}}{{i.value === i.max ? i.type : ''}}</span>
               <span flex="20"></span>
-              <h3 class="text-capitalize" layout="row" flex="80">{{ ::i.text}}</h3>
+              <h3 class="text-capitalize" layout="row" flex="80">{{ i.text}}</h3>
             </div>
             <md-divider md-inset ng-if="!$last"></md-divider>
           </md-list-item>
