@@ -90,14 +90,14 @@ app
 
       isThemeRed = !isThemeRed;
     }, 2000);  */
-
+    $scope.isShowLoader=true;
      RootAPIServices.rootApi.getAllServiceCategories({}).$promise.then(function (response) {
         $scope.allcategory = response.data;
         $rootScope.allcategory = response.data;
+        $scope.isShowLoader=false;
       })
 
     $scope.showAdvanced = function (event,catId) {
-      // console.log("catId in showAdvanced mehod====",catId);
        if(catId == undefined || catId == null){
          catId = 1;
          $scope.isCatShow=true;
@@ -132,7 +132,9 @@ app
         $scope.catId=1;
       }
 
+
       var isCatShow =$scope.isCatShow;
+      if($scope.allcategory && $scope.allcategory != undefined){
       $scope.allcategory.forEach(function (data) {
         if(data.id === $scope.catId){
           if(!$scope.isCatShow){
@@ -141,11 +143,12 @@ app
         }
 
       });
+    }
       // $scope.allcategory= $rootScope.allcategory;
       // $scope.catId = $rootScope.catId;
-      
         RootAPIServices.rootApi.getAllServiceByCatId(requestData,null).$promise.then(function (response) {
         $scope.allServices = response.data;
+        $scope.isShowLoader=false;
       }) 
       
 

@@ -20,10 +20,15 @@
     <md-dialog-content class="mddialog">
 <div ng-controller="AppCtrl" layout="column" style="height:500px;" ng-cloak>
 
-    <section layout="row" flex>
-    <md-sidenav class="md-sidenav-left" md-is-open="true" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
 
-      <md-content  ng-controller="LeftCtrl" >
+    <div layout="row" layout-sm="column" layout-align="space-around" ng-if="isShowLoader">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+      </div>
+
+    <section layout="row" flex ng-if="!isShowLoader">
+      <md-sidenav class="md-sidenav-left"  md-is-open="isCatShow" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
+          
+        <md-content  ng-controller="LeftCtrl" >
         <md-button ng-click="close()" class="md-primary" hide-gt-md>
           CLOSE
         </md-button>
@@ -37,6 +42,7 @@
          
         <a href="#" ng-if="!isCatShow" class="active collection-item">{{ ::unitCatName}}
         </a>
+        
         </div>
       </md-content>
 
@@ -44,7 +50,7 @@
 
     <md-content flex layout-padding style="background-color: transparent !important">
         <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md id="viewAll">
-          View All Category
+         View Categories
         </md-button>
         
         <md-list-item ng-repeat="item in allServices" ng-click="goToServiceForm(item, $event)" class="noright">
