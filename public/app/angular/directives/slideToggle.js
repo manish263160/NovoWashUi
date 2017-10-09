@@ -62,7 +62,7 @@ app.directive('slideToggle', function() {
         isOpen: "=slideToggle" // 'data-slide-toggle' in our html
       },  
       link: function(scope, element, attr) {
-        var slideDuration = parseInt(attr.slideToggleDuration, 10) || 200;      
+        var slideDuration = parseInt(attr.slideToggleDuration, 10) || 50;      
         
         // Watch for when the value bound to isOpen changes
         // When it changes trigger a slideToggle

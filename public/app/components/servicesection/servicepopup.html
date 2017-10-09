@@ -1,4 +1,4 @@
-<md-dialog layout="column" flex="{{isdesktop ? 50 : 100}}"  layout-xs="column" style="z-index: 999999;" ng-class="isdesktop ? 'menuDesctop' : 'menuMobile'"  class="menuDesctop servicepopUp">
+<md-dialog layout="column" flex="{{ ::isdesktop ? 50 : 100}}"  layout-xs="column" style="z-index: 999999;" ng-class="isdesktop ? 'menuDesctop' : 'menuMobile'"  class="menuDesctop servicepopUp">
   <!-- <form ng-cloak> -->
     <div class="md-toolbar-tools" ng-if="isdesktop" flex="100" >
         <strong class="centerHeader" flex="grow">All Services</strong>
@@ -29,11 +29,13 @@
         </md-button>
         <div class="collection">
 
-         <a href="#" ng-if="isCatShow"  ng-repeat="item in allcategory" ng-click="getServiceById($event,item.id); toggleLeft();"
-          ng-class="catId === item.id ? 'active collection-item' : 'collection-item inactive' ">{{item.catName}}
+          <div ng-if="isCatShow">
+         <a href="#"   ng-repeat="item in allcategory" ng-click="getServiceById($event,item.id); toggleLeft();"
+          ng-class="catId === item.id ? 'active collection-item' : 'collection-item inactive' ">{{ ::item.catName}}
         </a>
+        </div>
          
-        <a href="#" ng-if="!isCatShow" class="active collection-item">{{unitCatName}}
+        <a href="#" ng-if="!isCatShow" class="active collection-item">{{ ::unitCatName}}
         </a>
         </div>
       </md-content>
@@ -46,7 +48,7 @@
         </md-button>
         
         <md-list-item ng-repeat="item in allServices" ng-click="goToServiceForm(item, $event)" class="noright">
-          <p>{{ item.serviceName }}</p>
+          <p>{{ :: item.serviceName }}</p>
           <md-divider></md-divider>
           </md-list-item>
         </md-content>
@@ -87,10 +89,10 @@
           <div class="collection">
   
            <a href="#" ng-if="isCatShow"  ng-repeat="item in allcategory" ng-click="getServiceById($event,item.id); toggleLeft();"
-            ng-class="catId === item.id ? 'active collection-item' : 'collection-item inactive' ">{{item.catName}}
+            ng-class="catId === item.id ? 'active collection-item' : 'collection-item inactive' ">{{ ::item.catName}}
           </a>
            
-          <a href="#" ng-if="!isCatShow" class="active collection-item">{{unitCatName}}
+          <a href="#" ng-if="!isCatShow" class="active collection-item">{{ ::unitCatName}}
           </a>
           </div>
         </md-content>
@@ -103,7 +105,7 @@
           </md-button>
           
           <md-list-item ng-repeat="item in allServices" ng-click="goToServiceForm(item, $event)" class="noright">
-            <p>{{ item.serviceName }}</p>
+            <p>{{ :: item.serviceName }}</p>
             <md-divider></md-divider>
             </md-list-item>
           </md-content>

@@ -8,12 +8,12 @@
       <div class="featured-box border-right text-center hover brand-hover">
         <div class="featured-wrapper">
           <div class="intro-header">
-            <img ng-src="{{item.imageUrl}}" alt="" height=75 width=75 />
-            <h2 class="white-text hover-text">{{item.catName}}</h2>
+            <img ng-src="{{ ::item.imageUrl}}" alt="" height=75 width=75 />
+            <h2 class="white-text hover-text">{{ ::item.catName}}</h2>
           </div>
 
           <div class="content">
-            <a class="waves-effect  btn btn-larg " ng-click="showAdvanced($event, item.id)">{{item.catType ===2 ? 'Enquire Now' : 'Book Now'}}</a>
+            <a class="waves-effect  btn btn-larg " ng-click="showAdvanced($event, item.id)">{{ ::item.catType ===2 ? 'Enquire Now' : 'Book Now'}}</a>
           </div>
         </div>
         <!-- /.featured-wrapper -->
@@ -49,9 +49,9 @@
     <md-content  data-slide-toggle="{serviceSection}" data-slide-toggle-duration="500">
         <md-list>
           <md-list-item class="md-3-line" ng-repeat="item in allcategory" ng-click="showAdvanced($event, item.id)">
-            <img ng-src="{{item.imageUrl}}?{{$index}}" alt=""  class="md-avatar" alt="{{item.imageUrl}}">
+            <img ng-src="{{ ::item.imageUrl}}?{{ ::$index}}" alt=""  class="md-avatar" alt="{{ ::item.imageUrl}}">
             <div class="md-list-item-text">
-              <h3>{{item.catName}}</h3>
+              <h3>{{ ::item.catName}}</h3>
             </div>
             <md-divider md-inset ng-if="!$last"></md-divider>
           </md-list-item>
@@ -69,12 +69,12 @@
      <div class="featured-box border-right text-center hover brand-hover">
        <div class="featured-wrapper">
          <div class="intro-header">
-           <img ng-src="{{item.imageUrl}}" alt="" height=75 width=75 />
-           <h2 class="white-text hover-text">{{item.catName}}</h2>
+           <img ng-src="{{ ::item.imageUrl}}" alt="" height=75 width=75 />
+           <h2 class="white-text hover-text">{{ ::item.catName}}</h2>
          </div>
 
          <div class="content">
-           <a class="waves-effect  btn btn-larg " ng-click="showAdvanced($event, item.id)">{{item.catType ===2 ? 'Enquire Now' : 'Book Now'}}</a>
+           <a class="waves-effect  btn btn-larg " ng-click="showAdvanced($event, item.id)">{{ ::item.catType ===2 ? 'Enquire Now' : 'Book Now'}}</a>
          </div>
        </div>
      </div>

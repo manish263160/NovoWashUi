@@ -8,7 +8,7 @@
     </div>
 
   <!--   <script type="text/ng-template" id="scrl.html">
-        <img ng-src="{{item.logo_img}}" alt="Washed Out">
+        <img ng-src="{{ ::item.logo_img}}" alt="Washed Out">
     </script> -->
 
     <!-- <slick class="slider md-paddin" layout-xs="column" layout="row" settings="slickCarausel" ng-if="slickConfig4Loaded">
@@ -19,7 +19,7 @@
 
     <data-owl-carousel id="first" class="owl-carousel" data-options="{navigation: true, pagination: false,loop:true,items:5, rewindNav : false}">
             <div owl-carousel-item="" ng-repeat="item in logoJson" class="item owlcarausel">
-                    <img ng-src="{{item.logo_img}}" alt="Washed Out">
+                    <img ng-src="{{ ::item.logo_img}}" alt="Washed Out">
             </div>
           </data-owl-carousel>
 
@@ -45,14 +45,14 @@
     <md-content class="hiddenComponents" data-slide-toggle="ourPrtnrSection" data-slide-toggle-duration="500">
     <!-- <data-owl-carousel id="first" class="owl-carousel" data-options="{navigation: true, pagination: false,loop:true,items:5, rewindNav : false}">
         <div owl-carousel-item="" ng-repeat="item in ::logoJson" class="item owlcarausel">
-                <img ng-src="{{item.logo_img}}" alt="Washed Out">
+                <img ng-src="{{ ::item.logo_img}}" alt="Washed Out">
         </div>
       </data-owl-carousel> -->
       <md-list>
         <md-list-item class="md-3-line" ng-repeat="item in logoJson" >
-          <img ng-src="{{item.logo_img}}" alt=""  class="md-avatar" >
+          <img ng-src="{{ ::item.logo_img}}" alt=""  class="md-avatar" >
           <div class="md-list-item-text">
-            <h3>{{item.com_name}}</h3>
+            <h3>{{ ::item.com_name}}</h3>
           </div>
           <md-divider md-inset ng-if="!$last"></md-divider>
         </md-list-item>
