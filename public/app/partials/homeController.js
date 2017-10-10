@@ -175,10 +175,11 @@ app
     }
 
 
-      $scope.goToServiceForm = function (item, $event) {
+      $scope.goToServiceForm = function (item, $event , catId) {
         // console.log("-serviceid--",item.id);
         $scope.categoryServiceData=item;
         $scope.servModel = true;
+        $scope.catId=catId;
         var serviceId =$scope.categoryServiceData.id;
         RootAPIServices.rootApi.getServicesCostById({serviceId:serviceId},null).$promise.then(function (response) {
         $scope.serviceCost=response.data;

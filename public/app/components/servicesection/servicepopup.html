@@ -49,13 +49,12 @@
     </md-sidenav>
 
     <md-content flex layout-padding style="background-color: transparent !important">
-        <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md id="viewAll">
-         View Categories
+        <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md id="viewAll" aria-label="Close dialog">
         </md-button>
         <div layout="row" layout-sm="column" layout-align="space-around" ng-if="isShowLoaderCat">
             <md-progress-circular md-mode="indeterminate"></md-progress-circular>
           </div>
-        <md-list-item ng-repeat="item in allServices" ng-click="goToServiceForm(item, $event)" class="noright">
+        <md-list-item ng-repeat="item in allServices" ng-click="goToServiceForm(item, $event ,catId)" class="noright">
           <p>{{ :: item.serviceName }}</p>
           <md-divider></md-divider>
           </md-list-item>
