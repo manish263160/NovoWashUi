@@ -121,7 +121,7 @@ app.
                         // $scope.pagecount--;
                 };
 
-                $scope.serviceFormSubmit = function () {
+                $scope.serviceFormSubmit = function (catId) {
 
                         var enquire = {};
 
@@ -134,6 +134,7 @@ app.
                                 enquire.phone = $scope.myForm.phone,
                                 enquire.email = $scope.myForm.email,
                                 enquire.serviceDate = $scope.myForm.serviceDate;
+                                enquire.catId =catId;
                         // enquire.push(data);
                         RootAPIServices.rootApi.bookOrEnquireService({}, enquire).$promise.then(function (response) {
 
