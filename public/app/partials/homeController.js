@@ -95,6 +95,14 @@ app
         $scope.allcategory = response.data;
         $rootScope.allcategory = response.data;
         $scope.isShowLoader=false;
+        if(!$scope.isdesktop){
+          for (var i = 0; i < $scope.allcategory.length; i++) {
+            var element = $scope.allcategory[i].imageUrl;
+            var substr= element.substr(element.lastIndexOf("/")+1);
+            $scope.allcategory[i].imageUrl = "assets/img/serviceImg/mobile/"+substr;            
+            console.log("$scope.allcategory[i].imageUrl===",$scope.allcategory[i].imageUrl)
+          }
+        }
       })
 
     $scope.showAdvanced = function (event,catId) {

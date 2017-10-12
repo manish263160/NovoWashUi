@@ -1,5 +1,6 @@
 <md-dialog layout="column" flex="{{ isdesktop ? 50 : 100}}"  layout-xs="column" style="z-index: 999999;" ng-class="isdesktop ? 'menuDesctop' : 'menuMobile'"  class="menuDesctop servicepopUp">
   <!-- <form ng-cloak> -->
+      
     <div class="md-toolbar-tools" ng-if="isdesktop" flex="100" >
         <strong class="centerHeader" flex="grow">All Services</strong>
         <span flex></span>
@@ -16,14 +17,12 @@
         </md-button>
       </div>
     
-
+      <div layout="row" layout-sm="column" layout-align="space-around" ng-if="isShowLoader">
+          <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+        </div>
+        
     <md-dialog-content class="mddialog">
 <div ng-controller="AppCtrl" layout="column" style="height:500px;" ng-cloak>
-
-
-    <div layout="row" layout-sm="column" layout-align="space-around" ng-if="isShowLoader">
-        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
-      </div>
 
     <section layout="row" flex ng-if="!isShowLoader">
       <md-sidenav class="md-sidenav-left"  md-is-open="isCatShow" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" md-whiteframe="4">
