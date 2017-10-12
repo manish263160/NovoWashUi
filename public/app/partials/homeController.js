@@ -100,7 +100,6 @@ app
             var element = $scope.allcategory[i].imageUrl;
             var substr= element.substr(element.lastIndexOf("/")+1);
             $scope.allcategory[i].imageUrl = "assets/img/serviceImg/mobile/"+substr;            
-            console.log("$scope.allcategory[i].imageUrl===",$scope.allcategory[i].imageUrl)
           }
         }
       })
