@@ -36,16 +36,43 @@ module.exports = function (grunt) {
        }
     },
     
-    clean: ['public/css/style.css', 'public/sass/build.scss'],
+    clean: ['public/css/style.css', 'public/sass/build.scss' , 'public/app/composite.all.min.js'],
 
-   // Compile everything into one task with Watch Plugin
-    // watch: { 
-    //   clean: ['public/css/style.css', 'public/sass/build.scss'],
-    //   css: {
-    //     files: 'public/sass/**/*.{scss,sass}',
-    //     tasks: ['concat','sass']
-    //   },
-    // },
+    uglify: { 
+      my_target : { 
+        options : { 
+          mangle: false,
+          ie8 : true,
+          sourceMap : true, 
+          sourceMapName : 'public/app/sourceMap.map'
+        }, 
+        // src : 'public/app/**/*.js', 
+        // dest : 'public/app/composite.all.min.js'
+        files : { 
+          'public/app/composite.min.js':
+          ['public/app/app.js'
+            ,'public/app/NVConfig.js',
+            'public/app/appRoutes.js',
+            'public/app/components/homesection/homeSectionDirective.js'
+            ,'public/app/partials/homeController.js',
+            'public/app/components/aboutusSection/aboutusController.js',
+            'public/app/components/servicesection/serviceSectionDirective.js'
+            ,'public/app/angular/services/utilServices.js',
+            'public/app/angular/services/apicallServices.js',
+            'public/app/angular/services/rootAPIServices.js',
+            'public/app/components/servicesection/servicesectionController.js',
+            'public/app/components/partner/partnerController.js',
+            'public/app/components/customerReview/customerReview.js',
+            'public/app/components/ourPartners/partner.js',
+            'public/app/allEnquery/enqueryUserListController.js',
+            'public/app/angular/directives/slideToggle.js'] 
+        },
+        
+
+
+      } 
+    } 
+    
   });
   // Load Grunt plugins
   grunt.loadNpmTasks('grunt-contrib-sass');
@@ -65,7 +92,7 @@ module.exports = function (grunt) {
     'clean',
     'concat',
     'sass',
-    // 'uglify', 
+    'uglify', 
     'cssmin',
     
   ]);

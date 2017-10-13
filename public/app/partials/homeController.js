@@ -47,7 +47,7 @@ app
         var store=e.value;
          if (e.value < e.max) {
             e.value++;
-            mytimeout = $timeout($scope.onTimeout,200);
+           var mytimeout = $timeout($scope.onTimeout,200);
         } else{
           e.value = e.max;
         }
