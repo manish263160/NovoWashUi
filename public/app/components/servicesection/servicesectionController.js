@@ -25,6 +25,11 @@ app.
                 $scope.minDate = new Date();
                 $scope.maxDate = moment().add(1, 'year');
                 //$scope.disableDates = 
+                $scope.dates = [new Date('2017-10-15T00:00:00'), new Date('2017-10-16T00:00:00'),
+                new Date('2017-10-17T00:00:00'), new Date('2017-10-18T00:00:00'), new Date('2017-10-19T00:00:00'),
+                new Date('2017-10-19T00:00:00'),new Date('2017-10-20T00:00:00'),
+                new Date('2017-10-21T00:00:00'),new Date('2017-10-22T00:00:00'),
+                new Date('2017-10-23T00:00:00'),new Date('2017-10-24T00:00:00'),new Date('2017-10-25T00:00:00')];
 
                 $scope.displayDialogEdit = function (form) {
                         if ($scope.isdesktop) {
@@ -36,7 +41,8 @@ app.
                                         minutes: true,
                                         shortTime:true,
                                         autoOk : true,
-                                        minDate: $scope.minDate
+                                        minDate: $scope.minDate,
+                                        disableDates : $scope.dates
                                 })
                                         .then(function (date) {
                                                 $scope.myForm.serviceDate = date;
@@ -53,7 +59,8 @@ app.
                                         minutes: true,
                                         shortTime:true,
                                         autoOk : true,
-                                        minDate: $scope.minDate
+                                        minDate: $scope.minDate,
+                                        disableDates : $scope.dates
                                 })
                                         .then(function (date) {
                                                 $scope.myForm.serviceDate = date;

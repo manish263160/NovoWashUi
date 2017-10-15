@@ -34,7 +34,7 @@
                   <!-- example from https://beenote.github.io/angular-material-datetimepicker/ -->
                   <md-input-container  md-is-error="projectForm.serviceDate.$invalid && (projectForm.$submitted || projectForm.serviceDates.$dirty)">
                     <input ng-if="!isdesktop"  mdc-datetime-picker="" date="true" time="true" type="text" id="datetimeedit" placeholder="Date" show-todays-date=""
-                      ng-required="true" minutes="false" name="serviceDate" id="serviceDate" min-date="date" edit-input="true" ng-model="myForm.serviceDate"
+                      ng-required="true" minutes="false" name="serviceDate" id="serviceDate" min-date="date" edit-input="true" ng-model="myForm.serviceDate" disable-dates="dates"
                       class=" md-input">
 
                       <!-- --------------------mobile view---- -->
@@ -149,12 +149,12 @@
               <md-input-container  md-is-error="projectForm.serviceDate.$invalid && (projectForm.$submitted || projectForm.serviceDates.$dirty)">
 
                 <input ng-if="isdesktop"  mdc-datetime-picker="" date="true" time="true" type="text" id="datetimeedit" placeholder="Date" show-todays-date=""
-                  ng-required="true" minutes="false" name="serviceDate" id="serviceDate" min-date="date" edit-input="true" ng-model="myForm.serviceDate" auto-ok="true"
+                  ng-required="true" minutes="false" name="serviceDate" id="serviceDate" min-date="date" edit-input="true" ng-model="myForm.serviceDate" auto-ok="true"  disable-dates="dates"
                   max-date="maxDate" class=" md-input">
 
                   <!-- for mobile view datepicker -->
                   <input ng-if="!isdesktop"  mdc-datetime-picker="" date="true" time="true" type="text" id="datetimeedit" placeholder="Date" show-todays-date=""
-                  ng-required="true" minutes="false" name="serviceDate" id="serviceDate" min-date="date" edit-input="true" ng-model="myForm.serviceDate" auto-ok="true"
+                  ng-required="true" minutes="false" name="serviceDate" id="serviceDate" min-date="date" edit-input="true" ng-model="myForm.serviceDate" auto-ok="true" disable-dates="dates"
                   max-date="maxDate" class=" md-input">
                   
               </md-input-container>
